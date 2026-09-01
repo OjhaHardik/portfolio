@@ -1,9 +1,6 @@
 (function () {
   const nav = document.getElementById('siteNav');
   const categoriesEl = document.getElementById('categories');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxClose = document.getElementById('lightboxClose');
 
   GRAPHICS_DATA.forEach((cat, catIndex) => {
     const navLink = document.createElement('a');
@@ -42,13 +39,14 @@
         card.innerHTML =
           '<div class="thumb" style="aspect-ratio:' + item.width + '/' + item.height + '">' +
             '<img src="' + item.image + '" alt="' + item.title + '" loading="lazy">' +
-          '</div>' +
-          '<div class="info"><p class="title">' + item.title + '</p></div>';
+          '</div>';
 
         card.addEventListener('click', () => {
-          lightboxImg.src = item.image;
-          lightboxImg.alt = item.title;
-          lightbox.classList.add('open');
+          const wasExpanded = card.classList.contains('expanded');
+          grid.querySelectorAll('.card-graphic.expanded').forEach((c) => {
+            c.classList.remove('expanded');
+          });
+          if (!wasExpanded) card.classList.add('expanded');
         });
 
         grid.appendChild(card);
@@ -96,17 +94,4 @@
   );
 
   sections.forEach((s) => observer.observe(s));
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    lightboxImg.src = '';
-  }
-
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-  });
 })();
