@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hardik Ojha — Video Editor</title>
-<meta name="description" content="Hardik Ojha — Video Editing Portfolio. Healthcare, Creatives, Restaurant, Beauty, Education, Short Films, Real Estate.">
+<title>Graphics — Hardik Ojha</title>
+<meta name="description" content="Hardik Ojha — Graphic Design Portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,28 +18,22 @@
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav" id="siteNav"></nav>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Video</a>
+    </nav>
   </div>
 </header>
 
 <main>
   <section class="hero wrap">
-    <p class="eyebrow">Video Editor</p>
-    <h1>HARDIK<br>OJHA</h1>
+    <p class="eyebrow">Graphic Design</p>
+    <h1>GRAPHICS</h1>
     <p class="about">
-      I edit short-form and long-form video for brands and creators — reels, promos, event
-      recaps and short films — with a focus on pacing, sound design and story.
+      A selection of poster, cover and social graphic work — laid out below by category.
     </p>
-    <div class="hero-stats" id="heroStats"></div>
   </section>
 
   <div id="categories"></div>
-
-  <section class="contact wrap" id="contact">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Let's work<br>together.</h2>
-    <a class="contact-email" href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -49,7 +43,12 @@
   </div>
 </footer>
 
-<script src="data.js"></script>
-<script src="script.js"></script>
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="graphics-data.js"></script>
+<script src="graphics-script.js"></script>
 </body>
 </html>

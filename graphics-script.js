@@ -1,23 +1,16 @@
 (function () {
   const nav = document.getElementById('siteNav');
   const categoriesEl = document.getElementById('categories');
-  const heroStats = document.getElementById('heroStats');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
 
-  const playIcon = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+  GRAPHICS_DATA.forEach((cat, catIndex) => {
+    const navLink = document.createElement('a');
+    navLink.href = '#' + cat.slug;
+    navLink.textContent = cat.name;
+    nav.appendChild(navLink);
 
-  const totalItems = PORTFOLIO_DATA.reduce((sum, cat) => sum + cat.items.length, 0);
-  heroStats.innerHTML =
-    '<span><strong>' + totalItems + '</strong> Projects</span>' +
-    '<span><strong>' + PORTFOLIO_DATA.length + '</strong> Categories</span>';
-
-  PORTFOLIO_DATA.forEach((cat, catIndex) => {
-    // nav link
-    const a = document.createElement('a');
-    a.href = '#' + cat.slug;
-    a.textContent = cat.name;
-    nav.appendChild(a);
-
-    // section
     const section = document.createElement('section');
     section.className = 'category-section';
     section.id = cat.slug;
@@ -35,54 +28,36 @@
     const body = document.createElement('div');
     body.className = 'category-body';
 
-    // group same-ratio items together so vertical and horizontal
-    // thumbnails don't interleave awkwardly in the grid
-    const groups = new Map();
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+
     cat.items
       .slice()
       .sort((a, b) => a.number - b.number)
       .forEach((item) => {
-        if (!groups.has(item.ratio)) groups.set(item.ratio, []);
-        groups.get(item.ratio).push(item);
-      });
-
-    groups.forEach((items) => {
-      const grid = document.createElement('div');
-      grid.className = 'grid';
-
-      items.forEach((item) => {
-        const card = document.createElement('a');
-        card.className = 'card';
-        card.href = item.link;
-        card.target = '_blank';
-        card.rel = 'noopener noreferrer';
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'card card-graphic';
 
         card.innerHTML =
-          '<div class="thumb ' + item.ratio + '">' +
-            '<img src="' + item.thumbnail + '" alt="' + item.title + '" loading="lazy">' +
-            '<span class="play">' + playIcon + '</span>' +
+          '<div class="thumb" style="aspect-ratio:' + item.width + '/' + item.height + '">' +
+            '<img src="' + item.image + '" alt="' + item.title + '" loading="lazy">' +
           '</div>' +
           '<div class="info"><p class="title">' + item.title + '</p></div>';
+
+        card.addEventListener('click', () => {
+          lightboxImg.src = item.image;
+          lightboxImg.alt = item.title;
+          lightbox.classList.add('open');
+        });
 
         grid.appendChild(card);
       });
 
-      body.appendChild(grid);
-    });
-
+    body.appendChild(grid);
     section.appendChild(body);
     categoriesEl.appendChild(section);
   });
-
-  const graphicsLink = document.createElement('a');
-  graphicsLink.href = 'graphics.html';
-  graphicsLink.textContent = 'Graphics';
-  nav.appendChild(graphicsLink);
-
-  const contactLink = document.createElement('a');
-  contactLink.href = '#contact';
-  contactLink.textContent = 'Contact';
-  nav.appendChild(contactLink);
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -103,8 +78,8 @@
   });
 
   // active nav link on scroll
-  const sections = Array.from(document.querySelectorAll('.category-section, #contact'));
-  const links = Array.from(nav.querySelectorAll('a'));
+  const sections = Array.from(document.querySelectorAll('.category-section'));
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -121,4 +96,17 @@
   );
 
   sections.forEach((s) => observer.observe(s));
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
 })();
