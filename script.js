@@ -10,6 +10,30 @@
     '<span><strong>' + totalItems + '</strong> Projects</span>' +
     '<span><strong>' + PORTFOLIO_DATA.length + '</strong> Categories</span>';
 
+  // rotating role title
+  const eyebrowText = document.getElementById('eyebrowText');
+  const roles = ['Video Editor', 'Photographer', 'Cinematographer', 'Graphic Designer'];
+  let roleIndex = 0;
+
+  setInterval(() => {
+    roleIndex = (roleIndex + 1) % roles.length;
+    eyebrowText.style.transform = 'translateY(-100%)';
+    eyebrowText.style.opacity = '0';
+
+    setTimeout(() => {
+      eyebrowText.textContent = roles[roleIndex];
+      eyebrowText.style.transition = 'none';
+      eyebrowText.style.transform = 'translateY(100%)';
+      eyebrowText.style.opacity = '0';
+
+      void eyebrowText.offsetWidth;
+
+      eyebrowText.style.transition = '';
+      eyebrowText.style.transform = 'translateY(0)';
+      eyebrowText.style.opacity = '1';
+    }, 400);
+  }, 2000);
+
   PORTFOLIO_DATA.forEach((cat, catIndex) => {
     // nav link
     const a = document.createElement('a');

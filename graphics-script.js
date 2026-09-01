@@ -41,14 +41,6 @@
             '<img src="' + item.image + '" alt="' + item.title + '" loading="lazy">' +
           '</div>';
 
-        card.addEventListener('click', () => {
-          const wasExpanded = card.classList.contains('expanded');
-          grid.querySelectorAll('.card-graphic.expanded').forEach((c) => {
-            c.classList.remove('expanded');
-          });
-          if (!wasExpanded) card.classList.add('expanded');
-        });
-
         grid.appendChild(card);
       });
 
@@ -58,6 +50,23 @@
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // tap a card to expand it in place, tap it again (or anywhere else) to collapse
+  document.addEventListener('click', (e) => {
+    const clickedCard = e.target.closest('.card-graphic');
+    const currentExpanded = document.querySelector('.card-graphic.expanded');
+
+    if (clickedCard) {
+      if (currentExpanded === clickedCard) {
+        clickedCard.classList.remove('expanded');
+      } else {
+        if (currentExpanded) currentExpanded.classList.remove('expanded');
+        clickedCard.classList.add('expanded');
+      }
+    } else if (currentExpanded) {
+      currentExpanded.classList.remove('expanded');
+    }
+  });
 
   // mobile nav toggle
   const toggle = document.getElementById('navToggle');
