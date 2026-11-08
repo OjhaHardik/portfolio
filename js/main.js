@@ -113,33 +113,11 @@
       .to('.vf-focus', { opacity: 0, duration: 0.4 }, 1.3);
   }
 
-  /* ---------- Slate intro ---------- */
+  /* ---------- Intro ---------- */
   function runIntro(done) {
-    const slate = $('#slate');
-    const d = new Date();
-    $('#slateDate').textContent = [d.getDate(), d.getMonth() + 1, d.getFullYear()].map((n) => String(n).padStart(2, '0')).join('.');
-
-    const finish = () => {
-      slate.hidden = true;
-      document.body.classList.remove('is-loading');
-      if (lenis) lenis.start();
-      heroIn();
-      done();
-    };
-
-    if (reduce || session('ho-slate')) { finish(); return; }
-    session('ho-slate', '1');
-    if (lenis) lenis.stop();
-    gsap.set('.hero-title, .hero-foot, .hero-reel', { opacity: 0 });
-
-    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-    gsap.from('.clapper', { y: 24, opacity: 0, duration: 0.6, ease: 'expo.out' });
-    Promise.race([Promise.all([document.fonts.ready, firstFrame, wait(700)]), wait(1800)]).then(() => {
-      gsap.timeline({ onComplete: finish })
-        .to('.clapper-stick', { rotate: 0, duration: 0.16, ease: 'power4.in' })
-        .to('.clapper', { y: 4, duration: 0.06, yoyo: true, repeat: 1 })
-        .to({}, { duration: 0.3 });
-    });
+    document.body.classList.remove('is-loading');
+    heroIn();
+    done();
   }
 
   /* ---------- Interface: UI builds itself ---------- */

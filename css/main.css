@@ -149,28 +149,6 @@ ol, ul { padding: 0; list-style: none; }
   60% { transform: translate(-4%, -1%); } 80% { transform: translate(3%, 3%); } 100% { transform: translate(0, 0); }
 }
 
-/* ---------- Slate loader ---------- */
-.slate {
-  position: fixed; inset: 0; z-index: 80; display: grid; place-items: center;
-  background: var(--black);
-}
-.slate[hidden] { display: none; }
-.clapper { width: min(440px, 82vw); }
-.clapper-stick {
-  height: 44px; transform-origin: 0 100%; transform: rotate(-22deg);
-  background: repeating-linear-gradient(-55deg, var(--white) 0 26px, var(--black) 26px 52px);
-  border: 2px solid var(--white);
-}
-.clapper-board {
-  display: grid; grid-template-columns: 1fr 1fr; border: 2px solid var(--white); border-top: 0;
-  background: var(--g900);
-}
-.clapper-row { padding: 12px 14px; border-top: 2px solid var(--white); display: flex; flex-direction: column; gap: 2px; }
-.clapper-row:nth-child(odd):not(.clapper-row--wide) { border-right: 2px solid var(--white); }
-.clapper-row--wide { grid-column: span 2; }
-.clapper-row span { font-family: var(--f-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--g300); }
-.clapper-row strong { font-family: var(--f-display); font-weight: 600; font-size: 24px; color: var(--white); letter-spacing: -.02em; }
-
 /* ---------- Top bar ---------- */
 .topbar {
   position: fixed; inset: 0 0 auto 0; z-index: 40; height: var(--topbar);
