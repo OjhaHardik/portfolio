@@ -3,55 +3,400 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hardik Ojha — Video Editor</title>
-<meta name="description" content="Hardik Ojha — Video Editing Portfolio. Healthcare, Creatives, Restaurant, Beauty, Education, Short Films, Real Estate.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<title>Hardik Ojha - UI Designer, Editor, Cinematographer</title>
+<meta name="description" content="Hardik Ojha designs interfaces, edits films and shoots stills. UI design, video editing, cinematography, photography and graphic design.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:title" content="Hardik Ojha">
+<meta property="og:description" content="UI design, video editing, cinematography and photography.">
+<meta property="og:image" content="Assets/site/hero-wide.jpg">
+<link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230a0a0b%27/%3E%3Crect x=%277%27 y=%2711%27 width=%2718%27 height=%2710%27 rx=%272%27 fill=%27%232a2a2f%27/%3E%3Crect x=%2715%27 y=%275%27 width=%272.5%27 height=%2722%27 fill=%27%23b4ff39%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="css/main.css">
+<script>try{var t=localStorage.getItem('ho-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="logo" href="index.html">HARDIK OJHA</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav" id="siteNav"></nav>
+</head>
+<body class="is-loading">
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Slate: plays once per session, skipped for reduced motion -->
+<div class="slate" id="slate" aria-hidden="true">
+  <div class="clapper">
+    <div class="clapper-stick"></div>
+    <div class="clapper-board">
+      <div class="clapper-row clapper-row--wide"><span>Production</span><strong>Hardik Ojha</strong></div>
+      <div class="clapper-row"><span>Roll</span><strong>Portfolio</strong></div>
+      <div class="clapper-row"><span>Take</span><strong>01</strong></div>
+      <div class="clapper-row clapper-row--wide"><span>Date</span><strong id="slateDate"></strong></div>
+    </div>
   </div>
+</div>
+
+<header class="topbar">
+  <a class="logo" href="#open" translate="no">Hardik Ojha</a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="#interface">Work</a>
+    <a href="#edit">Video</a>
+    <a href="#graphics">Graphics</a>
+    <a href="#darkroom">Photos</a>
+    <a href="#credits">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to light mode"><span class="ic ic-moon" data-icon="moon"></span><span class="ic ic-sun" data-icon="sun"></span></button>
+  <button class="music-btn" id="musicBtn" type="button" aria-pressed="false" aria-label="Music off" hidden>
+    <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="music-label">Sound</span>
+  </button>
 </header>
 
-<main>
-  <section class="hero wrap">
-    <p class="eyebrow"><span class="eyebrow-roll"><span class="eyebrow-text" id="eyebrowText">Video Editor</span></span></p>
-    <h1>HARDIK<br>OJHA</h1>
-    <p class="about">
-      I like making things look good, sound good and, most importantly, feel right. I work
-      across video, photography, cinematography and graphic design, creating everything from
-      brand videos and campaigns to event films and the occasional weird idea.
-    </p>
-    <div class="hero-stats" id="heroStats"></div>
+<main id="main">
+
+  <!-- Cold open -->
+  <section class="hero" id="open" data-scene="Open">
+    <div class="hero-copy">
+      <h1 class="hero-title">I <a class="cue is-on" href="#interface" data-cue="0">design interfaces</a>, <a class="cue" href="#edit" data-cue="1">cut films</a>, <a class="cue" href="#graphics" data-cue="2">make posters</a> and <a class="cue" href="#darkroom" data-cue="3">shoot photographs</a>.</h1>
+      <div class="hero-foot">
+        <p class="hero-sub">I'm <span translate="no">Hardik Ojha</span>. Brand films, reels, apps and posters, from the first sketch to the final export.</p>
+        <div class="hero-ctas">
+          <a class="btn btn--neon" href="#interface">View work</a>
+          <a class="btn btn--ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero reel, a program monitor: one frame per discipline, in page order. Each frame's data-cue matches a phrase in the h1. -->
+    <div class="hero-reel" id="heroReel">
+      <div class="hero-reel-view">
+        <i class="vf-corner vf-tl"></i><i class="vf-corner vf-tr"></i><i class="vf-corner vf-bl"></i><i class="vf-corner vf-br"></i>
+        <div class="hero-reel-frame" aria-hidden="true">
+          <!-- REPLACE: a real UI shot (4:5). This one is rendered from the concept app in the Interface section. -->
+          <div class="reel-frame is-on" data-cue="0"><img src="Assets/site/hero-ui.jpg" alt="" width="1080" height="1350"></div>
+          <!-- REPLACE: a vertical cut of your own reel (stock from Pexels) -->
+          <div class="reel-frame" data-cue="1"><video id="heroVideo" muted loop playsinline preload="none" poster="Assets/site/hero-tall.jpg"></video></div>
+          <div class="reel-frame" data-cue="2"><img src="Assets/Graphics/Creatives/Delusion.jpg" alt="" width="1080" height="1350" loading="lazy"></div>
+          <!-- REPLACE: one of your own photographs (stock from Unsplash) -->
+          <div class="reel-frame" data-cue="3"><img src="Assets/photo/02-portrait.jpg" alt="" loading="lazy"></div>
+          <i class="vf-focus"></i>
+        </div>
+      </div>
+      <div class="hero-reel-bar" role="group" aria-label="Reel controls">
+        <button class="seg is-on" type="button" data-cue="0" aria-current="true"><span class="seg-track"><i></i></span>Interface</button>
+        <button class="seg" type="button" data-cue="1"><span class="seg-track"><i></i></span>The Edit</button>
+        <button class="seg" type="button" data-cue="2"><span class="seg-track"><i></i></span>Print</button>
+        <button class="seg" type="button" data-cue="3"><span class="seg-track"><i></i></span>Darkroom</button>
+        <button class="hero-reel-pause" id="heroReelPause" type="button" aria-label="Pause the reel">
+          <span class="ic ic-pause" data-icon="pause-fill"></span><span class="ic ic-play" data-icon="play-fill"></span>
+        </button>
+      </div>
+    </div>
   </section>
 
-  <div id="categories"></div>
+  <!-- 01 UI design -->
+  <section class="interface" id="interface" data-scene="Interface">
+    <div class="chapter" data-motif="grid" aria-hidden="true">
+      <div class="chapter-frame">
+        <i class="motif motif--grid"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i></i>
+        <div class="chapter-copy">
+          <p class="chapter-kicker"><span>Scene 01</span><span>UI / UX</span></p>
+          <p class="chapter-title">Interface</p>
+          <p class="chapter-sub">Apps and websites, from the first wireframe to the last interaction.</p>
+        </div>
+      </div>
+    </div>
 
-  <section class="contact wrap" id="contact">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Let's work<br>together.</h2>
-    <a class="contact-email" href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a>
+    <div class="interface-pin">
+      <div class="interface-copy">
+        <h2 class="h2">Interfaces, built layer by layer.</h2>
+        <p class="lede">UI design for apps and websites, from the first wireframe to the last interaction.</p>
+        <ol class="stages" id="stageList">
+          <li class="is-active">Wireframe</li>
+          <li>Type</li>
+          <li>Imagery</li>
+          <li>Color</li>
+          <li>Interaction</li>
+        </ol>
+      </div>
+
+      <div class="stage" id="uiStage" aria-label="A music app interface assembling from wireframe to finished design" role="img">
+        <div class="dev-desktop b">
+          <div class="dt-bar b"><i></i><i></i><i></i></div>
+          <div class="dt-body">
+            <aside class="dt-side b">
+              <span class="t t-logo">Tape</span>
+              <span class="dt-nav"><span class="ic" data-icon="house"></span><span class="t">Listen now</span></span>
+              <span class="dt-nav is-on"><span class="ic" data-icon="moon"></span><span class="t">Late night</span></span>
+              <span class="dt-nav"><span class="ic" data-icon="books"></span><span class="t">Library</span></span>
+              <span class="dt-nav"><span class="ic" data-icon="magnifying-glass"></span><span class="t">Search</span></span>
+            </aside>
+            <div class="dt-main">
+              <span class="t t-h">Late night sessions</span>
+              <span class="t t-s">Slow jazz for long edits</span>
+              <div class="dt-grid">
+                <figure class="dt-card"><span class="img b"><img src="Assets/photo/04-city-bokeh.jpg" alt=""></span><span class="t">Velvet hours</span><span class="t t-s">Tape Sessions</span></figure>
+                <figure class="dt-card"><span class="img b"><img src="Assets/photo/08-desk-lamp.jpg" alt=""></span><span class="t">Desk lamp</span><span class="t t-s">Quiet Room</span></figure>
+                <figure class="dt-card"><span class="img b"><img src="Assets/photo/10-window-city.jpg" alt=""></span><span class="t">Window seat</span><span class="t t-s">Blue Hour</span></figure>
+              </div>
+              <div class="dt-player b">
+                <span class="img img--sm b"><img src="Assets/photo/04-city-bokeh.jpg" alt=""></span>
+                <span class="dt-player-meta"><span class="t">Velvet hours</span><span class="t t-s">Tape Sessions</span></span>
+                <span class="bar b"><i class="accent"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-phone b">
+          <span class="img img--art b"><img src="Assets/photo/03-desk-camera.jpg" alt=""></span>
+          <span class="ph-meta">
+            <span class="t t-h">Velvet hours</span>
+            <span class="t t-s">Tape Sessions</span>
+          </span>
+          <span class="bar b"><i class="accent"></i></span>
+          <span class="ph-controls">
+            <span class="ic" data-icon="skip-back-fill"></span>
+            <span class="ph-play accent b"><span class="ic ic-play" data-icon="play-fill"></span><span class="ic ic-pause" data-icon="pause-fill"></span></span>
+            <span class="ic" data-icon="skip-forward-fill"></span>
+          </span>
+          <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+
+        <span class="ui-cursor ic" data-icon="cursor-fill" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="cases wrap">
+      <h3 class="h3">Selected UI projects</h3>
+      <div class="cases-grid" id="cases"></div>
+    </div>
+  </section>
+
+  <!-- 02 Editing -->
+  <section class="edit" id="edit" data-scene="The Edit">
+    <div class="chapter" data-motif="splice" aria-hidden="true">
+      <div class="chapter-frame">
+        <i class="motif motif--splice"><i class="splice-ruler"></i><i class="splice-head"></i></i>
+        <div class="chapter-copy">
+          <p class="chapter-kicker"><span>Scene 02</span><span>Editing</span></p>
+          <p class="chapter-title">The Edit</p>
+          <p class="chapter-sub">Brand films, reels and short films, cut to keep people watching.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="edit-pin">
+      <div class="edit-top wrap">
+        <div class="monitor" id="monitor">
+          <div class="monitor-bg" id="monitorBg"></div>
+          <img class="monitor-img" id="monitorImg" alt="">
+        </div>
+        <div class="edit-info">
+          <h2 class="h2">Cuts that keep people watching.</h2>
+          <div class="clip-info" aria-live="polite">
+            <p class="clip-cat mono" id="clipCat"></p>
+            <p class="clip-title" id="clipTitle"></p>
+            <a class="link-arrow" id="clipLink" href="#" target="_blank" rel="noopener noreferrer">Watch reel <span class="ic" data-icon="arrow-up-right"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl" id="timeline">
+        <div class="tl-labels mono" aria-hidden="true"><span>V2</span><span>V1</span><span>A1</span></div>
+        <div class="tl-viewport">
+          <div class="tl-strip" id="tlStrip">
+            <canvas class="tl-wave" id="tlWave" aria-hidden="true"></canvas>
+          </div>
+          <div class="tl-playhead" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videography -->
+  <section class="rolling" id="rolling" data-scene="Rolling">
+    <div class="reel" id="reel">
+      <video id="reelVideo" playsinline preload="none"></video>
+      <i class="letterbox letterbox--top" aria-hidden="true"></i>
+      <i class="letterbox letterbox--bottom" aria-hidden="true"></i>
+      <div class="reel-overlay" id="reelOverlay">
+        <h2 class="h2 reel-title">Showreel</h2>
+        <button class="play-btn glass" id="reelPlay" type="button" aria-label="Play showreel"><span class="ic" data-icon="play-fill"></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video work, one category at a time -->
+  <section class="work" id="work" data-scene="Every Cut">
+    <div class="wrap">
+      <h2 class="h2">Every cut.</h2>
+      <p class="lede" id="workLede"></p>
+      <div class="bar-row">
+        <div class="chips" id="chips" role="tablist" aria-label="Video categories" data-lenis-prevent-horizontal></div>
+        <div class="rail-nav">
+          <button class="rail-btn" id="railPrev" type="button" aria-label="Scroll back" aria-controls="workRail"><span class="ic" data-icon="caret-left"></span></button>
+          <button class="rail-btn" id="railNext" type="button" aria-label="Scroll forward" aria-controls="workRail"><span class="ic" data-icon="caret-right"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="rail" id="workRail" role="tabpanel" data-lenis-prevent-horizontal></div>
+  </section>
+
+  <!-- 03 Graphics -->
+  <section class="gfx" id="graphics" data-scene="Graphics">
+    <div class="chapter" data-motif="halftone" aria-hidden="true">
+      <div class="chapter-frame">
+        <div class="chapter-copy">
+          <p class="chapter-kicker"><span>Scene 03</span><span>Graphic design</span></p>
+          <p class="chapter-title">Print</p>
+          <p class="chapter-sub">Posters, magazine and book covers, and social creatives.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spotlight: one piece at a time, its neighbours turned away. Pieces and categories come from graphics-data.js. -->
+    <div class="gfx-body">
+      <div class="wrap">
+        <h2 class="h2">Print and pixels.</h2>
+        <p class="lede">Posters, magazine and book covers, and social creatives.</p>
+        <div class="bar-row">
+          <div class="chips" id="gfxChips" role="group" aria-label="Jump to a category" data-lenis-prevent-horizontal></div>
+          <a class="link-arrow" href="graphics.html">Full gallery <span class="ic" data-icon="arrow-right"></span></a>
+        </div>
+      </div>
+      <div class="flow" id="gfxFlow" aria-roledescription="carousel" aria-label="Graphic design. Use the arrow keys to browse." data-lenis-prevent-horizontal>
+        <div class="flow-glow" aria-hidden="true"><i></i><i></i></div>
+        <div class="flow-track" id="gfxTrack"></div>
+      </div>
+      <div class="flow-foot wrap">
+        <p class="flow-cap" aria-live="polite"><span class="flow-title" id="gfxTitle"></span><span class="mono" id="gfxCat"></span></p>
+        <div class="rail-nav">
+          <button class="rail-btn" id="gfxPrev" type="button" aria-label="Previous piece"><span class="ic" data-icon="caret-left"></span></button>
+          <button class="rail-btn" id="gfxNext" type="button" aria-label="Next piece"><span class="ic" data-icon="caret-right"></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Photography -->
+  <section class="darkroom" id="darkroom" data-scene="Darkroom">
+    <div class="chapter" data-motif="film" aria-hidden="true">
+      <div class="chapter-frame">
+        <i class="motif motif--film"><i class="film-strip film-strip--top"></i><i class="film-strip film-strip--bottom"></i></i>
+        <div class="chapter-copy">
+          <p class="chapter-kicker"><span>Scene 04</span><span>Photography</span></p>
+          <p class="chapter-title">Darkroom</p>
+          <p class="chapter-sub">Street, portrait and night photography.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="darkroom-body wrap">
+      <h2 class="h2">Stills, developed slowly.</h2>
+      <p class="lede">Street, portrait and night photography. Circled frames are my picks.</p>
+      <div class="sheet" id="sheet"></div>
+    </div>
+    <div class="loupe" id="loupe" aria-hidden="true"></div>
+  </section>
+
+  <!-- 05 About -->
+  <section class="credits" id="credits" data-scene="Credits">
+    <div class="chapter" data-motif="letterbox" aria-hidden="true">
+      <div class="chapter-frame">
+        <i class="motif motif--letterbox"><i></i><i></i></i>
+        <div class="chapter-copy">
+          <p class="chapter-kicker"><span>Scene 05</span><span>About</span></p>
+          <p class="chapter-title">Credits</p>
+          <p class="chapter-sub">The person behind every frame.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="credits-pin">
+      <figure class="credits-portrait">
+        <!-- REPLACE: your portrait -->
+        <img src="Assets/photo/02-portrait.jpg" alt="Portrait of Hardik Ojha" loading="lazy">
+      </figure>
+      <div class="credits-screen">
+        <div class="credits-roll" id="creditsRoll">
+          <p class="cr-kicker">Directed, designed and edited by</p>
+          <h2 class="cr-name">Hardik Ojha</h2>
+          <p class="cr-bio">I like making things look good, sound good and, most importantly, feel right. These days that means designing interfaces for apps and websites, and still cutting brand films, campaigns, event films and the occasional weird idea.</p>
+
+          <dl class="cr-block">
+            <div><dt>UI and UX design</dt><dd>Hardik Ojha</dd></div>
+            <div><dt>Video editing</dt><dd>Hardik Ojha</dd></div>
+            <div><dt>Cinematography</dt><dd>Hardik Ojha</dd></div>
+            <div><dt>Photography</dt><dd>Hardik Ojha</dd></div>
+            <div><dt>Graphic design</dt><dd>Hardik Ojha</dd></div>
+          </dl>
+
+          <dl class="cr-block">
+            <div><dt>Design tools</dt><dd>Figma, Framer, Adobe XD</dd></div>
+            <div><dt>Edit suite</dt><dd>Premiere Pro, After Effects, DaVinci Resolve</dd></div>
+            <div><dt>Stills</dt><dd>Lightroom, Photoshop, Illustrator</dd></div>
+          </dl>
+
+          <dl class="cr-block">
+            <div><dt>Worked with</dt><dd>Clinics, cafes, salons, schools, real estate and independent film</dd></div>
+          </dl>
+
+          <dl class="cr-block cr-block--small">
+            <div><dt>Music</dt><dd>Mellow Smooth Jazz by Denis-Pavlov-Music, via Pixabay</dd></div>
+            <div><dt>Placeholder footage</dt><dd>Pexels and Unsplash</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact" data-scene="Fade Out">
+    <div class="contact-inner wrap">
+      <h2 class="contact-title">Let's work together.</h2>
+      <div class="contact-mail">
+        <a class="mail-link" id="mailLink" href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a>
+        <button class="copy-btn" id="copyBtn" type="button" aria-label="Copy email address">
+          <span class="ic" data-icon="copy"></span><span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <ul class="socials" id="socials"></ul>
+    </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>&copy; <span id="year"></span> Hardik Ojha</span>
-    <a href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a>
-  </div>
+<footer class="footer wrap">
+  <span>&copy; <span id="year"></span> Hardik Ojha</span>
+  <a href="#open" class="link-arrow">Back to top <span class="ic" data-icon="arrow-up"></span></a>
 </footer>
 
+<!-- Timeline dock: the main navigation -->
+<nav class="dock" id="dock" aria-label="Scenes">
+  <span class="dock-tc mono" id="timecode" aria-hidden="true">00:00:00:00</span>
+  <div class="dock-track" id="dockTrack">
+    <i class="dock-head" id="dockHead" aria-hidden="true"></i>
+  </div>
+</nav>
+
+<div class="sound-prompt" id="soundPrompt" role="dialog" aria-label="Soundtrack" hidden>
+  <p>This site has a soundtrack. Slow jazz, guitar and piano.</p>
+  <div class="sound-prompt-actions">
+    <button class="btn btn--neon btn--sm" id="soundOn" type="button">Play with sound</button>
+    <button class="btn btn--ghost btn--sm" id="soundOff" type="button">Silent</button>
+  </div>
+</div>
+
+<audio id="music" loop preload="none"></audio>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/icons.js"></script>
 <script src="data.js"></script>
-<script src="script.js"></script>
-<script src="nav-fit.js"></script>
+<script src="graphics-data.js"></script>
+<script src="site-data.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/main.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+/* Bakhoor Al Barkaah study: occasion rail, the shop's components at their real sizes, the logo film.
+   Brand plates use the shop's own tokens (css/style.css in the shop) and stay the same in both themes. */
+@font-face { font-family: 'Cormorant Infant'; src: url('../fonts/cormorant-infant-var.woff2') format('woff2'); font-weight: 300 700; font-display: swap; }
+
+.study--bakhoor { --b-forest: #0e2b03; --b-gold: #b78a4a; --b-gold-2: #dbb05f; --b-charcoal: #333333; --b-ink: #1e1e1e; }
+.study--bakhoor .st-cover-frame > img { object-position: 70% 70%; }
+.b-serif { font-family: 'Cormorant Infant', 'Times New Roman', serif; }
+
+/* ---------- Occasions: one card per moment, the way the shop sells it ---------- */
+.occ { margin-top: clamp(8px, 2vw, 24px); }
+.occ-card { width: clamp(260px, 26vw, 380px); margin: 0; }
+.occ-photo { aspect-ratio: 3 / 4; overflow: hidden; background: var(--g900); }
+.occ-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.occ-card:hover .occ-photo img { transform: scale(1.04); }
+.occ-card figcaption { padding-top: 18px; display: grid; gap: 6px; }
+.occ-name { color: var(--white); font-weight: 600; font-size: 17px; letter-spacing: -.01em; }
+.occ-card figcaption p { font-size: 15px; line-height: 1.5; max-width: 34ch; }
+.occ-foot { margin-top: clamp(28px, 3vw, 40px); }
+
+/* ---------- Logo ---------- */
+.b-lockup { display: grid; justify-items: center; gap: 22px; color: var(--b-gold-2); }
+.b-lockup img { width: clamp(96px, 11vw, 150px); height: auto; }
+.b-word { font-family: Inter, sans-serif; font-weight: 700; font-size: clamp(11px, 1vw, 14px); letter-spacing: .14em; text-transform: uppercase; }
+.b-emb { width: 84px; height: auto; }
+.gd-logo--photo img.b-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+.gd-logo--photo::after { content: ''; position: absolute; inset: 0; background: rgb(14 20 8 / .28); }
+.gd-logo--photo .b-emb, .gd-logo--photo figcaption { position: relative; z-index: 1; color: #fff; }
+.gd-logo--photo figcaption { position: absolute; }
+
+/* the 12 second film is gold on white, so it sits on a white plate */
+.b-film { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 0; }
+.b-film video { width: 100%; height: 100%; max-height: 560px; object-fit: cover; background: #fff; }
+.b-film-copy { padding: clamp(24px, 4vw, 56px); display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; border-left: 1px solid #ece7dc; }
+.b-film-copy .st-label { color: #6b6b6b; }
+.b-film-copy p { max-width: 40ch; color: var(--b-charcoal); }
+
+/* ---------- The shop's components, live ---------- */
+.b-btn {
+  display: inline-flex; align-items: center; justify-content: center; width: 160px; padding: 16px 20px;
+  font: 600 14px/1 Inter, sans-serif; letter-spacing: 1.12px; text-transform: uppercase; white-space: nowrap;
+  transition: background-color .35s cubic-bezier(.16, 1, .3, 1), border-color .35s cubic-bezier(.16, 1, .3, 1), transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s cubic-bezier(.16, 1, .3, 1);
+}
+.b-btn--dark { background: var(--b-forest); border: 1px solid var(--b-forest); color: #fff; }
+.b-btn--dark:hover { background: var(--b-gold); border-color: var(--b-gold); box-shadow: 0 10px 24px rgb(0 0 0 / .2); }
+.b-btn--light { background: #fff; color: var(--b-ink); border: 1px solid #fff; }
+.b-btn--light:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgb(0 0 0 / .25); }
+.b-arrow { width: 39px; height: 39px; display: grid; place-items: center; border: 2px solid var(--b-forest); color: var(--b-forest); font-size: 20px; transition: background-color .3s, color .3s; }
+.b-arrow .ic { transition: transform .3s cubic-bezier(.16, 1, .3, 1); }
+.b-arrow:hover { background: var(--b-forest); color: #fff; }
+.b-arrow:hover .ic { transform: translateX(3px); }
+.b-field { display: flex; flex-direction: column; gap: 10px; width: min(100%, 260px); }
+.b-field > span { font: 700 12px/1 Inter, sans-serif; letter-spacing: .6px; text-transform: uppercase; color: var(--b-ink); }
+.b-field input { font: 400 15px Inter, sans-serif; padding: 0 0 10px; border: 0; border-bottom: 1px solid var(--b-forest); border-radius: 0; background: transparent; color: var(--b-ink); transition: border-color .2s; }
+.b-field input::placeholder { color: #6b6b6b; }
+.b-field input:focus { outline: none; border-bottom-color: var(--b-gold); }
+.b-field input:focus-visible { outline: 2px solid var(--b-gold); outline-offset: 4px; }
+.b-qty { display: inline-flex; align-items: center; border: 1px solid #d8d3c8; }
+.b-qty span { width: 40px; height: 40px; display: grid; place-items: center; color: var(--b-forest); font-size: 18px; }
+.b-qty b { width: 48px; height: 40px; display: grid; place-items: center; border-inline: 1px solid #d8d3c8; font-size: 15px; color: var(--b-ink); }
+.b-onphoto { display: inline-flex; padding: 28px 32px; background: #6b5a43 url('../Assets/case-studies/bakhoor/hero.webp') 18% 30% / 260% auto no-repeat; }
+
+@media (max-width: 1024px) {
+  .b-film { grid-template-columns: 1fr; }
+  .b-film video { max-height: 420px; }
+  .b-film-copy { border-left: 0; border-top: 1px solid #ece7dc; }
+}

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FTN World case study - Hardik Ojha</title>
+<meta name="description" content="The brand and website for FTN World, an architecture practice in Uttarakhand: built in the order they would draw a building, with the brand guidelines, screens and revisions.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:title" content="FTN World, a case study by Hardik Ojha">
+<meta property="og:description" content="A practice website for architects in the hills, drawn like a drawing set and built in five steps.">
+<meta property="og:image" content="Assets/case-studies/ftn-world/card.jpg">
+<link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230a0a0b%27/%3E%3Crect x=%277%27 y=%2711%27 width=%2718%27 height=%2710%27 rx=%272%27 fill=%27%232a2a2f%27/%3E%3Crect x=%2715%27 y=%275%27 width=%272.5%27 height=%2722%27 fill=%27%23b4ff39%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/study.css">
+<link rel="stylesheet" href="css/study-ftn.css">
+<script>try{var t=localStorage.getItem('ho-theme');if(t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="no-dock">
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html">Hardik Ojha</a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="index.html#interface" class="is-active">Work</a>
+    <a href="index.html#edit">Video</a>
+    <a href="graphics.html">Graphics</a>
+    <a href="index.html#darkroom">Photos</a>
+    <a href="index.html#credits">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to light mode"><span class="ic ic-moon" data-icon="moon"></span><span class="ic ic-sun" data-icon="sun"></span></button>
+</header>
+
+<main id="main" class="study study--ftn">
+
+  <!-- Title card -->
+  <header class="st-hero wrap">
+    <div class="st-hero-top">
+      <a class="link-arrow" href="index.html#interface"><span class="ic" data-icon="caret-left"></span> All work</a>
+      <nav class="st-series" aria-label="Case studies">
+        <span class="st-label">Case 04 / 05</span>
+        <a href="the-dale.html" aria-label="Previous case study: The Dale"><span class="ic" data-icon="caret-left"></span></a>
+        <a href="evelyn-dew.html" aria-label="Next case study: Evelyn Dew"><span class="ic" data-icon="caret-right"></span></a>
+      </nav>
+    </div>
+    <h1 class="st-title" data-split>FTN World</h1>
+    <div class="st-hero-foot">
+      <div data-intro>
+        <p class="st-sum">A practice website for architects in the hills of Uttarakhand, drawn like a drawing set and built in five steps.</p>
+        <div class="st-hero-cta">
+          <a class="btn btn--neon" href="https://ojhahardik.github.io/FTN/" target="_blank" rel="noopener noreferrer">Open the live preview <span class="ic" data-icon="arrow-up-right"></span></a>
+        </div>
+      </div>
+      <dl class="st-meta" data-intro style="--d:.5s">
+        <div><dt>Client</dt><dd>FTN World, architecture, interiors, landscape and planning, since 2018</dd></div>
+        <div><dt>Role</dt><dd>Brand direction, UI and UX in Figma, front end, enquiry backend</dd></div>
+        <div><dt>Timeline</dt><dd>October 2026, front end live as a preview</dd></div>
+        <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, GSAP, Lenis, PHP, MySQL</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <figure class="st-cover">
+    <div class="st-cover-frame">
+      <img src="Assets/case-studies/ftn-world/screen-hero.jpg" alt="The FTN World home page: a line drawing of a house stepped into a hillside, a title block and the headline Designed for the site you have" width="1440" height="900" fetchpriority="high">
+    </div>
+  </figure>
+
+  <!-- Intro -->
+  <section class="st-sec wrap" aria-labelledby="intro-h">
+    <h2 class="st-label" id="intro-h">Overview</h2>
+    <p class="st-statement" data-words style="margin-top:20px">FTN World says it has designed more than 270 projects across Uttarakhand since 2018. Their first website showed none of them. The new one is built the way they build: survey, grid, structure, detail, planting.</p>
+    <div class="st-intro-grid">
+      <div data-reveal><span class="st-label">The brief</span><p>Replace a theme-demo site with one that shows the work, explains four disciplines in plain words and takes enquiries for hill plots.</p></div>
+      <div data-reveal style="--d:.08s"><span class="st-label">The client</span><p>An architecture, interiors, landscape and planning practice with offices in Haldwani and Dehradun, building mostly on slopes.</p></div>
+      <div data-reveal style="--d:.16s"><span class="st-label">My part</span><p>Brand direction and the logo&rsquo;s respacing, every screen in Figma, the front end, and the PHP and MySQL enquiry backend.</p></div>
+    </div>
+  </section>
+
+  <!-- The old site -->
+  <section class="st-sec wrap" aria-labelledby="old-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="old-h" data-split>What the old site left out.</h2>
+      <p class="st-lede" data-reveal>I read every page of the first website. This is what I found, and what the new one does instead.</p>
+    </div>
+    <div class="gaps-head st-label" aria-hidden="true"><span>On the old site</span><span>On the new one</span></div>
+    <ul class="gaps">
+      <li data-reveal><p class="gap-old">No projects section at all</p><p class="gap-new">A projects chapter with a card for each, ready for real photographs and a short story per project.</p></li>
+      <li data-reveal><p class="gap-old">No real mobile navigation</p><p class="gap-new">A menu on phones, a fixed chapter bar on desktop, and a layout designed at 390 px as carefully as at 1440.</p></li>
+      <li data-reveal><p class="gap-old">Theme demo posts about food and London, still indexed</p><p class="gap-new">One page and two small ones: the estimate and a 404. Nothing left behind.</p></li>
+      <li data-reveal><p class="gap-old">A low-resolution raster logo</p><p class="gap-new">A vector mark outlined from the typeface, so it never waits for a font and scales to any size.</p></li>
+      <li data-reveal><p class="gap-old">Two estimators that disagreed</p><p class="gap-new">One estimate page, linked from the navigation and the footer.</p></li>
+      <li data-reveal><p class="gap-old">Typos, and dates from 2014</p><p class="gap-new">Copy rewritten in plain sentences, in sentence case.</p></li>
+    </ul>
+  </section>
+
+  <!-- The build in five steps -->
+  <section class="st-sec draw" aria-labelledby="draw-h">
+    <div class="wrap st-head">
+      <h2 class="st-h2" id="draw-h" data-split>Built in the order they would draw it.</h2>
+    </div>
+    <div class="wrap draw-pin">
+      <div class="draw-sheet plate">
+        <svg class="f-elev" viewBox="0 0 1200 560" role="img" aria-labelledby="elevTitle">
+                <title id="elevTitle">Line drawing of a two-level house stepped into a hillside, with deodar trees and mountains behind</title>
+                <defs>
+                    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                        <line x1="0" y1="0" x2="0" y2="9" class="hatch-line"/>
+                    </pattern>
+                </defs>
+
+                <g class="fills" data-fills>
+                    <path class="fl-earth" d="M0 520 C110 518 220 512 300 506 V499 H312 V492 H324 V485 H336 V478 H640 V418 H900 C985 400 1085 370 1200 344 V560 H0 Z"/>
+                    <polygon class="fl-wall" points="380,478 380,303 640,281 640,478"/>
+                    <polygon class="fl-wall" points="640,418 640,245 900,215 900,418"/>
+                    <polygon class="fl-roof" points="366,296 640,272 640,280 366,304"/>
+                    <polygon class="fl-roof" points="632,238 912,206 912,214 632,246"/>
+                    <rect class="fl-glass" x="396" y="404" width="132" height="74"/>
+                    <rect class="fl-glass" x="396" y="316" width="228" height="52"/>
+                                            <rect class="fl-glass" x="664" y="340" width="32" height="66"/>
+                        <rect class="fl-glass" x="664" y="256" width="32" height="58"/>
+                                            <rect class="fl-glass" x="724" y="340" width="32" height="66"/>
+                        <rect class="fl-glass" x="724" y="256" width="32" height="58"/>
+                                            <rect class="fl-glass" x="784" y="340" width="32" height="66"/>
+                        <rect class="fl-glass" x="784" y="256" width="32" height="58"/>
+                                            <rect class="fl-glass" x="844" y="340" width="32" height="66"/>
+                        <rect class="fl-glass" x="844" y="256" width="32" height="58"/>
+                                        <rect class="fl-door" x="556" y="410" width="44" height="68"/>
+                </g>
+
+                <g class="lines">
+                    <g data-step="0">
+                        <polyline class="ln ln-faint" points="0,250 90,214 150,232 240,168 310,204 400,150 470,190 560,118 640,174 720,138 800,184 880,128 960,178 1040,148 1120,194 1200,168"/>
+                        <path class="ln ln-ground" d="M0 520 C110 518 220 512 300 506 V499 H312 V492 H324 V485 H336 V478 H640 V418 H900 C985 400 1085 370 1200 344"/>
+                    </g>
+                    <g data-step="1">
+                        <path class="ln ln-dim ln-dash" d="M380 52 V500 M640 52 V500 M900 52 V500"/>
+                        <circle class="ln ln-dim" cx="380" cy="40" r="11"/>
+                        <circle class="ln ln-dim" cx="640" cy="40" r="11"/>
+                        <circle class="ln ln-dim" cx="900" cy="40" r="11"/>
+                        <path class="ln ln-dim" d="M380 540 H900 M380 532 V548 M640 532 V548 M900 532 V548 M375 545 L385 535 M635 545 L645 535 M895 545 L905 535"/>
+                        <path class="ln ln-dash" d="M360 494 H640 M640 434 H900"/>
+                    </g>
+                    <g data-step="2">
+                        <path class="ln" d="M380 478 V303 M640 478 V245 M900 418 V215 M380 388 H640 M640 328 H900"/>
+                        <path class="ln" d="M366 304 L640 280 M366 296 L640 272 M366 296 V304 M632 246 L912 214 M632 238 L912 206 M912 206 V214 M632 238 V246"/>
+                    </g>
+                    <g data-step="3">
+                        <path class="ln" d="M396 404 H528 V478 M396 404 V478 M429 404 V478 M462 404 V478 M495 404 V478"/>
+                        <path class="ln" d="M396 316 H624 V368 H396 Z M453 316 V368 M510 316 V368 M567 316 V368"/>
+                        <path class="ln" d="M556 478 V410 H600 V478 M592 444 H596"/>
+                        <path class="ln" d="M340 388 H380 M340 394 H380 M340 388 V362 H380 M350 388 V362 M360 388 V362 M370 388 V362"/>
+                                                    <path class="ln" d="M664 340 h32 v66 h-32 Z M664 256 h32 v58 h-32 Z"/>
+                                                    <path class="ln" d="M724 340 h32 v66 h-32 Z M724 256 h32 v58 h-32 Z"/>
+                                                    <path class="ln" d="M784 340 h32 v66 h-32 Z M784 256 h32 v58 h-32 Z"/>
+                                                    <path class="ln" d="M844 340 h32 v66 h-32 Z M844 256 h32 v58 h-32 Z"/>
+                                                <path class="ln" d="M920 418 V360 M992 418 V360 M910 360 H1002 M916 354 V360 M928 354 V360 M940 354 V360 M952 354 V360 M964 354 V360 M976 354 V360 M988 354 V360 M1000 354 V360"/>
+                    </g>
+                    <g data-step="4">
+                        <path class="ln" d="M110 519 V387 M76 479 L110 427 L144 479 M84 447 L110 401 L136 447 M93 419 L110 377 L127 419"/>
+                        <path class="ln" d="M178 516 V407.8 M150.1 483.2 L178 440.6 L205.9 483.2 M156.7 457 L178 419.2 L199.3 457 M164.1 434 L178 399.6 L191.9 434"/>
+                        <path class="ln" d="M1080 386 V254 M1046 346 L1080 294 L1114 346 M1054 314 L1080 268 L1106 314 M1063 286 L1080 244 L1097 286"/>
+                        <path class="ln" d="M1150 362 V248.5 M1120.8 327.6 L1150 282.9 L1179.2 327.6 M1127.6 300.1 L1150 260.5 L1172.4 300.1 M1135.4 276 L1150 239.9 L1164.6 276"/>
+                        <path class="ln ln-dim" d="M262 472 L270 478 L278 472 Z M262 382 L270 388 L278 382 Z M262 292 L270 298 L278 292 Z M278 478 H372 M278 388 H334 M278 298 H372"/>
+                    </g>
+                </g>
+
+                <g class="labels" data-labels>
+                    <text x="380" y="44" class="lb lb-c">A</text>
+                    <text x="640" y="44" class="lb lb-c">B</text>
+                    <text x="900" y="44" class="lb lb-c">C</text>
+                    <text x="230" y="474" class="lb">+0.00</text>
+                    <text x="230" y="384" class="lb">+3.00</text>
+                    <text x="230" y="294" class="lb">+6.00</text>
+                    <text x="510" y="532" class="lb lb-c">8.65</text>
+                    <text x="770" y="532" class="lb lb-c">8.65</text>
+                </g>
+            </svg>
+        <ol class="draw-log" id="drawLog" aria-hidden="true">
+          <li>Survey the site</li>
+          <li>Set out the grid</li>
+          <li>Raise the structure</li>
+          <li>Detail the openings</li>
+          <li>Plant the trees</li>
+        </ol>
+      </div>
+      <div class="draw-steps">
+        <article class="draw-step is-on">
+          <p class="st-label">Survey the site</p>
+          <p>I crawled the whole old site and wrote it up: its pages, its story, and the catalogue behind its fee estimator. That gave 98 drawing types, 19 building types and a table of locations to design around.</p>
+        </article>
+        <article class="draw-step">
+          <p class="st-label">Set out the grid</p>
+          <p>Before any page, a brand sheet. Type, colour, square corners and one red were settled, and the logo was respaced so F, T and N sit an equal distance apart.</p>
+        </article>
+        <article class="draw-step">
+          <p class="st-label">Raise the structure</p>
+          <p>One long page in chapters: studio, projects, services, hill sites, process, contact. A chapter bar replaces the top bar once you are past the hero, so there is only ever one navigation on screen.</p>
+        </article>
+        <article class="draw-step">
+          <p class="st-label">Detail the openings</p>
+          <p>Every part became a Figma component first: navigation cells, buttons, service rows open and closed, process steps, form fields in four states. Edits in Figma were read back into the code, so the two stayed the same drawing.</p>
+        </article>
+        <article class="draw-step">
+          <p class="st-label">Plant the trees</p>
+          <p>Light and dark modes, spacing that scales with the screen, a pass from 320 to 1920 px, and a still page for anyone who asks for less motion. Then a public preview, with the backend kept out.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand guidelines -->
+  <section class="st-sec wrap" aria-labelledby="guide-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="guide-h" data-split>Brand guidelines.</h2>
+      <p class="st-lede" data-reveal>The colours come from a drafting table: a grey like tracing paper, ink for the lines, and one red, named Buransh after the rhododendron that is Uttarakhand&rsquo;s state tree, for the one thing on each screen that matters.</p>
+    </div>
+
+    <dl class="gd-quick" data-reveal>
+      <div><dt>Accent</dt><dd><i class="gd-dot" style="--c:#bd3420"></i>Buransh #BD3420</dd></div>
+      <div><dt>Ground</dt><dd><i class="gd-dot" style="--c:#eef0f2"></i>Tracing #EEF0F2</dd></div>
+      <div><dt>Display</dt><dd>Urbanist 700 and 800</dd></div>
+      <div><dt>Text</dt><dd>Geist</dd></div>
+    </dl>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Logo</span>
+        <h3 class="st-h3">Three letters, one even word.</h3>
+        <p>The first logo had a 24 unit gap between F and T and a 74 unit gap between T and N. Both are now 49, so the letters read as one word. The mark is outlined to SVG, so it never waits for a font.</p>
+      </div>
+      <div class="gd-main gd-logos">
+        <figure class="gd-logo gd-logo--wide plate" style="--pb:#eef0f2;--pi:#151b2e" data-reveal><span class="f-logo-word" role="img" aria-label="FTN World logo in ink on tracing paper grey"></span><figcaption>Primary, ink on tracing</figcaption></figure>
+        <figure class="gd-logo plate" style="--pb:#0d1120;--pi:#e9ecf1" data-reveal><span class="f-logo-word" style="width:min(86%,300px)" role="img" aria-label="FTN World logo in mist on night"></span><figcaption>Night, for the dark mode</figcaption></figure>
+        <figure class="gd-logo plate" style="--pb:#ffffff;--pi:#151b2e;--d:.06s" data-reveal>
+          <svg class="f-gap" viewBox="-20 -900 1824 960" role="img" aria-label="The letters F T N with two equal gaps of 49 units marked in red">
+            <rect class="gp" x="445" y="-735" width="49" height="770"/>
+            <rect class="gp" x="1080" y="-735" width="49" height="770"/>
+            <path class="mk" d="M0 -700H445V-535H186V-416H435V-263H186V0H0Z"/>
+            <path class="mk" d="M494 -527H690V0H884V-527H1080V-700H494Z"/>
+            <path class="mk" d="M1598 -700V-344L1129 -735V0H1315V-356L1784 35V-700Z"/>
+            <path class="gl" d="M445 -800V-760M494 -800V-760M445 -780H494M1080 -800V-760M1129 -800V-760M1080 -780H1129"/>
+            <text x="469.5" y="-820">49</text><text x="1104.5" y="-820">49</text>
+          </svg>
+          <figcaption>Equal gaps, in font units</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Colour</span>
+        <h3 class="st-h3">Tracing paper, ink and one red.</h3>
+        <p>Eight tokens from the site&rsquo;s stylesheet. The red lightens to Buransh Lite on the night sheet so it keeps its contrast. Select a value to copy it.</p>
+      </div>
+      <div class="gd-main">
+        <ul class="gd-swatches" style="--n:4">
+          <li class="gd-sw" data-reveal><span class="gd-chip" style="--c:#eef0f2;--k:#151b2e">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Tracing</span><button class="gd-hex" type="button" data-copy="#EEF0F2" aria-label="Copy #EEF0F2"><span class="gd-hex-t">#EEF0F2</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 238 240 242</span><span class="gd-use">Ground</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.04s"><span class="gd-chip" style="--c:#e2e6eb;--k:#151b2e">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Tracing 2</span><button class="gd-hex" type="button" data-copy="#E2E6EB" aria-label="Copy #E2E6EB"><span class="gd-hex-t">#E2E6EB</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 226 230 235</span><span class="gd-use">Raised panels</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.08s"><span class="gd-chip" style="--c:#c5cbd6;--k:#151b2e">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Contour</span><button class="gd-hex" type="button" data-copy="#C5CBD6" aria-label="Copy #C5CBD6"><span class="gd-hex-t">#C5CBD6</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 197 203 214</span><span class="gd-use">Rules and grid lines</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.12s"><span class="gd-chip" style="--c:#596379;--k:#eef0f2">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Slate</span><button class="gd-hex" type="button" data-copy="#596379" aria-label="Copy #596379"><span class="gd-hex-t">#596379</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 89 99 121</span><span class="gd-use">Muted text</span></span></li>
+          <li class="gd-sw" data-reveal><span class="gd-chip" style="--c:#151b2e;--k:#eef0f2">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Ink</span><button class="gd-hex" type="button" data-copy="#151B2E" aria-label="Copy #151B2E"><span class="gd-hex-t">#151B2E</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 21 27 46</span><span class="gd-use">Text and lines</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.04s"><span class="gd-chip" style="--c:#0d1120;--k:#e9ecf1">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Night</span><button class="gd-hex" type="button" data-copy="#0D1120" aria-label="Copy #0D1120"><span class="gd-hex-t">#0D1120</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 13 17 32</span><span class="gd-use">Dark ground, footer</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.08s"><span class="gd-chip" style="--c:#bd3420;--k:#f7f8fa">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Buransh</span><button class="gd-hex" type="button" data-copy="#BD3420" aria-label="Copy #BD3420"><span class="gd-hex-t">#BD3420</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 189 52 32</span><span class="gd-use">The only accent</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.12s"><span class="gd-chip" style="--c:#e8553b;--k:#0d1120">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Buransh Lite</span><button class="gd-hex" type="button" data-copy="#E8553B" aria-label="Copy #E8553B"><span class="gd-hex-t">#E8553B</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 232 85 59</span><span class="gd-use">The accent on night</span></span></li>
+        </ul>
+        <div class="gd-pairs" data-reveal>
+          <p class="gd-pair plate" style="--pb:#eef0f2;--pi:#151b2e"><b>Aa</b><span>Ink on tracing<br>15.0 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#0d1120;--pi:#e9ecf1"><b>Aa</b><span>Mist on night<br>15.9 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#eef0f2;--pi:#bd3420"><b>Aa</b><span>Buransh on tracing<br>5.0 : 1, AA</span></p>
+          <p class="gd-pair plate" style="--pb:#0d1120;--pi:#e8553b"><b>Aa</b><span>Lite on night<br>5.2 : 1, AA</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Type</span>
+        <h3 class="st-h3">Geometric, tight and heavy.</h3>
+        <p>Urbanist at 700 and 800 with tight spacing, like lettering on a title block. Geist for text and for the small spaced labels on the chapter bar.</p>
+      </div>
+      <div class="gd-main">
+        <div class="gd-faces">
+          <div class="gd-face plate" style="--pb:#eef0f2;--pi:#151b2e" data-reveal>
+            <p class="gd-face-top"><span>Display</span><span>600, 700, 800</span></p>
+            <p class="gd-aa f-display" style="font-weight:800;letter-spacing:-.05em" aria-hidden="true">Aa</p>
+            <div>
+              <p class="gd-face-name f-display" style="font-weight:700">Urbanist</p>
+              <p class="gd-glyphs f-display" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
+            </div>
+          </div>
+          <div class="gd-face plate" style="--pb:#0d1120;--pi:#e9ecf1;--d:.06s" data-reveal>
+            <p class="gd-face-top"><span>Text and labels</span><span>400, 500, 600</span></p>
+            <p class="gd-aa f-text" style="font-weight:500;letter-spacing:-.04em" aria-hidden="true">Aa</p>
+            <div>
+              <p class="gd-face-name f-text" style="font-weight:600">Geist</p>
+              <p class="gd-glyphs f-text" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
+            </div>
+          </div>
+        </div>
+        <div class="gd-scale plate" style="--pb:#eef0f2;--pi:#151b2e;--pl:#c5cbd6" data-reveal>
+          <div class="gd-row"><span class="gd-role">Hero title</span><span class="gd-sample f-display" style="font-size:clamp(38px,5vw,76px);line-height:.9;font-weight:800;letter-spacing:-.035em;text-transform:uppercase">Designed for the site you have</span><span class="gd-spec">Urbanist 800, capitals<br>40 to 90 px, line 0.9, &minus;0.035 em</span></div>
+          <div class="gd-row"><span class="gd-role">Section title</span><span class="gd-sample f-display" style="font-size:clamp(36px,4.8vw,72px);line-height:.92;font-weight:800;letter-spacing:-.04em">Four disciplines, one drawing set.</span><span class="gd-spec">Urbanist 800<br>42 to 93 px, line 0.92, &minus;0.04 em</span></div>
+          <div class="gd-row"><span class="gd-role">Service</span><span class="gd-sample f-display" style="font-size:clamp(30px,4vw,60px);line-height:1;font-weight:700;letter-spacing:-.035em;color:#bd3420">Architecture</span><span class="gd-spec">Urbanist 700<br>32 to 67 px, line 1.0, &minus;0.035 em</span></div>
+          <div class="gd-row"><span class="gd-role">Statement</span><span class="gd-sample f-display" style="font-size:clamp(22px,2.8vw,40px);line-height:1.1;font-weight:600;letter-spacing:-.025em">Every design still starts the same way: with the slope, the soil, the light and the people who will live there.</span><span class="gd-spec">Urbanist 600<br>30 to 58 px, line 1.1, &minus;0.025 em</span></div>
+          <div class="gd-row"><span class="gd-role">Body</span><span class="gd-sample f-text" style="font-size:16px;line-height:1.6">Master plans and site infrastructure for plotted, gated and resort developments.</span><span class="gd-spec">Geist 400<br>16 px, line 1.6</span></div>
+          <div class="gd-row"><span class="gd-role">Chapter label</span><span class="gd-sample f-text" style="font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#596379">Studio &nbsp; Projects &nbsp; Services &nbsp; Hill sites</span><span class="gd-spec">Geist 500, capitals<br>11.5 to 12 px, +0.06 em</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Components</span>
+        <h3 class="st-h3">Square corners, one red per screen.</h3>
+        <p>Built as Figma components first. The service row below opens the way it does on the site: one at a time.</p>
+      </div>
+      <div class="gd-main f-parts">
+        <div class="plate plate--pad" style="--pb:#eef0f2;--pi:#151b2e" data-reveal aria-hidden="true">
+          <span class="f-btn f-btn--dark">Get an estimate <span class="ic" data-icon="arrow-right"></span></span>
+          <span class="f-cells"><span>Studio</span><span>Projects</span><span class="is-on">Services</span><span>Hill sites</span></span>
+        </div>
+        <div class="plate plate--pad" style="--pb:#0d1120;--pi:#e9ecf1;--d:.06s" data-reveal aria-hidden="true">
+          <span class="f-btn f-btn--light">Send enquiry <span class="ic" data-icon="arrow-right"></span></span>
+        </div>
+        <div class="f-svc plate plate--pad" style="--pb:#eef0f2;--pi:#151b2e" data-reveal>
+          <details name="svc">
+            <summary><span class="f-svc-name">Planning</span><span class="f-svc-d">Master plans and site infrastructure for plotted, gated and resort developments.</span><span class="f-svc-n">26 drawing types</span><span class="f-svc-x" aria-hidden="true">+</span></summary>
+            <ul><li>Master plan with layout</li><li>Zonation plan</li><li>Site drainage scheme</li><li>Rain water harvesting</li></ul>
+          </details>
+          <details name="svc" open>
+            <summary><span class="f-svc-name">Architecture</span><span class="f-svc-d">From concept to the drawings your contractor builds from.</span><span class="f-svc-n">37 drawing types</span><span class="f-svc-x" aria-hidden="true">+</span></summary>
+            <ul><li>Floor plans and elevations</li><li>Structure with bar bending schedules</li><li>Door and window schedules</li><li>Municipal sanction drawings</li></ul>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drawing set picker -->
+  <section class="st-sec wrap set" aria-labelledby="set-h">
+    <div>
+      <h2 class="st-h2" id="set-h" data-split>Ninety-eight drawing types, four disciplines.</h2>
+      <p class="st-lede" data-reveal>The services chapter is built from the practice&rsquo;s own catalogue, so the same list is here. Pick a discipline: each tick is one type of drawing, and the red ones are marked essential.</p>
+    </div>
+    <div class="set-ui plate plate--pad" data-reveal style="--d:.08s">
+      <div class="set-tabs" role="tablist" aria-label="Disciplines">
+        <button type="button" role="tab" aria-selected="true" aria-controls="setList" data-k="planning">Planning <span>26</span></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="setList" data-k="architecture">Architecture <span>37</span></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="setList" data-k="interiors">Interiors <span>28</span></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="setList" data-k="landscape">Landscape <span>7</span></button>
+      </div>
+      <div class="set-ticks" id="ticks" aria-hidden="true"></div>
+      <p class="set-sum" id="setSum" aria-live="polite"></p>
+      <ol class="set-list" id="setList" role="tabpanel" tabindex="0" aria-label="Drawing types"></ol>
+    </div>
+  </section>
+
+  <!-- Screens -->
+  <section class="st-sec wrap" aria-labelledby="el-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="el-h" data-split>The site, sheet by sheet.</h2>
+      <p class="st-lede" data-reveal>Six screens from the preview at 1440 px, and four at 390.</p>
+    </div>
+    <div class="els">
+      <figure class="el el--wide" data-reveal><div class="plate" style="--pb:#e2e6eb"><img class="shot" src="Assets/case-studies/ftn-world/screen-services.jpg" alt="Services chapter: Planning, Architecture and Interiors as large rows, with Architecture open to show its drawing types" width="1440" height="900" loading="lazy"></div><figcaption><b>Services.</b><span>Four disciplines as four rows. One opens at a time, so the page stays short.</span><span class="mono">1440 &times; 900</span></figcaption></figure>
+      <figure class="el" data-reveal><div class="plate" style="--pb:#e2e6eb"><img class="shot" src="Assets/case-studies/ftn-world/screen-process.jpg" alt="Process chapter: four steps, Survey, Design, Detail and Supervise, joined by a ruled line with red markers" width="1440" height="900" loading="lazy"></div><figcaption><b>Process.</b><span>The rule draws as you scroll, and each step lights when the line reaches it.</span></figcaption></figure>
+      <figure class="el" data-reveal style="--d:.06s"><div class="plate" style="--pb:#161c2f"><img class="shot" src="Assets/case-studies/ftn-world/screen-enquiry.jpg" alt="Footer on a dark ground: the headline Have a plot in the hills, and a short enquiry form" width="1440" height="900" loading="lazy"></div><figcaption><b>Enquiry.</b><span>Name, phone, village, plot area, and what you plan to build.</span></figcaption></figure>
+      <figure class="el" data-reveal><div class="plate" style="--pb:#e2e6eb"><img class="shot" src="Assets/case-studies/ftn-world/screen-estimate.jpg" alt="The estimate page, with the practice's fee estimator embedded below the title" width="1440" height="900" loading="lazy"></div><figcaption><b>Estimate.</b><span>The fee estimator, embedded inside the site&rsquo;s own frame.</span></figcaption></figure>
+      <figure class="el" data-reveal style="--d:.06s"><div class="plate" style="--pb:#e2e6eb"><img class="shot" src="Assets/case-studies/ftn-world/screen-404.jpg" alt="404 page: This page is not on the drawing, with a button back to the home page" width="1440" height="900" loading="lazy"></div><figcaption><b>404.</b><span>&ldquo;This page is not on the drawing.&rdquo; Same voice, a way back.</span></figcaption></figure>
+      <figure class="el el--wide" data-reveal><div class="plate" style="--pb:#161c2f"><img class="shot" src="Assets/case-studies/ftn-world/screen-hero-night.jpg" alt="The home page hero in dark mode, white lines on deep navy, the ground line and door in orange-red" width="1440" height="900" loading="lazy"></div><figcaption><b>Night sheet.</b><span>The same drawing in dark mode. The site starts in your device&rsquo;s setting and remembers your choice.</span><span class="mono">1440 &times; 900</span></figcaption></figure>
+    </div>
+    <div class="st-phones st-sec" style="padding-top:clamp(56px,7vw,96px)">
+      <figure class="st-phone" data-speed="0.4"><div class="st-phone-frame"><img src="Assets/case-studies/ftn-world/phone-hero.jpg" alt="Home page on a phone: the drawing, its title block and the headline" width="780" height="1688" loading="lazy"></div><figcaption>Hero</figcaption></figure>
+      <figure class="st-phone" data-speed="-0.5"><div class="st-phone-frame"><img src="Assets/case-studies/ftn-world/phone-studio.jpg" alt="Studio statement and four numbers on a phone" width="780" height="1688" loading="lazy"></div><figcaption>Studio</figcaption></figure>
+      <figure class="st-phone" data-speed="0.6"><div class="st-phone-frame"><img src="Assets/case-studies/ftn-world/phone-services.jpg" alt="Services as stacked rows on a phone" width="780" height="1688" loading="lazy"></div><figcaption>Services</figcaption></figure>
+      <figure class="st-phone" data-speed="-0.3"><div class="st-phone-frame"><img src="Assets/case-studies/ftn-world/phone-process.jpg" alt="Process steps stacked down a phone with red markers" width="780" height="1688" loading="lazy"></div><figcaption>Process</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Revisions -->
+  <section class="st-sec wrap" aria-labelledby="rev-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="rev-h" data-split>Revisions.</h2>
+      <p class="st-lede" data-reveal>The task list kept for this project records each change, in order. This is the part that shaped the build.</p>
+    </div>
+    <div class="st-log">
+      <div class="st-log-group">
+        <h3>Survey and system<small>14 and 15 October</small></h3>
+        <ol>
+          <li><time datetime="2026-10-14">14 Oct</time><p>Old site crawled and written up. Brand guidelines drafted. Type moved from a wide grotesque to a geometric one, which suits an architectural practice better.</p></li>
+          <li style="--d:.06s"><time datetime="2026-10-15">15 Oct</time><p>A PHP framework was tried and dropped. The practice&rsquo;s hosting runs only PHP and MySQL, so the front end became plain HTML, CSS and JavaScript, with plain PHP behind it.</p></li>
+          <li style="--d:.12s"><time datetime="2026-10-15">15 Oct</time><p>Light and dark modes added. Components, logos and the whole light-mode interface built in Figma.</p></li>
+        </ol>
+      </div>
+      <div class="st-log-group">
+        <h3>Detail and preview<small>16 October</small></h3>
+        <ol>
+          <li><time datetime="2026-10-16">16 Oct</time><p>Figma edits applied to the site: hero cells, a menu on every page, spacing that scales with the screen width.</p></li>
+          <li style="--d:.06s"><time datetime="2026-10-16">16 Oct</time><p>The F in the logo redrawn as one outline. The loading animation traces the letters, and three overlapping rectangles had left visible seams.</p></li>
+          <li style="--d:.12s"><time datetime="2026-10-16">16 Oct</time><p>Scroll timing tuned. One navigation bar at a time. Services made an accordion. The process section holds the screen until its last step is lit.</p></li>
+          <li style="--d:.18s"><time datetime="2026-10-16">16 Oct</time><p>Front end published as a preview for the team, with the backend kept out of the public repository.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Status and next -->
+  <section class="st-sec wrap st-close" aria-labelledby="close-h">
+    <div data-reveal>
+      <h2 class="st-h3" id="close-h">Where it stands</h2>
+      <div class="st-body">
+        <p>The front end is live as a preview. The photographs and sample projects on it are stand-ins, and the page says so. The enquiry backend is written for the practice&rsquo;s hosting and waits to be connected.</p>
+      </div>
+    </div>
+    <div data-reveal style="--d:.08s">
+      <h2 class="st-h3">What comes next</h2>
+      <dl class="st-next-list">
+        <div><dt>Real project photographs</dt><dd>The biggest gap. Eight to fifteen real projects, each with a place, a year, an area and a short story.</dd></div>
+        <div><dt>Connect the enquiry form</dt><dd>The preview form says it is not connected. The live one will store each enquiry and email the practice.</dd></div>
+        <div><dt>One estimator</dt><dd>Decide whether the fee estimator stays embedded or is rebuilt inside the site&rsquo;s own design.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="st-contact wrap" aria-labelledby="end-h">
+    <h2 class="contact-title" id="end-h" data-split>Need a site that holds to scale?</h2>
+    <p class="lede" data-reveal>I design and build websites for practices that care about being exact.</p>
+    <div class="contact-mail" data-reveal><a class="mail-link" href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a></div>
+  </section>
+
+  <!-- Next case -->
+  <a class="st-nextcase" href="evelyn-dew.html">
+    <img src="Assets/case-studies/evelyn-dew/card.jpg" alt="" width="1400" height="788" loading="lazy">
+    <span class="st-nextcase-in wrap">
+      <span><span class="st-label">Next case</span><span class="st-nextcase-name">Evelyn Dew</span></span>
+      <span class="st-nextcase-go"><span class="ic" data-icon="arrow-right"></span></span>
+    </span>
+  </a>
+</main>
+
+<footer class="footer wrap">
+  <span>&copy; <span id="year"></span> Hardik Ojha</span>
+  <a href="#main" class="link-arrow">Back to top <span class="ic" data-icon="arrow-up"></span></a>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/study.js"></script>
+<script src="js/study-ftn-data.js"></script>
+<script src="js/study-ftn.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* The Dale mark: wipe plates (photograph against the mark drawn over it), explorations, anatomy.
+   Plates keep The Dale's mist and deodar in both themes. */
+@font-face { font-family: 'Cormorant Garamond'; src: url('../fonts/cormorant-garamond-var.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+
+.study--mark { --d-mist: #edf3f8; --d-deodar: #2f4a3a; --d-ink: #16231d; --d-ink-2: #4a5a52; --d-geru: #a3341f; }
+.mk-cover { --pb: var(--d-deodar); --pi: var(--d-mist); position: absolute; inset: 0; display: grid; place-items: center; }
+.mk-cover .d-lockup { width: min(56%, 620px); }
+.d-lockup { display: block; width: min(70%, 380px); aspect-ratio: 1003.24 / 408.5; background: currentColor; -webkit-mask: url('../Assets/case-studies/the-dale-logo/the-dale-lockup-short.svg') center / contain no-repeat; mask: url('../Assets/case-studies/the-dale-logo/the-dale-lockup-short.svg') center / contain no-repeat; }
+.d-emb { display: block; width: var(--s); aspect-ratio: 399 / 220; background: currentColor; -webkit-mask: url('../Assets/case-studies/the-dale-logo/the-dale-emblem.svg') center / contain no-repeat; mask: url('../Assets/case-studies/the-dale-logo/the-dale-emblem.svg') center / contain no-repeat; }
+
+/* ---------- Wipe: drag across a photograph to lay the mark over it ---------- */
+.ba { position: relative; display: grid; gap: 14px; margin: 0; }
+.ba--tall { width: 100%; max-width: 500px; justify-self: center; }
+.ba-stage { display: grid; overflow: hidden; background: var(--g900); }
+.ba-stage > * { grid-area: 1 / 1; }
+.ba-stage img { width: 100%; height: auto; }
+.ba-b { clip-path: inset(0 0 0 var(--pos)); }
+.ba-line { position: relative; pointer-events: none; }
+.ba-line i { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--neon); }
+.ba-line i::after { content: ''; position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 999px; background: var(--neon); box-shadow: 0 8px 24px rgb(0 0 0 / .4); }
+.ba-line i::before { content: ''; position: absolute; z-index: 1; top: 50%; left: 50%; width: 14px; height: 8px; margin: -4px 0 0 -7px; border-inline: 2px solid #0a0a0b; }
+.ba-range { width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; }
+.ba:has(.ba-range:focus-visible) .ba-stage { outline: 2px solid var(--neon); outline-offset: 3px; }
+.ba figcaption { font-size: 14px; color: var(--g400); max-width: 56ch; }
+
+/* ---------- Explorations ---------- */
+.tries { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px); align-items: start; }
+.try { margin: 0; }
+.try-img { aspect-ratio: 1; overflow: hidden; display: grid; place-items: center; background: #0f2a1d; }
+.try-img img { width: 100%; height: 100%; object-fit: cover; }
+.try-img--wide img { height: auto; object-fit: contain; }
+.try h3 { margin-top: 16px; }
+.try p { margin-top: 6px; font-size: 15px; }
+
+/* ---------- Anatomy ---------- */
+.an { width: 100%; height: auto; }
+.an .mk { fill: var(--d-deodar); }
+.an .lead { stroke: var(--d-geru); stroke-width: 1.2; fill: none; }
+.an .dotm { fill: var(--d-geru); }
+.an text { font: 500 15px Inter, sans-serif; fill: var(--d-ink-2); }
+.an-legend { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.an-legend li { padding-top: 14px; border-top: var(--hair); font-size: 15px; }
+.an-legend b { display: block; color: var(--white); font-weight: 600; margin-bottom: 4px; }
+
+.credits { font-size: 15px; }
+.credits ul { margin-top: 10px; display: grid; gap: 6px; }
+.credits a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--g500); }
+.credits a:hover { text-decoration-color: var(--neon); }
+
+@media (max-width: 1024px) {
+  .tries { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .an-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .an text, .an .lead, .an .dotm { display: none; }
+  .an-legend { grid-template-columns: 1fr; }
+}

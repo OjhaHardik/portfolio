@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aafreenn case study - Hardik Ojha</title>
+<meta name="description" content="Designing and building aafreenn.in, a made-to-order store for handmade Indian suits: research, decisions, brand guidelines, key screens and what changed after launch.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:title" content="Aafreenn, a case study by Hardik Ojha">
+<meta property="og:description" content="A made-to-order store for handmade Indian suits, cut to the buyer's height.">
+<meta property="og:image" content="Assets/case-studies/aafreenn/photo-courtyard.jpg">
+<link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230a0a0b%27/%3E%3Crect x=%277%27 y=%2711%27 width=%2718%27 height=%2710%27 rx=%272%27 fill=%27%232a2a2f%27/%3E%3Crect x=%2715%27 y=%275%27 width=%272.5%27 height=%2722%27 fill=%27%23b4ff39%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/study.css">
+<link rel="stylesheet" href="css/study-aafreenn.css">
+<script>try{var t=localStorage.getItem('ho-theme');if(t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="no-dock">
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html">Hardik Ojha</a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="index.html#interface" class="is-active">Work</a>
+    <a href="index.html#edit">Video</a>
+    <a href="graphics.html">Graphics</a>
+    <a href="index.html#darkroom">Photos</a>
+    <a href="index.html#credits">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to light mode"><span class="ic ic-moon" data-icon="moon"></span><span class="ic ic-sun" data-icon="sun"></span></button>
+</header>
+
+<main id="main" class="study study--aafreenn">
+
+  <!-- Title card -->
+  <header class="st-hero wrap">
+    <div class="st-hero-top">
+      <a class="link-arrow" href="index.html#interface"><span class="ic" data-icon="caret-left"></span> All work</a>
+      <nav class="st-series" aria-label="Case studies">
+        <span class="st-label">Case 01 / 05</span>
+        <a href="evelyn-dew.html" aria-label="Previous case study: Evelyn Dew"><span class="ic" data-icon="caret-left"></span></a>
+        <a href="bakhoor-al-barkaah.html" aria-label="Next case study: Bakhoor Al Barkaah"><span class="ic" data-icon="caret-right"></span></a>
+      </nav>
+    </div>
+    <h1 class="st-title" data-split>Aafreenn</h1>
+    <div class="st-hero-foot">
+      <div data-intro>
+        <p class="st-sum">A made-to-order store for handmade Indian suits, cut to the buyer&rsquo;s height.</p>
+        <div class="st-hero-cta">
+          <a class="btn btn--neon" href="https://aafreenn.in" target="_blank" rel="noopener noreferrer">Visit aafreenn.in <span class="ic" data-icon="arrow-up-right"></span></a>
+        </div>
+      </div>
+      <dl class="st-meta" data-intro style="--d:.5s">
+        <div><dt>Client</dt><dd>Aafreenn, a small label for farshi, gharara and shalwar sets</dd></div>
+        <div><dt>Role</dt><dd>UI and UX design, front end, back end</dd></div>
+        <div><dt>Timeline</dt><dd>Four weeks to launch, Jul to Aug 2026</dd></div>
+        <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, PHP, MySQL, Razorpay</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <figure class="st-cover">
+    <div class="st-cover-frame">
+      <img src="Assets/case-studies/aafreenn/photo-courtyard.jpg" alt="A model in an ivory embroidered kurta and red farshi salwar, seated in a stone courtyard" width="1672" height="1174" fetchpriority="high">
+    </div>
+  </figure>
+
+  <!-- Intro -->
+  <section class="st-sec wrap" aria-labelledby="intro-h">
+    <h2 class="st-label" id="intro-h">Overview</h2>
+    <p class="st-statement" data-words style="margin-top:20px">Aafreenn sold every suit through Instagram and WhatsApp: a photo, a price, a long thread about fit, then a bank transfer and a screenshot for a receipt. The store had to answer the fit question before anyone asked it.</p>
+    <div class="st-intro-grid">
+      <div data-reveal><span class="st-label">The brief</span><p>A store as calm as the photographs, that answers fit before anyone has to ask, takes payment, and can be run by the owner from a phone.</p></div>
+      <div data-reveal style="--d:.08s"><span class="st-label">The customer</span><p>Women ordering a suit made to their size, who mostly arrive from the link in the label&rsquo;s Instagram bio, on a phone.</p></div>
+      <div data-reveal style="--d:.16s"><span class="st-label">My part</span><p>Reading the order chats with the owner, the design system, the store and its admin, from the first layout to the payment webhook.</p></div>
+    </div>
+  </section>
+
+  <!-- The four questions -->
+  <section class="st-sec wrap" aria-labelledby="asks-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="asks-h" data-split>Every thread asked the same four things.</h2>
+      <p class="st-lede" data-reveal>I read back through a few months of order chats with the owner. The questions repeated so closely that they became the outline for the product page.</p>
+    </div>
+    <ol class="asks">
+      <li data-reveal>
+        <p class="ask">&ldquo;Will it fit me?&rdquo;</p>
+        <p class="answer">Size and height are picked together, right where you add to cart. Each suit is cut to the height you choose, from 4&prime;11&Prime; to 5&prime;11&Prime;, and the size chart sits one tap below.</p>
+      </li>
+      <li data-reveal>
+        <p class="ask">&ldquo;Do you still have it?&rdquo;</p>
+        <p class="answer">Nothing is cut until it&rsquo;s ordered, so each design has one stock count shared by every size. Low stock reads &ldquo;Hurry, only 5 left!&rdquo; Sold-out designs stay in the grid, marked, so the range still looks full.</p>
+      </li>
+      <li data-reveal>
+        <p class="ask">&ldquo;When will it reach me?&rdquo;</p>
+        <p class="answer">Dispatch time and the returns policy sit in an accordion under the buy buttons, before checkout, not in an email after it.</p>
+      </li>
+      <li data-reveal>
+        <p class="ask">&ldquo;Can I just message you?&rdquo;</p>
+        <p class="answer">Yes. A WhatsApp button stays on the shop, product, cart and contact pages. For a label this size, talking is part of buying.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Walkthrough -->
+  <section class="st-sec" aria-labelledby="walk-h">
+    <div class="wrap st-head">
+      <h2 class="st-h2" id="walk-h" data-split>From the first photo to paid.</h2>
+    </div>
+    <div class="walk wrap">
+      <div class="walk-steps">
+        <article class="walk-step" data-shot="0">
+          <p class="st-label">Home</p>
+          <h3 class="st-h3">One photograph and a door.</h3>
+          <p>The home page is a single full-screen photo, an Enter button and the tagline &ldquo;For moments worthy of praise&rdquo; running along the bottom. No banners, no carousel. The clothes make the first impression.</p>
+          <img class="walk-inline" src="Assets/case-studies/aafreenn/screen-home.jpg" alt="Aafreenn home page: a full-screen photo with an Enter button" width="1600" height="1000" loading="lazy">
+        </article>
+        <article class="walk-step" data-shot="1">
+          <p class="st-label">Shop</p>
+          <h3 class="st-h3">The whole range on one page.</h3>
+          <p>Farshi, gharara and winter sets in a four-column grid. Filter by availability, collection or price, sort by newest or price. Each card flips through its photos without opening the product.</p>
+          <img class="walk-inline" src="Assets/case-studies/aafreenn/screen-shop.jpg" alt="Shop page: filters above a four-column grid of products" width="1600" height="1000" loading="lazy">
+        </article>
+        <article class="walk-step" data-shot="2">
+          <p class="st-label">Quick view</p>
+          <h3 class="st-h3">Buy without leaving the grid.</h3>
+          <p>Choose opens a quick view with the same size and height controls as the product page. Someone who already knows what they want never has to change page.</p>
+          <img class="walk-inline" src="Assets/case-studies/aafreenn/screen-quickview.jpg" alt="Quick view dialog over the shop grid with size and height controls" width="1600" height="1000" loading="lazy">
+        </article>
+        <article class="walk-step" data-shot="3">
+          <p class="st-label">Product</p>
+          <h3 class="st-h3">Size, height, done.</h3>
+          <p>Photos on the left, decisions on the right, in the order you make them. The size chart, specifications and shipping live in accordions below, there when you need them.</p>
+          <img class="walk-inline" src="Assets/case-studies/aafreenn/screen-pdp-size.jpg" alt="Product page with size M selected and the height list open" width="1600" height="1000" loading="lazy">
+        </article>
+        <article class="walk-step" data-shot="4">
+          <p class="st-label">Cart</p>
+          <h3 class="st-h3">Every line keeps its own fit.</h3>
+          <p>Size and height are stored per item, not per order, so one cart can hold a suit for you and another for your sister. Shipping is free, so the total never surprises.</p>
+          <img class="walk-inline" src="Assets/case-studies/aafreenn/screen-cart.jpg" alt="Cart with one item showing size M and height 5 feet 4" width="1600" height="1000" loading="lazy">
+        </article>
+        <article class="walk-step" data-shot="5">
+          <p class="st-label">Checkout</p>
+          <h3 class="st-h3">Pay as a guest.</h3>
+          <p>No account needed. If the email already has one, a short prompt offers to continue without a password. Payment opens Razorpay, so UPI, cards and netbanking all work.</p>
+          <img class="walk-inline" src="Assets/case-studies/aafreenn/screen-checkout.jpg" alt="Checkout with a shipping address form and order summary" width="1600" height="1222" loading="lazy">
+        </article>
+      </div>
+
+      <div class="walk-stage" aria-hidden="true">
+        <div class="browser">
+          <div class="browser-bar">
+            <i></i><i></i><i></i>
+            <span class="browser-url mono" id="walkUrl">aafreenn.in</span>
+          </div>
+          <div class="browser-view">
+            <img class="is-on" src="Assets/case-studies/aafreenn/screen-home.jpg" alt="" width="1600" height="1000" data-url="aafreenn.in">
+            <img src="Assets/case-studies/aafreenn/screen-shop.jpg" alt="" width="1600" height="1000" loading="lazy" data-url="aafreenn.in/pages/shop.html">
+            <img src="Assets/case-studies/aafreenn/screen-quickview.jpg" alt="" width="1600" height="1000" loading="lazy" data-url="aafreenn.in/pages/shop.html">
+            <img src="Assets/case-studies/aafreenn/screen-pdp-size.jpg" alt="" width="1600" height="1000" loading="lazy" data-url="aafreenn.in/pages/product.html?slug=mahira-farshi-set">
+            <img src="Assets/case-studies/aafreenn/screen-cart.jpg" alt="" width="1600" height="1000" loading="lazy" data-url="aafreenn.in/pages/cart.html">
+            <img src="Assets/case-studies/aafreenn/screen-checkout.jpg" alt="" width="1600" height="1222" loading="lazy" data-url="aafreenn.in/pages/checkout.html">
+          </div>
+        </div>
+        <ol class="walk-index mono" id="walkIndex">
+          <li class="is-on">Home</li><li>Shop</li><li>Quick view</li><li>Product</li><li>Cart</li><li>Checkout</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fit demo -->
+  <section class="st-sec wrap fit" id="fit" aria-labelledby="fit-h">
+    <div class="fit-copy">
+      <h2 class="st-h2" id="fit-h" data-split>Cut to your height.</h2>
+      <p class="st-lede" data-reveal>A farshi&rsquo;s length depends on who wears it. Asking for height next to size, at the moment of adding to cart, replaced the longest part of every DM thread.</p>
+      <p class="st-lede" data-reveal>Try it. Add two suits at different heights and both lines keep their own fit, the same way the real cart does.</p>
+    </div>
+    <div class="fit-demo plate plate--pad" data-reveal style="--d:.1s">
+      <form class="demo" id="fitDemo" novalidate>
+        <p class="demo-name">Mahira Farshi Set</p>
+        <p class="demo-price">Rs. 5,499.00</p>
+        <p class="demo-stock">Hurry, only 5 left!</p>
+        <hr>
+        <fieldset class="demo-field">
+          <legend class="demo-label">Size</legend>
+          <div class="demo-sizes">
+            <label><input type="radio" name="size" value="S"><span>S</span></label>
+            <label><input type="radio" name="size" value="M"><span>M</span></label>
+            <label><input type="radio" name="size" value="L"><span>L</span></label>
+            <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+            <label><input type="radio" name="size" value="XXL"><span>XXL</span></label>
+          </div>
+        </fieldset>
+        <div class="demo-field">
+          <label class="demo-label" for="demoHeight">Height</label>
+          <select class="demo-select" id="demoHeight" name="height">
+            <option value="">Select your height</option>
+          </select>
+        </div>
+        <p class="demo-error" id="demoError" role="alert"></p>
+        <button class="demo-add" type="submit">Add to cart</button>
+        <div class="demo-cart" aria-live="polite">
+          <p class="demo-label">Cart</p>
+          <ul id="demoCart"></ul>
+          <p class="demo-empty" id="demoEmpty">Empty. Pick a size and a height, then add.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Brand guidelines -->
+  <section class="st-sec wrap" aria-labelledby="guide-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="guide-h" data-split>Brand guidelines.</h2>
+      <p class="st-lede" data-reveal>The photographs carry the colour, so the interface stays quiet: a warm cream ground, one deep maroon for every action, and Inter at a medium weight.</p>
+    </div>
+
+    <dl class="gd-quick" data-reveal>
+      <div><dt>Action</dt><dd><i class="gd-dot" style="--c:#4c1205"></i>Maroon #4C1205</dd></div>
+      <div><dt>Ground</dt><dd><i class="gd-dot" style="--c:#fff7ef"></i>Cream #FFF7EF</dd></div>
+      <div><dt>Typeface</dt><dd>Inter, 400 to 600</dd></div>
+      <div><dt>Shape</dt><dd>Square choices, pill actions</dd></div>
+    </dl>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Logo</span>
+        <h3 class="st-h3">A lotus and a name.</h3>
+        <p>One file, drawn as a mask here so it takes any brand colour. It sits on maroon, on cream, or straight over a photograph in the header.</p>
+      </div>
+      <div class="gd-main gd-logos">
+        <figure class="gd-logo plate" style="--pb:#4c1205;--pi:#fff7ef" data-reveal><span class="a-logo" role="img" aria-label="Aafreenn logo in cream on maroon"></span><figcaption>Primary, cream on maroon</figcaption></figure>
+        <figure class="gd-logo plate" data-reveal style="--pb:#fff7ef;--pi:#3b060a;--d:.06s"><span class="a-logo" role="img" aria-label="Aafreenn logo in wine on cream"></span><figcaption>Wine on cream</figcaption></figure>
+        <figure class="gd-logo gd-logo--photo plate" style="--pb:#231f20" data-reveal><img src="Assets/case-studies/aafreenn/photo-ivory.jpg" alt="" width="1400" height="788" loading="lazy"><span class="a-logo" role="img" aria-label="Aafreenn logo in cream over a photograph"></span><figcaption>Over photography</figcaption></figure>
+        <figure class="gd-logo plate" data-reveal style="--pb:#e5ded7;--pi:#4c1205;--d:.06s"><span class="gd-clear" style="--x:22px"><span class="a-logo a-logo--sm" role="img" aria-label="Aafreenn logo with its clear space marked"></span></span><figcaption>Clear space: the lotus height on every side</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Colour</span>
+        <h3 class="st-h3">Cream, maroon and wine.</h3>
+        <p>Six colours, all from the store&rsquo;s stylesheet. Select a value to copy it.</p>
+      </div>
+      <div class="gd-main">
+        <ul class="gd-swatches">
+          <li class="gd-sw" data-reveal><span class="gd-chip" style="--c:#fff7ef;--k:#231f20">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Cream</span><button class="gd-hex" type="button" data-copy="#FFF7EF" aria-label="Copy #FFF7EF"><span class="gd-hex-t">#FFF7EF</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 255 247 239</span><span class="gd-use">Page ground</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.04s"><span class="gd-chip" style="--c:#e5ded7;--k:#231f20">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Sand</span><button class="gd-hex" type="button" data-copy="#E5DED7" aria-label="Copy #E5DED7"><span class="gd-hex-t">#E5DED7</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 229 222 215</span><span class="gd-use">Borders, fields</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.08s"><span class="gd-chip" style="--c:#6b6560;--k:#fff7ef">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Stone</span><button class="gd-hex" type="button" data-copy="#6B6560" aria-label="Copy #6B6560"><span class="gd-hex-t">#6B6560</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 107 101 96</span><span class="gd-use">Muted text</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.12s"><span class="gd-chip" style="--c:#4c1205;--k:#fff7ef">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Maroon</span><button class="gd-hex" type="button" data-copy="#4C1205" aria-label="Copy #4C1205"><span class="gd-hex-t">#4C1205</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 76 18 5</span><span class="gd-use">Buttons, prices, every action</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.16s"><span class="gd-chip" style="--c:#3b060a;--k:#fff7ef">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Wine</span><button class="gd-hex" type="button" data-copy="#3B060A" aria-label="Copy #3B060A"><span class="gd-hex-t">#3B060A</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 59 6 10</span><span class="gd-use">Headings</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.2s"><span class="gd-chip" style="--c:#231f20;--k:#fff7ef">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Ink</span><button class="gd-hex" type="button" data-copy="#231F20" aria-label="Copy #231F20"><span class="gd-hex-t">#231F20</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 35 31 32</span><span class="gd-use">Body text</span></span></li>
+        </ul>
+        <div class="gd-pairs" data-reveal>
+          <p class="gd-pair plate" style="--pb:#fff7ef;--pi:#3b060a"><b>Aa</b><span>Wine on cream<br>16.3 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#fff7ef;--pi:#231f20"><b>Aa</b><span>Ink on cream<br>15.4 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#4c1205;--pi:#fff7ef"><b>Aa</b><span>Cream on maroon<br>14.2 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#fff7ef;--pi:#6b6560"><b>Aa</b><span>Stone on cream<br>5.4 : 1, AA</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Type</span>
+        <h3 class="st-h3">One family, four weights of quiet.</h3>
+        <p>Inter for everything. Headings at 500 in wine, body at 14, and small spaced capitals for labels and buttons.</p>
+      </div>
+      <div class="gd-main">
+        <div class="gd-faces">
+          <div class="gd-face plate" style="--pb:#fff7ef;--pi:#3b060a" data-reveal>
+            <p class="gd-face-top"><span>Display and text</span><span>400, 500, 600</span></p>
+            <p class="gd-aa" style="font-family:Inter;font-weight:500;letter-spacing:-.04em" aria-hidden="true">Aa</p>
+            <div>
+              <p class="gd-face-name" style="font-weight:500">Inter</p>
+              <p class="gd-glyphs" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 Rs. &amp; ? !</p>
+            </div>
+          </div>
+        </div>
+        <div class="gd-scale plate" style="--pb:#fff7ef;--pi:#231f20;--pl:#e5ded7" data-reveal>
+          <div class="gd-row"><span class="gd-role">Page hero</span><span class="gd-sample" style="font-size:40px;font-weight:500;color:#3b060a;letter-spacing:-.01em;line-height:1.1">Returns and refunds</span><span class="gd-spec">Inter 500<br>40 px</span></div>
+          <div class="gd-row"><span class="gd-role">Page title</span><span class="gd-sample" style="font-size:32px;font-weight:500;color:#3b060a;line-height:1.15">All Products</span><span class="gd-spec">Inter 500<br>32 px</span></div>
+          <div class="gd-row"><span class="gd-role">Quick view</span><span class="gd-sample" style="font-size:24px;font-weight:500;color:#3b060a">Mahira Farshi Set</span><span class="gd-spec">Inter 500<br>24 px</span></div>
+          <div class="gd-row"><span class="gd-role">Product name</span><span class="gd-sample" style="font-size:20px;font-weight:500;color:#3b060a">Cocoa Winter Co-ord Set</span><span class="gd-spec">Inter 500<br>20 px</span></div>
+          <div class="gd-row"><span class="gd-role">Body</span><span class="gd-sample" style="font-size:14px;line-height:1.5">Relaxed and flowy fit. Three-piece set: kurta, farshi salwar and dupatta.</span><span class="gd-spec">Inter 400<br>14 / 21 px</span></div>
+          <div class="gd-row"><span class="gd-role">Label, button</span><span class="gd-sample" style="font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#4c1205">Size chart</span><span class="gd-spec">Inter 600, capitals<br>12 px, +0.12 em</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Components</span>
+        <h3 class="st-h3">Choices are boxes, moves are pills.</h3>
+        <p>The rule that holds the store together, rebuilt here in HTML at the real sizes.</p>
+      </div>
+      <div class="gd-main">
+        <div class="plate plate--pad" style="--pb:#fff7ef;--pi:#231f20" data-reveal>
+          <div class="gd-parts" aria-hidden="true">
+            <span class="a-sizes"><span class="a-size">S</span><span class="a-size is-on">M</span><span class="a-size">L</span><span class="a-size">XL</span></span>
+            <span class="a-select">Select your height <span class="ic" data-icon="caret-right"></span></span>
+            <span class="a-qty">-<b>1</b>+</span>
+            <span class="a-btn a-btn--line">Add to cart</span>
+            <span class="a-btn a-btn--solid">Proceed to checkout</span>
+          </div>
+          <p class="gd-parts-note">A size is a square box with a 2 px maroon border, filled when chosen. Anything that moves you towards paying is a pill.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phones -->
+  <section class="st-sec wrap" aria-labelledby="phones-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="phones-h" data-split>Most visits start on a phone.</h2>
+      <p class="st-lede" data-reveal>Every page was checked at 390 px: a two-column grid, filters stacked above it, size buttons big enough for a thumb, and a WhatsApp button that never covers the price.</p>
+    </div>
+    <div class="st-phones">
+      <figure class="st-phone" data-speed="0.4"><div class="st-phone-frame"><img src="Assets/case-studies/aafreenn/phone-home.jpg" alt="Home page on a phone" width="780" height="1688" loading="lazy"></div><figcaption>Home</figcaption></figure>
+      <figure class="st-phone" data-speed="-0.5"><div class="st-phone-frame"><img src="Assets/case-studies/aafreenn/phone-shop.jpg" alt="Shop page on a phone, two products per row" width="780" height="1688" loading="lazy"></div><figcaption>Shop, two to a row</figcaption></figure>
+      <figure class="st-phone" data-speed="0.6"><div class="st-phone-frame"><img src="Assets/case-studies/aafreenn/phone-pdp-info.jpg" alt="Product choices on a phone: size, height, quantity and buttons" width="780" height="1688" loading="lazy"></div><figcaption>Size and height</figcaption></figure>
+      <figure class="st-phone" data-speed="-0.3"><div class="st-phone-frame"><img src="Assets/case-studies/aafreenn/phone-cart.jpg" alt="Cart on a phone" width="780" height="1688" loading="lazy"></div><figcaption>Cart</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- After launch -->
+  <section class="st-sec wrap" aria-labelledby="after-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="after-h" data-split>Launch was the first draft.</h2>
+      <p class="st-lede" data-reveal>Real orders showed what the chats never had. These are the changes from the first month, in the order they shipped.</p>
+    </div>
+    <div class="st-log">
+      <div class="st-log-group">
+        <h3>Fewer steps to pay<small>Late August</small></h3>
+        <ol>
+          <li><time datetime="2026-08-25">25 Aug</time><p>Guest checkout. Making an account before paying was losing people at the last step.</p></li>
+          <li style="--d:.08s"><time datetime="2026-08-26">26 Aug</time><p>Returning customers can continue without a password instead of being sent to a login page.</p></li>
+          <li style="--d:.16s"><time datetime="2026-08-27">27 Aug</time><p>A full pass on phone layouts, page by page.</p></li>
+        </ol>
+      </div>
+      <div class="st-log-group">
+        <h3>Sizing<small>End of August</small></h3>
+        <ol>
+          <li><time datetime="2026-08-28">28 Aug</time><p>Height moved from the order to each item, so one order can carry suits for two people.</p></li>
+          <li style="--d:.08s"><time datetime="2026-08-28">28 Aug</time><p>The floating size-chart pop-up became an accordion on the product page. It no longer covers the thing you&rsquo;re sizing.</p></li>
+          <li style="--d:.16s"><time datetime="2026-08-30">30 Aug</time><p>WhatsApp button on the shop, product, cart and contact pages.</p></li>
+        </ol>
+      </div>
+      <div class="st-log-group">
+        <h3>Trust<small>Mid September</small></h3>
+        <ol>
+          <li><time datetime="2026-09-11">11 Sep</time><p>Product uploads from the owner&rsquo;s phone stopped failing on mobile data.</p></li>
+          <li style="--d:.08s"><time datetime="2026-09-13">13 Sep</time><p>A payment webhook, so a paid order is saved even if the customer closes the tab mid-redirect.</p></li>
+          <li style="--d:.16s"><time datetime="2026-09-13">13 Sep</time><p>Customers get their cart summary by email the moment they reach payment.</p></li>
+          <li style="--d:.24s"><time datetime="2026-09-15">15 Sep</time><p>Shipping limited to India, said plainly at the address step.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Behind the counter, next -->
+  <section class="st-sec wrap st-close" aria-labelledby="close-h">
+    <div data-reveal>
+      <h2 class="st-h3" id="close-h">Behind the counter</h2>
+      <div class="st-body">
+        <p>A separate admin lets the owner add designs with several photos, manage collections, move orders through their stages and see every email the store has sent.</p>
+        <p>Each status change emails the customer, so nobody has to ask where their order is.</p>
+      </div>
+    </div>
+    <div data-reveal style="--d:.08s">
+      <h2 class="st-h3">What I&rsquo;d add next</h2>
+      <dl class="st-next-list">
+        <div><dt>Fit memory</dt><dd>Remember a returning customer&rsquo;s size and height, so the second order is two taps.</dd></div>
+        <div><dt>Collection pages</dt><dd>A lookbook per collection once the range grows past one screen of designs.</dd></div>
+        <div><dt>Cash on delivery</dt><dd>For first orders, behind a small prepaid deposit, since many buyers here still prefer it.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="st-contact wrap" aria-labelledby="end-h">
+    <h2 class="contact-title" id="end-h" data-split>Selling through DMs?</h2>
+    <p class="lede" data-reveal>I design and build stores for small labels, from the first sketch to the last order email.</p>
+    <div class="contact-mail" data-reveal><a class="mail-link" href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a></div>
+  </section>
+
+  <!-- Next case -->
+  <a class="st-nextcase" href="bakhoor-al-barkaah.html">
+    <img src="Assets/case-studies/bakhoor/hero.webp" alt="" width="1920" height="1080" loading="lazy">
+    <span class="st-nextcase-in wrap">
+      <span><span class="st-label">Next case</span><span class="st-nextcase-name">Bakhoor Al Barkaah</span></span>
+      <span class="st-nextcase-go"><span class="ic" data-icon="arrow-right"></span></span>
+    </span>
+  </a>
+</main>
+
+<footer class="footer wrap">
+  <span>&copy; <span id="year"></span> Hardik Ojha</span>
+  <a href="#main" class="link-arrow">Back to top <span class="ic" data-icon="arrow-up"></span></a>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/study.js"></script>
+<script src="js/study-aafreenn.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

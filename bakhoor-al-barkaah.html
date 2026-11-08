@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bakhoor Al Barkaah case study - Hardik Ojha</title>
+<meta name="description" content="Designing and building the online shop for Bakhoor Al Barkaah, a hand-blended bakhoor: the decisions, the brand guidelines, key screens and what changed after launch.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:title" content="Bakhoor Al Barkaah, a case study by Hardik Ojha">
+<meta property="og:description" content="A one-product shop for a hand-blended bakhoor, sold through the moments it is burned for.">
+<meta property="og:image" content="Assets/case-studies/bakhoor/card.jpg">
+<link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230a0a0b%27/%3E%3Crect x=%277%27 y=%2711%27 width=%2718%27 height=%2710%27 rx=%272%27 fill=%27%232a2a2f%27/%3E%3Crect x=%2715%27 y=%275%27 width=%272.5%27 height=%2722%27 fill=%27%23b4ff39%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/study.css">
+<link rel="stylesheet" href="css/study-bakhoor.css">
+<script>try{var t=localStorage.getItem('ho-theme');if(t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="no-dock">
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html">Hardik Ojha</a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="index.html#interface" class="is-active">Work</a>
+    <a href="index.html#edit">Video</a>
+    <a href="graphics.html">Graphics</a>
+    <a href="index.html#darkroom">Photos</a>
+    <a href="index.html#credits">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to light mode"><span class="ic ic-moon" data-icon="moon"></span><span class="ic ic-sun" data-icon="sun"></span></button>
+</header>
+
+<main id="main" class="study study--bakhoor">
+
+  <!-- Title card -->
+  <header class="st-hero wrap">
+    <div class="st-hero-top">
+      <a class="link-arrow" href="index.html#interface"><span class="ic" data-icon="caret-left"></span> All work</a>
+      <nav class="st-series" aria-label="Case studies">
+        <span class="st-label">Case 02 / 05</span>
+        <a href="aafreenn.html" aria-label="Previous case study: Aafreenn"><span class="ic" data-icon="caret-left"></span></a>
+        <a href="the-dale.html" aria-label="Next case study: The Dale"><span class="ic" data-icon="caret-right"></span></a>
+      </nav>
+    </div>
+    <h1 class="st-title" data-split>Bakhoor<br>Al Barkaah</h1>
+    <div class="st-hero-foot">
+      <div data-intro>
+        <p class="st-sum">A one-product shop for a hand-blended bakhoor, sold through the moments it is burned for.</p>
+        <div class="st-hero-cta">
+          <a class="btn btn--neon" href="https://bakhooralbarkaah.com" target="_blank" rel="noopener noreferrer">Visit the shop <span class="ic" data-icon="arrow-up-right"></span></a>
+        </div>
+      </div>
+      <dl class="st-meta" data-intro style="--d:.5s">
+        <div><dt>Client</dt><dd>Bakhoor Al Barkaah, a hand-blended bakhoor</dd></div>
+        <div><dt>Role</dt><dd>UI and UX design, front end, back end</dd></div>
+        <div><dt>Timeline</dt><dd>Aug to Oct 2026</dd></div>
+        <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, PHP, MySQL, Razorpay</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <figure class="st-cover">
+    <div class="st-cover-frame">
+      <img src="Assets/case-studies/bakhoor/hero.webp" alt="A deep green Bakhoor Al Barkaah box with a gold calligraphy emblem and a bowl of bakhoor, on a sunlit stone step with palm shadows" width="1920" height="1080" fetchpriority="high">
+    </div>
+  </figure>
+
+  <!-- Intro -->
+  <section class="st-sec wrap" aria-labelledby="intro-h">
+    <h2 class="st-label" id="intro-h">Overview</h2>
+    <p class="st-statement" data-words style="margin-top:20px">Bakhoor is wood and resin, warmed on a coal until the smoke rises. Nobody can smell it through a phone, and there is only one blend to sell, so the shop had to sell the moment instead of the notes.</p>
+    <div class="st-intro-grid">
+      <div data-reveal><span class="st-label">The brief</span><p>One blend, a green box and a gold calligraphy mark. It needed a shop that takes an order and a payment, and an admin that prints a GST invoice.</p></div>
+      <div data-reveal style="--d:.08s"><span class="st-label">The customer</span><p>Families who burn bakhoor before prayer, on Fridays and for guests, and people buying it as a gift, mostly from a link shared on a phone.</p></div>
+      <div data-reveal style="--d:.16s"><span class="st-label">My part</span><p>The shop and its admin: design, front end, PHP and MySQL, Razorpay, the order emails and the printed invoice.</p></div>
+    </div>
+  </section>
+
+  <!-- Sell the moment -->
+  <section class="st-sec" aria-labelledby="occ-h">
+    <div class="wrap st-head st-head--row">
+      <div>
+        <h2 class="st-h2" id="occ-h" data-split>Sell the moment, not the notes.</h2>
+        <p class="st-lede" data-reveal>An ingredient list doesn&rsquo;t smell of anything. So the home page names five times the bowl is lit, each with a photograph of it already in that room and one line from the shop.</p>
+      </div>
+      <div class="st-ctl" data-reveal>
+        <button type="button" data-rail-prev="occRail" aria-label="Previous moment"><span class="ic" data-icon="caret-left"></span></button>
+        <button type="button" data-rail-next="occRail" aria-label="Next moment"><span class="ic" data-icon="caret-right"></span></button>
+      </div>
+    </div>
+    <div class="st-rail occ" id="occRail" data-rail tabindex="0" role="region" aria-label="The five occasions on the home page. Scroll sideways or use the arrow keys.">
+      <figure class="occ-card" data-reveal><div class="occ-photo"><img src="Assets/case-studies/bakhoor/occasion-1.webp" alt="A bowl of bakhoor on a polished floor beside a prayer mat, light through a carved window" width="620" height="827" loading="lazy"></div><figcaption><span class="occ-name">Before Namaz</span><p>Light it a few minutes ahead. By the time you begin, the room has settled.</p></figcaption></figure>
+      <figure class="occ-card" data-reveal style="--d:.06s"><div class="occ-photo"><img src="Assets/case-studies/bakhoor/occasion-2.webp" alt="A bowl of bakhoor in front of an open Quran on a wooden stand" width="620" height="827" loading="lazy"></div><figcaption><span class="occ-name">While Reading Quran</span><p>A soft, steady warmth that holds the space without pulling at your attention.</p></figcaption></figure>
+      <figure class="occ-card" data-reveal style="--d:.12s"><div class="occ-photo"><img src="Assets/case-studies/bakhoor/occasion-3.webp" alt="A bowl of bakhoor on a sunlit floor with a mosque dome through the window" width="620" height="827" loading="lazy"></div><figcaption><span class="occ-name">Jumu&rsquo;ah</span><p>For mornings that ask for something richer. Deeper resins, for a home that fills up.</p></figcaption></figure>
+      <figure class="occ-card" data-reveal style="--d:.18s"><div class="occ-photo"><img src="Assets/case-studies/bakhoor/occasion-4.webp" alt="A bowl of bakhoor on a rug with a family sitting together behind it" width="620" height="827" loading="lazy"></div><figcaption><span class="occ-name">Family Gatherings</span><p>Floral and generous, enough for a full house. The scent people remember afterwards.</p></figcaption></figure>
+      <figure class="occ-card" data-reveal style="--d:.24s"><div class="occ-photo"><img src="Assets/case-studies/bakhoor/occasion-5.webp" alt="A bowl of bakhoor on a table as two men greet each other at the door" width="620" height="827" loading="lazy"></div><figcaption><span class="occ-name">Welcoming Guests</span><p>An old courtesy, still worth keeping. Warmth that reaches the door ahead of you.</p></figcaption></figure>
+    </div>
+    <div class="wrap occ-foot">
+      <figure class="plate plate--pad" style="--pb:#f1efe9" data-reveal>
+        <img class="shot" src="Assets/case-studies/bakhoor/screen-occasions.jpg" alt="Home page section titled A scent for every occasion, with cards for Before Namaz, While Reading Quran and Jumu&rsquo;ah, and an Order now button beside the heading" width="1440" height="738" loading="lazy">
+      </figure>
+      <div class="st-ch-copy">
+        <h3 class="st-h3" data-reveal>One row, one button.</h3>
+        <div class="st-body" data-reveal>
+          <p>The row scrolls sideways and a single arrow steps along it. Order now sits beside the heading, not under every card, so the photographs stay photographs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two more decisions -->
+  <section class="st-sec wrap" aria-label="Two more decisions">
+    <div class="st-chs">
+      <article class="st-ch st-ch--split">
+        <figure class="st-ch-media plate plate--pad" style="--pb:#ffffff" data-reveal>
+          <img class="shot" src="Assets/case-studies/bakhoor/screen-stories.jpg" alt="Home page section titled The stories behind the collection, with three story cards" width="1440" height="747" loading="lazy">
+        </figure>
+        <div class="st-ch-copy">
+          <h2 class="st-h2" data-split>Let the history vouch for it.</h2>
+          <div class="st-body" data-reveal>
+            <p>A new brand has no reviews to lean on, so the page borrows something older. One quotation from Sahih Muslim stands alone in the middle of the page, and three short stories follow: The Incense Road, A Quiet Sunnah, and Given, Rarely Bought.</p>
+            <p>They explain why bakhoor matters before anyone is asked to buy it, and they make it a gift as much as a purchase.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="st-ch st-ch--split st-ch--flip">
+        <figure class="st-ch-media plate plate--pad" style="--pb:#f1efe9" data-reveal>
+          <img class="shot" src="Assets/case-studies/bakhoor/screen-order.jpg" alt="Order page: the product box, quantity stepper and total on the left, a shipping form on the right" width="1440" height="900" loading="lazy">
+        </figure>
+        <div class="st-ch-copy">
+          <h2 class="st-h2" data-split>One product, one page to order it.</h2>
+          <div class="st-body" data-reveal>
+            <p>The order page holds the product, a quantity stepper with a live total, and a shipping form. There is no cart screen and no account to make. Fields are underlined, not boxed, so the form looks written rather than filled.</p>
+            <p>Behind the single button the server checks stock again before it creates the order. Stock only drops once the payment is verified, and the confirmation email goes out right after.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Brand guidelines -->
+  <section class="st-sec wrap" aria-labelledby="guide-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="guide-h" data-split>Brand guidelines.</h2>
+      <p class="st-lede" data-reveal>The box is deep green and the mark is gold, so the shop keeps to those two and lets the warm photographs do the rest. The colours, type and components below come from the shop&rsquo;s own stylesheet.</p>
+    </div>
+
+    <dl class="gd-quick" data-reveal>
+      <div><dt>Primary</dt><dd><i class="gd-dot" style="--c:#0e2b03"></i>Forest #0E2B03</dd></div>
+      <div><dt>Mark</dt><dd><i class="gd-dot" style="--c:#b78a4a"></i>Gold #B78A4A</dd></div>
+      <div><dt>Display</dt><dd>Cormorant Infant</dd></div>
+      <div><dt>Text</dt><dd>Inter</dd></div>
+    </dl>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Logo</span>
+        <h3 class="st-h3">A calligraphy emblem and one spaced line.</h3>
+        <p>&ldquo;Bakhoor Al Barkaah&rdquo; written in Arabic, inside a round seal. On the box and in the footer it sits over the name in spaced capitals. In the shop&rsquo;s top bar it stands alone.</p>
+      </div>
+      <div class="gd-main gd-logos">
+        <figure class="gd-logo gd-logo--wide plate" style="--pb:#0e2b03;--pi:#dbb05f" data-reveal>
+          <span class="b-lockup"><img src="Assets/case-studies/bakhoor/logo-gold.svg" alt="The Bakhoor Al Barkaah calligraphy emblem in gold" width="56" height="56"><span class="b-word">Bakhoor-Al-Barkaah</span></span>
+          <figcaption>Primary lockup, gold on forest</figcaption>
+        </figure>
+        <figure class="gd-logo gd-logo--third plate" style="--pb:#111111;--pi:#dbb05f" data-reveal>
+          <img class="b-emb" src="Assets/case-studies/bakhoor/logo-gold.svg" alt="The emblem in gold on black" width="56" height="56" loading="lazy">
+          <figcaption>On black, for social posts</figcaption>
+        </figure>
+        <figure class="gd-logo gd-logo--third gd-logo--photo plate" data-reveal style="--pb:#6b5a43;--d:.06s">
+          <img class="b-bg" src="Assets/case-studies/bakhoor/about-1.webp" alt="" width="620" height="827" loading="lazy">
+          <img class="b-emb" src="Assets/case-studies/bakhoor/logo-white.svg" alt="The emblem in white over a photograph" width="56" height="56" loading="lazy">
+          <figcaption>White, over the hero photograph</figcaption>
+        </figure>
+        <figure class="gd-logo gd-logo--third plate" data-reveal style="--pb:#ffffff;--pi:#0e2b03;--d:.12s">
+          <span class="gd-clear" style="--x:24px"><img class="b-emb" src="Assets/case-studies/bakhoor/logo-gold.svg" alt="The emblem with its clear space marked" width="56" height="56" loading="lazy" style="width:64px"></span>
+          <figcaption>Clear space around the seal</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Motion</span>
+        <h3 class="st-h3">The mark, drawn in twelve seconds.</h3>
+        <p>A short film for reels and stories. The seal writes itself in gold on white, then the name settles underneath.</p>
+      </div>
+      <div class="gd-main">
+        <div class="b-film plate" style="--pb:#ffffff;--pi:#333333" data-reveal>
+          <video src="Assets/case-studies/bakhoor/logo-animation.mp4" poster="Assets/case-studies/bakhoor/logo-poster.jpg" muted loop playsinline preload="none" data-autoplay aria-label="The calligraphy emblem drawing itself in gold on white, then the name appearing below it" width="1080" height="1920"></video>
+          <div class="b-film-copy">
+            <span class="st-label">Logo film, 12 s, 1080 by 1920</span>
+            <p>It plays here only while it is on screen. On a phone it is the first thing a follower sees of the brand, so the mark arrives before the product does.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Colour</span>
+        <h3 class="st-h3">Forest and two golds.</h3>
+        <p>Five colours, all tokens in the shop&rsquo;s stylesheet. Gold is for the mark and for lines, never for small text on white. Select a value to copy it.</p>
+      </div>
+      <div class="gd-main">
+        <ul class="gd-swatches" style="--n:5">
+          <li class="gd-sw" data-reveal><span class="gd-chip" style="--c:#0e2b03;--k:#dbb05f">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Forest</span><button class="gd-hex" type="button" data-copy="#0E2B03" aria-label="Copy #0E2B03"><span class="gd-hex-t">#0E2B03</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 14 43 3</span><span class="gd-use">Headings, buttons, footer</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.04s"><span class="gd-chip" style="--c:#b78a4a;--k:#0e2b03">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Gold</span><button class="gd-hex" type="button" data-copy="#B78A4A" aria-label="Copy #B78A4A"><span class="gd-hex-t">#B78A4A</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 183 138 74</span><span class="gd-use">The mark, button hover, focus line</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.08s"><span class="gd-chip" style="--c:#dbb05f;--k:#0e2b03">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Gold light</span><button class="gd-hex" type="button" data-copy="#DBB05F" aria-label="Copy #DBB05F"><span class="gd-hex-t">#DBB05F</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 219 176 95</span><span class="gd-use">Text and icons on forest</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.12s"><span class="gd-chip" style="--c:#ffffff;--k:#0e2b03">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">White</span><button class="gd-hex" type="button" data-copy="#FFFFFF" aria-label="Copy #FFFFFF"><span class="gd-hex-t">#FFFFFF</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 255 255 255</span><span class="gd-use">Section ground, hero type</span></span></li>
+          <li class="gd-sw" data-reveal style="--d:.16s"><span class="gd-chip" style="--c:#333333;--k:#ffffff">Aa</span><span class="gd-sw-info"><span class="gd-sw-name">Charcoal</span><button class="gd-hex" type="button" data-copy="#333333" aria-label="Copy #333333"><span class="gd-hex-t">#333333</span><span class="ic" data-icon="copy"></span></button><span class="gd-rgb">RGB 51 51 51</span><span class="gd-use">Body text</span></span></li>
+        </ul>
+        <div class="gd-pairs" data-reveal>
+          <p class="gd-pair plate" style="--pb:#0e2b03;--pi:#ffffff"><b>Aa</b><span>White on forest<br>15.4 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#0e2b03;--pi:#dbb05f"><b>Aa</b><span>Gold light on forest<br>7.6 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#ffffff;--pi:#333333"><b>Aa</b><span>Charcoal on white<br>12.6 : 1, AAA</span></p>
+          <p class="gd-pair plate" style="--pb:#ffffff;--pi:#b78a4a"><b>Aa</b><span>Gold on white<br>3.1 : 1, large only</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Type</span>
+        <h3 class="st-h3">A soft serif to speak, a plain sans to sell.</h3>
+        <p>Cormorant Infant for every heading, light and bold capitals on the hero. Inter for the copy, the buttons and the small spaced labels.</p>
+      </div>
+      <div class="gd-main">
+        <div class="gd-faces">
+          <div class="gd-face plate" style="--pb:#ffffff;--pi:#0e2b03" data-reveal>
+            <p class="gd-face-top"><span>Display</span><span>300, 500, 700</span></p>
+            <p class="gd-aa b-serif" style="font-weight:500" aria-hidden="true">Aa</p>
+            <div>
+              <p class="gd-face-name b-serif" style="font-weight:600">Cormorant Infant</p>
+              <p class="gd-glyphs b-serif" style="font-size:19px" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
+            </div>
+          </div>
+          <div class="gd-face plate" data-reveal style="--pb:#0e2b03;--pi:#dbb05f;--d:.06s">
+            <p class="gd-face-top"><span>Text and labels</span><span>400, 500, 600, 700</span></p>
+            <p class="gd-aa" style="font-weight:500;letter-spacing:-.04em" aria-hidden="true">Aa</p>
+            <div>
+              <p class="gd-face-name" style="font-weight:600">Inter</p>
+              <p class="gd-glyphs" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
+            </div>
+          </div>
+        </div>
+        <div class="gd-scale plate" style="--pb:#ffffff;--pi:#333333;--pl:#ece7dc" data-reveal>
+          <div class="gd-row"><span class="gd-role">Hero headline</span><span class="gd-sample b-serif" style="font-size:clamp(34px,4.4vw,68px);line-height:1;letter-spacing:.01em;text-transform:uppercase;color:#0e2b03"><span style="font-weight:300">Let the warmth</span><br><span style="font-weight:700">carry your calm</span></span><span class="gd-spec">Cormorant Infant 300 and 700, capitals<br>68 / 48 / 36 px, line 1.0, +0.01 em</span></div>
+          <div class="gd-row"><span class="gd-role">Section heading</span><span class="gd-sample b-serif" style="font-size:clamp(34px,4.4vw,68px);line-height:1;font-weight:500;color:#0e2b03">A scent for every occasion</span><span class="gd-spec">Cormorant Infant 500<br>68 / 48 / 36 px, line 1.0</span></div>
+          <div class="gd-row"><span class="gd-role">Story heading</span><span class="gd-sample b-serif" style="font-size:44px;line-height:1.05;font-weight:500;color:#0e2b03">The stories behind the collection</span><span class="gd-spec">Cormorant Infant 500<br>44 / 36 / 30 px</span></div>
+          <div class="gd-row"><span class="gd-role">Quotation</span><span class="gd-sample" style="font-size:24px;line-height:1.4;font-weight:500;color:#0e2b03">He told his companions not to refuse a fragrant gift.</span><span class="gd-spec">Inter 500<br>24 px, line 1.4</span></div>
+          <div class="gd-row"><span class="gd-role">Card title</span><span class="gd-sample" style="font-size:18px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#0e2b03">Before Namaz</span><span class="gd-spec">Inter 700, capitals<br>18 px, +1.6 px</span></div>
+          <div class="gd-row"><span class="gd-role">Body</span><span class="gd-sample" style="font-size:16px;line-height:1.4;font-weight:500">Light it a few minutes ahead. By the time you begin, the room has settled.</span><span class="gd-spec">Inter 400 and 500<br>16 px, line 1.4</span></div>
+          <div class="gd-row"><span class="gd-role">Button, citation</span><span class="gd-sample" style="font-size:14px;font-weight:600;letter-spacing:1.12px;text-transform:uppercase;color:#0e2b03">Order now</span><span class="gd-spec">Inter 600, capitals<br>14 px, +1.12 px</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-block">
+      <div class="gd-side">
+        <span class="st-label">Components</span>
+        <h3 class="st-h3">Square, thin and slow.</h3>
+        <p>No rounded corners anywhere in the shop. Hover any of these: they behave the way they do on the live site.</p>
+      </div>
+      <div class="gd-main">
+        <div class="plate plate--pad" style="--pb:#ffffff;--pi:#1e1e1e" data-reveal>
+          <div class="gd-parts" aria-hidden="true">
+            <button class="b-btn b-btn--dark" type="button" tabindex="-1">Order now</button>
+            <span class="b-onphoto"><button class="b-btn b-btn--light" type="button" tabindex="-1">Order now</button></span>
+            <button class="b-arrow" type="button" tabindex="-1" aria-label="Next card (sample)"><span class="ic" data-icon="arrow-right"></span></button>
+            <span class="b-qty" aria-hidden="true"><span>&minus;</span><b>1</b><span>+</span></span>
+            <label class="b-field"><span>Full name</span><input type="text" placeholder="As it should appear on the parcel" tabindex="-1"></label>
+          </div>
+          <p class="gd-parts-note">The dark button fills with gold on hover. The light one, used only over the hero photograph, lifts three pixels. Fields are a single forest line that turns gold when you type.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phones -->
+  <section class="st-sec wrap" aria-labelledby="phones-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="phones-h" data-split>Most people arrive on a phone.</h2>
+      <p class="st-lede" data-reveal>A scent is shared by message, so every page was checked at 390 px. The hero swaps to a portrait photograph, the occasion row becomes a swipe, and the order form stacks with the button at the end.</p>
+    </div>
+    <div class="st-phones st-phones--stagger">
+      <figure class="st-phone" data-reveal><div class="st-phone-frame"><img src="Assets/case-studies/bakhoor/phone-home.jpg" alt="Home page on a phone: the hero with the headline Let the warmth carry your calm" width="780" height="1688" loading="lazy"></div><figcaption>Portrait hero</figcaption></figure>
+      <figure class="st-phone" data-reveal style="--d:.06s"><div class="st-phone-frame"><img src="Assets/case-studies/bakhoor/phone-occasions.jpg" alt="Occasions row on a phone, the next card peeking in from the right" width="780" height="1688" loading="lazy"></div><figcaption>Occasions, a swipe</figcaption></figure>
+      <figure class="st-phone" data-reveal style="--d:.12s"><div class="st-phone-frame"><img src="Assets/case-studies/bakhoor/phone-stories.jpg" alt="The stories on a phone, one card under another" width="780" height="1688" loading="lazy"></div><figcaption>Stories</figcaption></figure>
+      <figure class="st-phone" data-reveal style="--d:.18s"><div class="st-phone-frame"><img src="Assets/case-studies/bakhoor/phone-order.jpg" alt="Order page on a phone: product, quantity and total" width="780" height="1688" loading="lazy"></div><figcaption>Order, one column</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- After launch -->
+  <section class="st-sec wrap" aria-labelledby="after-h">
+    <div class="st-head">
+      <h2 class="st-h2" id="after-h" data-split>The first two days were mostly photographs.</h2>
+      <p class="st-lede" data-reveal>The git history shows where the work went after the first version: into images first, then into the parts a real shop needs.</p>
+    </div>
+    <div class="st-log">
+      <div class="st-log-group">
+        <h3>Photographs<small>August</small></h3>
+        <ol>
+          <li><time datetime="2026-08-29">29 Aug</time><p>First version in git: hero, about, occasions, stories, order and the admin.</p></li>
+          <li style="--d:.06s"><time datetime="2026-08-29">29 Aug</time><p>A portrait photograph for phones and a new desktop shot, anchored bottom right so the box is never cropped.</p></li>
+          <li style="--d:.12s"><time datetime="2026-08-30">30 Aug</time><p>Real photography for all five occasion cards and the three stories, and a tablet size for the hero.</p></li>
+          <li style="--d:.18s"><time datetime="2026-08-30">30 Aug</time><p>Home page images cut from 35 MB to about 2 MB and served as WebP.</p></li>
+          <li style="--d:.24s"><time datetime="2026-08-30">30 Aug</time><p>Hover zoom removed from every photo, so the pictures sit still and only the buttons move.</p></li>
+        </ol>
+      </div>
+      <div class="st-log-group">
+        <h3>Ready for real orders<small>September</small></h3>
+        <ol>
+          <li><time datetime="2026-09-15">15 Sep</time><p>About, Contact, Terms, Privacy, Cookie and Refund pages, so the shop could take real orders.</p></li>
+          <li style="--d:.06s"><time datetime="2026-09-15">15 Sep</time><p>Sequential invoice numbers for every order.</p></li>
+          <li style="--d:.12s"><time datetime="2026-09-15">15 Sep</time><p>Design source files moved out of the folder that goes live.</p></li>
+        </ol>
+      </div>
+      <div class="st-log-group">
+        <h3>The paperwork<small>October</small></h3>
+        <ol>
+          <li><time datetime="2026-10-07">7 Oct</time><p>The admin invoice redrawn at 4 by 6 inches, with the amount in words.</p></li>
+          <li style="--d:.06s"><time datetime="2026-10-07">7 Oct</time><p>The config file with the real credentials kept out of git for good.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Behind the counter, next -->
+  <section class="st-sec wrap st-close" aria-labelledby="close-h">
+    <div data-reveal>
+      <h2 class="st-h3" id="close-h">Behind the counter</h2>
+      <div class="st-body">
+        <p>A private admin lets the owner edit the product and its stock, see every order, and print the invoice. A Payments and GST report totals each month and the financial year, and the invoice splits tax into CGST and SGST, or IGST, depending on the buyer&rsquo;s state.</p>
+        <p>Until the payment keys were added, the whole flow ran in a demo mode with a simulated payment and emails written to a log, so the owner could test it end to end without a real charge.</p>
+      </div>
+    </div>
+    <div data-reveal style="--d:.08s">
+      <h2 class="st-h3">What I&rsquo;d add next</h2>
+      <dl class="st-next-list">
+        <div><dt>A gift note</dt><dd>The stories call bakhoor something you give. A &ldquo;send as a gift&rdquo; option with a printed card would finish that thought.</dd></div>
+        <div><dt>A second blend</dt><dd>The order page is built for one product. A second blend would need a small range page, but not a catalogue.</dd></div>
+        <div><dt>Delivery estimate</dt><dd>A pincode check before payment, so nobody finds out about delivery time afterwards.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="st-contact wrap" aria-labelledby="end-h">
+    <h2 class="contact-title" id="end-h" data-split>Selling something you can&rsquo;t sample?</h2>
+    <p class="lede" data-reveal>I design and build small shops where the story has to do the work.</p>
+    <div class="contact-mail" data-reveal><a class="mail-link" href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a></div>
+  </section>
+
+  <!-- Next case -->
+  <a class="st-nextcase" href="the-dale.html">
+    <img src="Assets/case-studies/the-dale/valley-mist.webp" alt="" width="1536" height="1024" loading="lazy">
+    <span class="st-nextcase-in wrap">
+      <span><span class="st-label">Next case</span><span class="st-nextcase-name">The Dale</span></span>
+      <span class="st-nextcase-go"><span class="ic" data-icon="arrow-right"></span></span>
+    </span>
+  </a>
+</main>
+
+<footer class="footer wrap">
+  <span>&copy; <span id="year"></span> Hardik Ojha</span>
+  <a href="#main" class="link-arrow">Back to top <span class="ic" data-icon="arrow-up"></span></a>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/study.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

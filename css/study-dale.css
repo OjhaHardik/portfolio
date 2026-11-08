@@ -1,0 +1,110 @@
+/* The Dale study: the comparison switch, the photographs, the pinned pan of screens and the site's own parts.
+   Brand plates use the site's tokens (css/site.css in The Dale) and stay the same in both themes. */
+@font-face { font-family: 'Cormorant Garamond'; src: url('../fonts/cormorant-garamond-var.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Cormorant Garamond'; src: url('../fonts/cormorant-garamond-italic-var.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Hanken Grotesk'; src: url('../fonts/hanken-grotesk-var.woff2') format('woff2'); font-weight: 400 600; font-display: swap; }
+
+.study--dale { --d-mist: #edf3f8; --d-mist-2: #e2eaf1; --d-deodar: #2f4a3a; --d-deodar-2: #243a2d; --d-ink: #16231d; --d-ink-2: #4a5a52; --d-white: #f8fbfd; --d-geru: #a3341f; --d-line: rgb(47 74 58 / .14); }
+.study--dale .st-cover-frame > img { object-position: 50% 60%; }
+.d-serif { font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif; }
+.d-sans { font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+
+/* ---------- Comparison: the site's table, as a switch ---------- */
+.cmp-wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.cmp { --pb: var(--d-mist); --pi: var(--d-ink); font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+.cmp-top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.cmp-label { font: italic 400 20px/1.2 'Cormorant Garamond', Georgia, serif; color: var(--d-ink-2); }
+.cmp-title { margin-top: 8px; font: 400 clamp(28px, 2.8vw, 42px)/1.02 'Cormorant Garamond', Georgia, serif; text-transform: uppercase; letter-spacing: .005em; color: var(--d-deodar); max-width: 13ch; }
+.cmp-switch { display: inline-flex; padding: 4px; border-radius: 999px; border: 1px solid var(--d-line); background: var(--d-white); }
+.cmp-switch button { height: 40px; padding: 0 1.1em; border-radius: 999px; font: 500 14px/1 'Hanken Grotesk', sans-serif; color: var(--d-ink-2); white-space: nowrap; transition: background-color .4s cubic-bezier(.16, 1, .3, 1), color .4s cubic-bezier(.16, 1, .3, 1); }
+.cmp-switch button[aria-pressed="true"] { background: var(--d-deodar); color: var(--d-white); }
+.cmp-switch button:focus-visible { outline: 2px solid var(--d-deodar); outline-offset: 2px; }
+.cmp-rows { margin-top: clamp(24px, 3vw, 36px); }
+.cmp-rows div { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 16px; padding-block: 16px; border-top: 1px solid var(--d-line); }
+.cmp-rows dt { font: italic 400 20px/1.2 'Cormorant Garamond', Georgia, serif; color: var(--d-ink-2); }
+.cmp-rows dd { display: grid; font-size: 16px; line-height: 1.5; }
+.cmp-rows dd > span { grid-area: 1 / 1; transition: opacity .5s cubic-bezier(.16, 1, .3, 1), transform .6s cubic-bezier(.16, 1, .3, 1), visibility 0s; }
+.cmp[data-show="dale"] .cmp-rows [data-side="nainital"], .cmp[data-show="nainital"] .cmp-rows [data-side="dale"] { opacity: 0; transform: translateY(8px); visibility: hidden; transition: opacity .3s, transform .3s, visibility 0s .3s; }
+.cmp[data-show="nainital"] .cmp-rows dd { color: var(--d-geru); }
+.cmp-foot { margin-top: 18px; font: italic 400 18px/1.3 'Cormorant Garamond', Georgia, serif; color: var(--d-ink-2); }
+
+/* ---------- Photographs from the estate ---------- */
+.d-photos { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(10px, 1.4vw, 18px); }
+.d-photo { margin: 0; }
+.d-photo div { overflow: hidden; background: var(--g900); }
+.d-photo img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: inherit; }
+.d-photo figcaption { margin-top: 10px; font-size: 14px; color: var(--g400); }
+.d-photo--a { grid-column: 1 / span 5; }
+.d-photo--a div { aspect-ratio: 4 / 5; }
+.d-photo--b { grid-column: 6 / span 7; align-self: end; }
+.d-photo--b div { aspect-ratio: 16 / 10; }
+.d-photo--c { grid-column: 1 / span 4; }
+.d-photo--c div, .d-photo--d div { aspect-ratio: 3 / 4; }
+.d-photo--d { grid-column: 5 / span 4; margin-top: clamp(40px, 6vw, 96px); }
+.d-photo--e { grid-column: 9 / span 4; }
+.d-photo--e div { aspect-ratio: 3 / 4; }
+
+/* ---------- Pan of screens: pinned on desktop, a swipe everywhere else ---------- */
+.pan { padding-top: var(--sec); }
+.pan-i { margin: 0; }
+.pan-i img { height: min(52dvh, 480px); width: auto; max-width: none; background: var(--d-mist); box-shadow: inset 0 0 0 1px var(--g800); }
+.pan-i figcaption { margin-top: 14px; max-width: 46ch; font-size: 14px; color: var(--g400); }
+.pan-i figcaption b { color: var(--white); font-weight: 600; }
+.pan-i--ph img { border-radius: 22px; }
+.pan.is-pinned { height: 100dvh; padding-top: calc(var(--topbar) + clamp(24px, 4vh, 48px)); display: flex; flex-direction: column; }
+.pan.is-pinned .st-head { margin-bottom: clamp(24px, 4vh, 48px); }
+.pan.is-pinned .st-rail { overflow: visible; scroll-snap-type: none; cursor: default; }
+.pan.is-pinned .st-ctl { display: none; }
+
+/* ---------- Logo ---------- */
+.d-lockup { display: block; width: min(70%, 380px); aspect-ratio: 1003.24 / 408.5; background: currentColor; -webkit-mask: url('../Assets/case-studies/the-dale/the-dale-lockup-short.svg') center / contain no-repeat; mask: url('../Assets/case-studies/the-dale/the-dale-lockup-short.svg') center / contain no-repeat; }
+.d-emb { display: block; width: var(--s); aspect-ratio: 399 / 220; background: currentColor; -webkit-mask: url('../Assets/case-studies/the-dale/the-dale-emblem.svg') center / contain no-repeat; mask: url('../Assets/case-studies/the-dale/the-dale-emblem.svg') center / contain no-repeat; }
+
+/* ---------- Colour balance and voice ---------- */
+.d-balance { margin-top: 28px; }
+.d-bar { margin-top: 12px; display: flex; height: 44px; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .08); }
+.d-bar i { flex: var(--w) 1 0; background: var(--c); }
+.d-bar-key { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--f-mono); font-size: 12px; color: var(--g400); }
+.d-voice { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px clamp(24px, 4vw, 56px); font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+.d-voice-h { font: italic 400 22px/1.2 'Cormorant Garamond', Georgia, serif; color: #4a5a52; margin-bottom: 14px; }
+.d-words { display: flex; flex-wrap: wrap; gap: 8px; }
+.d-words li { padding: .3em .9em; border-radius: 999px; background: rgb(47 74 58 / .1); color: #2f4a3a; font-size: 15px; }
+.d-words--no li { background: none; box-shadow: inset 0 0 0 1px rgb(163 52 31 / .35); color: #4a5a52; text-decoration: line-through; text-decoration-color: #a3341f; }
+.d-say { grid-column: 1 / -1; display: grid; gap: 10px; padding-top: 22px; border-top: 1px solid rgb(47 74 58 / .14); }
+.d-say p { display: grid; grid-template-columns: 4em minmax(0, 1fr); gap: 12px; font: 400 clamp(20px, 2vw, 26px)/1.25 'Cormorant Garamond', Georgia, serif; }
+.d-say span { font: 600 11.8px/2.2 'Hanken Grotesk', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #4a5a52; }
+.d-say s { text-decoration-color: #a3341f; color: #4a5a52; }
+
+/* ---------- The site's parts, live ---------- */
+.d-parts { font-family: 'Hanken Grotesk', system-ui, sans-serif; display: grid; gap: 28px; }
+.d-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.d-chip { display: inline-flex; align-items: center; height: 40px; padding: 0 1.15em; border-radius: 999px; border: 1px solid var(--d-line); font: 500 14px/1 'Hanken Grotesk', sans-serif; letter-spacing: .01em; color: var(--d-ink); white-space: nowrap; transition: background-color .4s cubic-bezier(.16, 1, .3, 1); }
+.d-chip:hover { background: var(--d-white); }
+.d-chip--solid { background: var(--d-deodar); border-color: var(--d-deodar); color: var(--d-white); }
+.d-chip--solid:hover { background: var(--d-deodar-2); }
+.d-kinds { border: 0; padding: 0; margin: 0; min-width: 0; }
+.d-kinds legend { padding: 0; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--d-ink); }
+.d-kinds label { position: relative; cursor: pointer; }
+.d-kinds input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.d-kinds span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1em; border-radius: 999px; border: 1px solid rgb(47 74 58 / .32); background: var(--d-white); font-size: 14.4px; color: var(--d-ink); transition: background-color .3s cubic-bezier(.16, 1, .3, 1), color .3s cubic-bezier(.16, 1, .3, 1); }
+.d-kinds input:checked + span { background: var(--d-deodar); border-color: var(--d-deodar); color: var(--d-white); }
+.d-kinds input:focus-visible + span { outline: 2px solid var(--d-deodar); outline-offset: 2px; }
+.d-pill { display: inline-block; padding: .25em .8em; border-radius: 999px; font: 500 12.2px/1.4 'Hanken Grotesk', sans-serif; background: rgb(47 74 58 / .1); color: var(--d-deodar); }
+.d-pill--mid { background: rgb(160 128 40 / .14); color: #6b5410; }
+.d-pill--busy { background: rgb(163 52 31 / .1); color: var(--d-geru); }
+
+@media (max-width: 1024px) {
+  .cmp-wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .cmp-rows div { grid-template-columns: 1fr; gap: 4px; }
+  .d-voice { grid-template-columns: 1fr; }
+  .d-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .d-photo--a, .d-photo--b { grid-column: 1 / -1; }
+  .d-photo--c, .d-photo--d, .d-photo--e { grid-column: auto; margin-top: 0; }
+  .d-photo--e { grid-column: 1 / -1; }
+  .d-photo--e div { aspect-ratio: 16 / 10; }
+  .pan .st-rail { align-items: flex-end; }
+  .pan-i img { height: auto; width: 84vw; }
+  .pan-i--ph img { width: 40vw; }
+}

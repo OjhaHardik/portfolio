@@ -3,48 +3,405 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Graphics — Hardik Ojha</title>
-<meta name="description" content="Hardik Ojha — Graphic Design Portfolio.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<title>Graphic Design Portfolio - Hardik Ojha</title>
+<meta name="description" content="Graphic design by Hardik Ojha: logo case studies for The Dale and FTN World, social posts, print covers and interface design.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230a0a0b%27/%3E%3Crect x=%277%27 y=%2711%27 width=%2718%27 height=%2710%27 rx=%272%27 fill=%27%232a2a2f%27/%3E%3Crect x=%2715%27 y=%275%27 width=%272.5%27 height=%2722%27 fill=%27%23b4ff39%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/study.css">
+<link rel="stylesheet" href="css/graphics.css">
+<script>try{var t=localStorage.getItem('ho-theme');if(t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
-<body>
+<body class="no-dock gf-page">
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="logo" href="index.html">HARDIK OJHA</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Video</a>
-    </nav>
-  </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html">Hardik Ojha</a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="index.html#interface">Work</a>
+    <a href="index.html#edit">Video</a>
+    <a href="graphics.html" class="is-active" aria-current="page">Graphics</a>
+    <a href="index.html#darkroom">Photos</a>
+    <a href="index.html#credits">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to light mode"><span class="ic ic-moon" data-icon="moon"></span><span class="ic ic-sun" data-icon="sun"></span></button>
 </header>
 
-<main>
-  <section class="hero wrap">
-    <p class="eyebrow">Graphic Design</p>
-    <h1>GRAPHICS</h1>
-    <p class="about">
-      A selection of poster, cover and social graphic work — laid out below by category.
-    </p>
+<!--
+  Any <img> inside a .slot opens full size on click. Paths with spaces need %20.
+  Script words (.scr) always sit beside or above a bold word, never on top of it.
+-->
+<main id="main" class="study gf">
+
+  <!-- Cover slide -->
+  <section class="gf-plate gf-hero" aria-labelledby="gf-title">
+    <div class="gf-hero-in wrap">
+      <a class="link-arrow gf-back" href="index.html#graphics"><span class="ic" data-icon="caret-left"></span> Back to the film</a>
+      <div class="gf-hero-mid">
+        <div class="sel">
+          <h1 class="gf-hero-t" id="gf-title">
+            <span class="gf-hero-kick" data-split>Graphic <span class="gf-dim">Design</span></span>
+            <span class="gf-hero-big" data-split style="--d:.12s">Portfolio</span>
+          </h1>
+          <i class="sel-h" data-reveal style="--d:.9s" aria-hidden="true"></i>
+          <span class="sel-cur ic" data-icon="cursor-fill" data-reveal style="--d:1.05s" aria-hidden="true"></span>
+        </div>
+        <p class="scr gf-sign" data-reveal style="--d:.6s">by Hardik Ojha</p>
+      </div>
+      <div class="gf-hero-foot" data-reveal style="--d:.5s">
+        <p>Logos and identities, social posts, print and interfaces. One discipline per chapter.</p>
+        <a class="btn btn--neon" href="mailto:ojhah10@gmail.com">Start a project</a>
+      </div>
+    </div>
   </section>
 
-  <div id="categories"></div>
+  <!-- Hello -->
+  <section class="gf-sheet" aria-labelledby="hello-t">
+    <div class="wrap gf-hello-in">
+      <div class="gf-hello-copy">
+        <h2 class="gf-hello-t" id="hello-t" data-split>Hello!</h2>
+        <p class="gf-hello-name" data-reveal>I&rsquo;m Hardik Ojha.</p>
+        <p class="gf-hello-body" data-reveal style="--d:.08s">I design the things a brand gets recognised by. I start from something the client already owns, a pine cone on their land or the drafting table their work starts on, and build the mark, the colours and the type from that.</p>
+        <dl class="gf-count" data-reveal style="--d:.14s">
+          <div><dt>Identities written up</dt><dd>2</dd></div>
+          <div><dt>Covers in print</dt><dd>5</dd></div>
+          <div><dt>Sites built</dt><dd>4</dd></div>
+        </dl>
+      </div>
+      <div class="gf-desk" aria-label="A few finished pieces">
+        <div class="plate gf-desk-a" style="--pb:#2f4a3a;--pi:#edf3f8" data-reveal><span class="mk mk--dale" role="img" aria-label="The Dale logo, mist on deodar green"></span></div>
+        <div class="plate gf-desk-b" style="--pb:#eef0f2;--pi:#151b2e;--d:.06s" data-reveal><span class="mk mk--ftn" role="img" aria-label="FTN World logo, ink on tracing grey"></span></div>
+        <div class="slot gf-desk-c" data-reveal style="--d:.12s"><img src="Assets/Graphics/Magazine%20Covers/NIET%20TIMES.jpg" alt="NIET Times magazine cover" width="1131" height="1600" loading="lazy"></div>
+        <div class="slot gf-desk-d" data-reveal style="--d:.18s"><img src="Assets/Graphics/Creatives/Delusion.jpg" alt="Delusion, social creative" width="1080" height="1350" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contents -->
+  <section class="gf-sheet" aria-labelledby="toc-t">
+    <div class="wrap">
+      <h2 class="gf-h" id="toc-t"><span class="scr gf-h-pre" data-reveal style="--d:.3s">Table of</span> <span data-split>Contents</span></h2>
+      <nav class="sel sel--board" aria-label="Chapters">
+        <ol class="toc">
+          <li data-reveal><a href="#logos"><span class="toc-n">01</span><span class="toc-w">Logo <span class="scr">Folio</span></span><span class="toc-d">The Dale, FTN World</span></a></li>
+          <li data-reveal style="--d:.06s"><a href="#social"><span class="toc-n">02</span><span class="toc-w">Social <span class="scr">Posts</span></span><span class="toc-d">Creatives for the feed</span></a></li>
+          <li data-reveal style="--d:.12s"><a href="#print"><span class="toc-n">03</span><span class="toc-w">Print <span class="scr">Covers</span></span><span class="toc-d">Magazine and book covers</span></a></li>
+          <li data-reveal style="--d:.18s"><a href="#uiux"><span class="toc-n">04</span><span class="toc-w">UI <span class="scr">Design</span></span><span class="toc-d">Four client sites</span></a></li>
+        </ol>
+        <i class="sel-h" data-reveal style="--d:.4s" aria-hidden="true"></i>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 01 Logo folio -->
+  <section id="logos" aria-labelledby="logos-t">
+    <div class="gf-plate gf-cut">
+      <div class="wrap gf-cut-in">
+        <p class="gf-cut-n mono" data-reveal>Chapter 01</p>
+        <div class="sel">
+          <h2 class="gf-cut-t" id="logos-t" data-split>Logo Folio</h2>
+          <i class="sel-h" data-reveal style="--d:.5s" aria-hidden="true"></i>
+          <span class="sel-cur ic" data-icon="cursor-fill" data-reveal style="--d:.65s" aria-hidden="true"></span>
+        </div>
+        <p class="gf-cut-sub" data-reveal style="--d:.3s">Two marks, each with its whole story. Both started from something the client already had.</p>
+      </div>
+    </div>
+
+    <div class="gf-sheet">
+      <div class="wrap">
+
+        <!-- Case 01: The Dale -->
+        <article class="gf-sub gf-brand" aria-labelledby="dale-t">
+          <div class="gf-brand-copy" data-reveal>
+            <p class="gf-meta">Logo case 01 &middot; October 2026</p>
+            <h3 class="gf-brand-t" id="dale-t">The Dale</h3>
+            <p>A farmstay of ten rooms among mango orchards at Rausil, in Kumaon. The brief said no gold, no marble, nothing that sounds like luxury. So the mark is traced from two shapes the farm already owns: a chir pine cone and the valley it sits in.</p>
+            <p class="gf-k">Key points</p>
+            <ul class="gf-list">
+              <li><b>Brief:</b> one colour, readable small in a navigation bar</li>
+              <li><b>Method:</b> drawn over photographs until the lines agreed</li>
+              <li><b>Delivered:</b> emblem, wordmark, lockups and favicon, as SVG</li>
+              <li><b>Type:</b> Cormorant Garamond capitals, Hanken Grotesk for text</li>
+              <li><b>Colour:</b> deodar green on snow mist, brick red kept for rare lines</li>
+            </ul>
+            <a class="link-arrow gf-read" href="the-dale-logo.html">How the mark was drawn <span class="ic" data-icon="arrow-up-right"></span></a>
+          </div>
+          <div class="gf-bento gf-bento--dale">
+            <div class="plate d-lock" style="--pb:#2f4a3a;--pi:#edf3f8" data-reveal><span class="mk mk--dale" role="img" aria-label="The Dale lockup, emblem over the name, in mist on deodar green"></span></div>
+            <div class="slot d-cone" data-reveal style="--d:.06s"><img src="Assets/case-studies/the-dale-logo/cone-overlay.jpg" alt="A chir pine cone with The Dale emblem traced over its tip and scales" width="1000" height="1250" loading="lazy"></div>
+            <div class="slot d-valley" data-reveal style="--d:.12s"><img src="Assets/case-studies/the-dale-logo/valley-overlay.jpg" alt="Kumaon hills at dusk with the logo&rsquo;s horizon line drawn over the real ridgelines" width="1300" height="869" loading="lazy"></div>
+            <div class="gf-type plate d-type" style="--pb:#edf3f8;--pi:#16231d" data-reveal>
+              <p class="gf-type-name">Cormorant Garamond <small>Display, capitals</small></p>
+              <p class="gf-type-aa t-dale" aria-hidden="true">Aa</p>
+              <p class="gf-type-set t-dale-text">Hanken Grotesk for text. Birdsong over the orchard, a walk to the ashram, dinner on the deck.</p>
+            </div>
+            <div class="gf-pal d-pal" data-reveal style="--d:.06s" role="img" aria-label="The Dale colours: Deodar #2F4A3A, Snow Mist #EDF3F8, Ink #16231D, Geru #A3341F">
+              <span style="--c:#2f4a3a"><b>Deodar</b>#2F4A3A</span>
+              <span style="--c:#edf3f8;--t:#16231d"><b>Snow Mist</b>#EDF3F8</span>
+              <span style="--c:#16231d"><b>Ink</b>#16231D</span>
+              <span style="--c:#a3341f"><b>Geru</b>#A3341F</span>
+            </div>
+            <div class="plate d-sizes" style="--pb:#edf3f8;--pi:#2f4a3a;--d:.12s" data-reveal role="img" aria-label="The emblem at 96, 56, 32 and 16 pixels">
+              <span class="mk mk--emb" style="--s:96px"></span><span class="mk mk--emb" style="--s:56px"></span><span class="mk mk--emb" style="--s:32px"></span><span class="mk mk--emb" style="--s:16px"></span>
+              <small>96, 56, 32, 16 px</small>
+            </div>
+          </div>
+        </article>
+
+        <div class="gf-sub">
+          <h3 class="gf-h gf-h--sm"><span data-split>Before</span> <span class="scr" data-reveal style="--d:.3s">the mark</span></h3>
+          <p class="gf-lede" data-reveal>Four directions that did not make it, and why.</p>
+          <ul class="gf-x">
+            <li data-reveal><div class="slot"><img src="Assets/case-studies/the-dale-logo/x-lattice.jpg" alt="Rejected: a pine cone drawn as a lattice of peach diamonds" width="509" height="509" loading="lazy"></div><b>A cone as a grid</b><span>Every scale a diamond. It read as a pineapple.</span></li>
+            <li data-reveal style="--d:.06s"><div class="slot"><img src="Assets/case-studies/the-dale-logo/x-leaf.jpg" alt="Rejected: a leaf made of angled stripes" width="437" height="501" loading="lazy"></div><b>Stripes in a leaf</b><span>Tidy, but it could belong to any farm.</span></li>
+            <li data-reveal style="--d:.12s"><div class="slot"><img src="Assets/case-studies/the-dale-logo/x-peaks.jpg" alt="Rejected: a horizon line with two sharp peaks" width="1200" height="239" loading="lazy"></div><b>Two sharp peaks</b><span>It said mountains. The place is a valley, so the V stayed.</span></li>
+            <li data-reveal style="--d:.18s"><div class="slot"><img src="Assets/case-studies/the-dale-logo/x-monogram.jpg" alt="Rejected: a pen-drawn t and d monogram" width="700" height="875" loading="lazy"></div><b>A pen monogram</b><span>Set aside for a mark that comes from the place.</span></li>
+          </ul>
+        </div>
+
+        <!-- Case 02: FTN World -->
+        <article class="gf-sub gf-brand gf-brand--flip" aria-labelledby="ftn-t">
+          <div class="gf-brand-copy" data-reveal>
+            <p class="gf-meta">Logo case 02 &middot; October 2026</p>
+            <h3 class="gf-brand-t" id="ftn-t">FTN World</h3>
+            <p>An architecture practice in Haldwani, working across the hills of Uttarakhand since 2018. The old logo was a low-resolution raster file with uneven letters. I respaced it, outlined it to SVG and built a brand sheet around it from a drafting table: tracing paper, ink and one red.</p>
+            <p class="gf-k">Key points</p>
+            <ul class="gf-list">
+              <li><b>Spacing:</b> gaps of 24 and 74 units, now both 49</li>
+              <li><b>Outlined:</b> pure SVG, so it never waits for a font</li>
+              <li><b>Type:</b> Urbanist 700 and 800, Geist for text</li>
+              <li><b>Colour:</b> Buransh red, after Uttarakhand&rsquo;s state tree</li>
+              <li><b>Modes:</b> ink on tracing by day, mist on night</li>
+            </ul>
+            <a class="link-arrow gf-read" href="ftn-world.html">Read the full case study <span class="ic" data-icon="arrow-up-right"></span></a>
+          </div>
+          <div class="gf-bento gf-bento--ftn">
+            <div class="plate f-word" style="--pb:#eef0f2;--pi:#151b2e" data-reveal><span class="mk mk--ftnw" role="img" aria-label="FTN World logo in ink on tracing grey"></span></div>
+            <div class="plate f-night" style="--pb:#0d1120;--pi:#e9ecf1;--d:.06s" data-reveal><span class="mk mk--ftn" role="img" aria-label="FTN mark in mist on night"></span></div>
+            <div class="plate f-red" style="--pb:#bd3420;--pi:#f7f8fa;--d:.12s" data-reveal><span class="mk mk--ftn" role="img" aria-label="FTN mark in white on Buransh red"></span></div>
+            <div class="gf-type plate f-type" style="--pb:#0d1120;--pi:#e9ecf1" data-reveal>
+              <p class="gf-type-name">Urbanist <small>Display, 700 and 800</small></p>
+              <p class="gf-type-aa t-ftn" aria-hidden="true">Aa</p>
+              <p class="gf-type-set t-ftn-text">Geist for text. Survey the site, set out the grid, raise the structure.</p>
+            </div>
+            <div class="gf-pal f-pal" data-reveal style="--d:.06s" role="img" aria-label="FTN World colours: Tracing #EEF0F2, Ink #151B2E, Night #0D1120, Buransh #BD3420">
+              <span style="--c:#eef0f2;--t:#151b2e"><b>Tracing</b>#EEF0F2</span>
+              <span style="--c:#151b2e"><b>Ink</b>#151B2E</span>
+              <span style="--c:#0d1120"><b>Night</b>#0D1120</span>
+              <span style="--c:#bd3420"><b>Buransh</b>#BD3420</span>
+            </div>
+            <div class="slot f-sheet" data-reveal style="--d:.12s"><img src="Assets/case-studies/ftn-world/screen-brand.jpg" alt="The FTN World brand sheet: logo, practice details and a hill road photograph" width="1440" height="900" loading="lazy"></div>
+          </div>
+        </article>
+
+        <!-- The FTN wordmark, annotated -->
+        <div class="gf-sub">
+          <div class="gf-bracket" data-reveal><h3>Wordmark <small>FTN World, respaced</small></h3></div>
+          <div class="gf-anat">
+            <ul class="gf-anat-notes gf-anat-notes--l">
+              <li data-reveal><b>Even gaps</b><span>F to T was 24 units, T to N was 74. Both are now 49, so the three letters read as one word.</span></li>
+              <li data-reveal style="--d:.08s"><b>One outline</b><span>The F was redrawn as a single shape, so the loading animation traces it without seams.</span></li>
+            </ul>
+            <div class="plate gf-anat-art" style="--pb:#ffffff;--pi:#151b2e" data-reveal>
+              <svg class="f-gap" viewBox="-20 -900 1824 960" role="img" aria-label="The letters F T N with two equal gaps of 49 units marked in red">
+                <rect class="gp" x="445" y="-735" width="49" height="770"/>
+                <rect class="gp" x="1080" y="-735" width="49" height="770"/>
+                <path class="mk-p" d="M0 -700H445V-535H186V-416H435V-263H186V0H0Z"/>
+                <path class="mk-p" d="M494 -527H690V0H884V-527H1080V-700H494Z"/>
+                <path class="mk-p" d="M1598 -700V-344L1129 -735V0H1315V-356L1784 35V-700Z"/>
+                <path class="gl" d="M445 -800V-760M494 -800V-760M445 -780H494M1080 -800V-760M1129 -800V-760M1080 -780H1129"/>
+                <text x="469.5" y="-820">49</text><text x="1104.5" y="-820">49</text>
+              </svg>
+            </div>
+            <ul class="gf-anat-notes gf-anat-notes--r">
+              <li data-reveal style="--d:.12s"><b>Letterform</b><span>Geometric and heavy, like lettering on the title block of a drawing.</span></li>
+              <li data-reveal style="--d:.2s"><b>Colour</b><span>Ink for the mark. The red is kept for one thing per screen.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Case 03: Arvira goes here, built the same way as the two cases above. -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Social -->
+  <section id="social" aria-labelledby="social-t">
+    <div class="gf-plate gf-cut">
+      <div class="wrap gf-cut-in">
+        <p class="gf-cut-n mono" data-reveal>Chapter 02</p>
+        <div class="sel">
+          <h2 class="gf-cut-t" id="social-t" data-split>Social Posts</h2>
+          <i class="sel-h" data-reveal style="--d:.5s" aria-hidden="true"></i>
+          <span class="sel-cur ic" data-icon="cursor-fill" data-reveal style="--d:.65s" aria-hidden="true"></span>
+        </div>
+        <p class="gf-cut-sub" data-reveal style="--d:.3s">Made to be read in the second before the thumb moves on.</p>
+      </div>
+    </div>
+    <div class="gf-sheet" id="posts">
+      <div class="wrap">
+        <div class="gf-posts" id="creatives">
+          <figure class="post" data-reveal>
+            <figcaption class="post-top"><i></i><span>Delusion</span><span class="ic" data-icon="instagram-logo" aria-hidden="true"></span></figcaption>
+            <div class="slot"><img src="Assets/Graphics/Creatives/Delusion.jpg" alt="Delusion, social creative" width="1080" height="1350" loading="lazy"></div>
+          </figure>
+          <figure class="post" data-reveal style="--d:.06s">
+            <figcaption class="post-top"><i></i><span>Hmns</span><span class="ic" data-icon="instagram-logo" aria-hidden="true"></span></figcaption>
+            <div class="slot"><img src="Assets/Graphics/Creatives/Hmns.jpg" alt="Hmns, social creative" width="1200" height="1600" loading="lazy"></div>
+          </figure>
+          <figure class="post" data-reveal style="--d:.12s">
+            <figcaption class="post-top"><i></i><span>Sarojini Ma&rsquo;am</span><span class="ic" data-icon="instagram-logo" aria-hidden="true"></span></figcaption>
+            <div class="slot"><img src="Assets/Graphics/Posts/Sarojini%20maam.jpg" alt="Sarojini Ma&rsquo;am, social post" width="1200" height="1600" loading="lazy"></div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Print -->
+  <section id="print" aria-labelledby="print-t">
+    <div class="gf-plate gf-cut">
+      <div class="wrap gf-cut-in">
+        <p class="gf-cut-n mono" data-reveal>Chapter 03</p>
+        <div class="sel">
+          <h2 class="gf-cut-t" id="print-t" data-split>Print Covers</h2>
+          <i class="sel-h" data-reveal style="--d:.5s" aria-hidden="true"></i>
+          <span class="sel-cur ic" data-icon="cursor-fill" data-reveal style="--d:.65s" aria-hidden="true"></span>
+        </div>
+        <p class="gf-cut-sub" data-reveal style="--d:.3s">Magazine and book covers, set up for the press and not just the screen.</p>
+      </div>
+    </div>
+    <div class="gf-sheet" id="magazine-covers">
+      <div class="wrap">
+        <div class="gf-covers gf-swipe">
+          <figure data-reveal>
+            <div class="slot"><img src="Assets/Graphics/Magazine%20Covers/Artboard%201.jpg" alt="Magazine front cover" width="1131" height="1600" loading="lazy"></div>
+            <figcaption>Magazine, front</figcaption>
+          </figure>
+          <figure data-reveal style="--d:.06s">
+            <div class="slot"><img src="Assets/Graphics/Magazine%20Covers/Artboard%20Back.jpg" alt="Magazine back cover" width="1131" height="1600" loading="lazy"></div>
+            <figcaption>Magazine, back</figcaption>
+          </figure>
+          <figure data-reveal style="--d:.12s">
+            <div class="slot"><img src="Assets/Graphics/Magazine%20Covers/NIET%20TIMES.jpg" alt="NIET Times magazine cover" width="1131" height="1600" loading="lazy"></div>
+            <figcaption>NIET Times</figcaption>
+          </figure>
+          <figure data-reveal style="--d:.18s">
+            <div class="slot"><img src="Assets/Graphics/Magazine%20Covers/book-cover_01.jpg" alt="Book cover, first design" width="1129" height="1600" loading="lazy"></div>
+            <figcaption>Book cover</figcaption>
+          </figure>
+          <figure data-reveal style="--d:.24s">
+            <div class="slot"><img src="Assets/Graphics/Magazine%20Covers/book-cover_03.jpg" alt="Book cover, second design" width="1131" height="1600" loading="lazy"></div>
+            <figcaption>Book cover</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 UI -->
+  <section id="uiux" aria-labelledby="uiux-t">
+    <div class="gf-plate gf-cut">
+      <div class="wrap gf-cut-in">
+        <p class="gf-cut-n mono" data-reveal>Chapter 04</p>
+        <div class="sel">
+          <h2 class="gf-cut-t" id="uiux-t" data-split>UI Design</h2>
+          <i class="sel-h" data-reveal style="--d:.5s" aria-hidden="true"></i>
+          <span class="sel-cur ic" data-icon="cursor-fill" data-reveal style="--d:.65s" aria-hidden="true"></span>
+        </div>
+        <p class="gf-cut-sub" data-reveal style="--d:.3s">Four client sites, designed in Figma and built by hand. Each one has a full case study.</p>
+      </div>
+    </div>
+    <div class="gf-sheet">
+      <div class="wrap">
+        <ul class="gf-sites">
+          <li class="gf-site" data-reveal>
+            <div class="gf-site-media">
+              <div class="gf-browser"><div class="gf-browser-bar" aria-hidden="true"><span>aafreenn</span></div><img src="Assets/case-studies/aafreenn/screen-home.jpg" alt="" width="1600" height="1000" loading="lazy"></div>
+              <div class="st-phone-frame gf-site-phone"><img src="Assets/case-studies/aafreenn/phone-home.jpg" alt="" width="780" height="1688" loading="lazy"></div>
+            </div>
+            <h3 class="gf-site-t">Aafreenn</h3>
+            <p>A made-to-order store for handmade Indian suits, cut to your height.</p>
+            <a class="link-arrow gf-site-link" href="aafreenn.html">Read case study <span class="ic" data-icon="arrow-right"></span></a>
+          </li>
+          <li class="gf-site" data-reveal style="--d:.08s">
+            <div class="gf-site-media">
+              <div class="gf-browser"><div class="gf-browser-bar" aria-hidden="true"><span>bakhoor al barkaah</span></div><img src="Assets/case-studies/bakhoor/screen-home.jpg" alt="" width="1440" height="900" loading="lazy"></div>
+              <div class="st-phone-frame gf-site-phone"><img src="Assets/case-studies/bakhoor/phone-home.jpg" alt="" width="780" height="1688" loading="lazy"></div>
+            </div>
+            <h3 class="gf-site-t">Bakhoor Al Barkaah</h3>
+            <p>A calm one-product shop for a hand-blended bakhoor.</p>
+            <a class="link-arrow gf-site-link" href="bakhoor-al-barkaah.html">Read case study <span class="ic" data-icon="arrow-right"></span></a>
+          </li>
+          <li class="gf-site" data-reveal>
+            <div class="gf-site-media">
+              <div class="gf-browser"><div class="gf-browser-bar" aria-hidden="true"><span>the dale</span></div><img src="Assets/case-studies/the-dale/screen-hero.jpg" alt="" width="1440" height="900" loading="lazy"></div>
+              <div class="st-phone-frame gf-site-phone"><img src="Assets/case-studies/the-dale/phone-hero.jpg" alt="" width="780" height="1688" loading="lazy"></div>
+            </div>
+            <h3 class="gf-site-t">The Dale</h3>
+            <p>A one-page site for the farmstay, built on the mark from chapter 01.</p>
+            <a class="link-arrow gf-site-link" href="the-dale.html">Read case study <span class="ic" data-icon="arrow-right"></span></a>
+          </li>
+          <li class="gf-site" data-reveal style="--d:.08s">
+            <div class="gf-site-media">
+              <div class="gf-browser"><div class="gf-browser-bar" aria-hidden="true"><span>ftn world</span></div><img src="Assets/case-studies/ftn-world/screen-hero.jpg" alt="" width="1440" height="900" loading="lazy"></div>
+              <div class="st-phone-frame gf-site-phone"><img src="Assets/case-studies/ftn-world/phone-hero.jpg" alt="" width="780" height="1688" loading="lazy"></div>
+            </div>
+            <h3 class="gf-site-t">FTN World</h3>
+            <p>A practice website for architects, drawn like a drawing set.</p>
+            <a class="link-arrow gf-site-link" href="ftn-world.html">Read case study <span class="ic" data-icon="arrow-right"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Last slide -->
+  <section class="gf-plate gf-end" id="thanks" aria-labelledby="end-t">
+    <div class="wrap gf-end-in">
+      <p class="scr gf-end-scr" data-reveal style="--d:.5s">Let<span class="gf-ap">&rsquo;</span>s work together</p>
+      <div class="sel">
+        <h2 class="gf-end-t" id="end-t" data-split>Thanks for scrolling!</h2>
+        <i class="sel-h" data-reveal style="--d:.7s" aria-hidden="true"></i>
+        <span class="sel-cur ic" data-icon="cursor-fill" data-reveal style="--d:.85s" aria-hidden="true"></span>
+      </div>
+      <p class="gf-end-sub" data-reveal style="--d:.3s">Have a logo, a launch or a cover that needs designing? Tell me about it.</p>
+      <div class="gf-end-cta" data-reveal style="--d:.4s">
+        <a class="btn btn--neon" href="mailto:ojhah10@gmail.com">Start a project</a>
+        <span class="mono">ojhah10@gmail.com</span>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>&copy; <span id="year"></span> Hardik Ojha</span>
-    <a href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a>
-  </div>
+<footer class="footer wrap">
+  <span>&copy; <span id="year"></span> Hardik Ojha</span>
+  <a href="#main" class="link-arrow">Back to top <span class="ic" data-icon="arrow-up"></span></a>
 </footer>
 
-<script src="graphics-data.js"></script>
-<script src="graphics-script.js"></script>
-<script src="nav-fit.js"></script>
+<dialog class="viewer" id="viewer" aria-label="Artwork viewer">
+  <button class="viewer-btn viewer-close" id="vClose" type="button" aria-label="Close"><span class="ic" data-icon="x"></span></button>
+  <button class="viewer-btn viewer-prev" id="vPrev" type="button" aria-label="Previous"><span class="ic" data-icon="caret-left"></span></button>
+  <figure class="viewer-fig">
+    <img id="vImg" alt="">
+    <figcaption id="vCap" class="mono"></figcaption>
+  </figure>
+  <button class="viewer-btn viewer-next" id="vNext" type="button" aria-label="Next"><span class="ic" data-icon="caret-right"></span></button>
+</dialog>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/study.js"></script>
+<script src="js/graphics.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>
