@@ -1,20 +1,18 @@
-/* Evelyn Dew study: the label proof (prototype panel against the carton), the name hidden in the mark,
-   the product colours, the Figma system, and the shop's own parts rebuilt from website/css/style.css.
+/* Evelyn Dew study: the name hidden in the mark, the product colours, the Figma system,
+   the shop's own parts rebuilt from website/css/style.css, and whole-section screenshots in plain frames.
    Brand fonts and colours appear only on plates; the page keeps the portfolio's ground, type and neon. */
 @font-face { font-family: 'Cormorant'; src: url('../fonts/cormorant-latin-wght-normal.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Cormorant'; src: url('../fonts/cormorant-latin-wght-italic.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Montserrat'; src: url('../fonts/montserrat-latin-wght-normal.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
-@font-face { font-family: 'Archivo'; src: url('../fonts/archivo-latin-wdth-normal.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; }
 
 .study--evelyn {
   --e-paper: #f6f6f3; --e-paper-2: #ecebe7; --e-paper-3: #dfded9; --e-ink: #121211; --e-ink-2: #4e4e4a;
-  --e-night: #0c0c0b; --e-on-night: #f4f4f0; --e-carton: #0d0c14;
+  --e-night: #0c0c0b; --e-on-night: #f4f4f0;
   --e-ease: cubic-bezier(.7, 0, .2, 1);
 }
 .e-serif { font-family: 'Cormorant', Georgia, serif; font-weight: 300; }
 .e-serif em { font-style: italic; }
 .e-sans { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; }
-.e-carton { font-family: 'Archivo', system-ui, sans-serif; }
 .study--evelyn .st-cover figcaption { margin-top: 16px; }
 /* the cover is a <picture> (a taller crop for phones), so it needs the frame's fill rule itself */
 .study--evelyn .st-cover-frame { background: var(--e-night); }
@@ -25,52 +23,6 @@
 
 .study--evelyn .st-hero-cta .link-arrow { min-height: 44px; }
 .ed-inline { color: var(--white); text-decoration: underline; text-decoration-color: var(--neon); text-underline-offset: 3px; }
-
-/* ---------- The label proof ---------- */
-.pf { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 88px); align-items: start; }
-.pf-stage { display: grid; gap: 16px; }
-.pf-tabs { display: flex; gap: 8px; }
-.pf-tabs button {
-  min-height: 44px; padding: 0 20px; border-radius: 999px; font-size: 15px; font-weight: 500; color: var(--g300);
-  box-shadow: inset 0 0 0 1px var(--g700); transition: color .3s, box-shadow .3s, background-color .3s;
-}
-.pf-tabs button:hover { color: var(--white); box-shadow: inset 0 0 0 1px var(--g500); }
-.pf-tabs button[aria-selected="true"] { color: var(--black, #0a0a0b); background: var(--neon); box-shadow: none; }
-.pf-tabs button:active { transform: scale(.97); transition-duration: .1s; }
-
-/* the front panel: the gradient band from the carton render, then the copy set as the carton sets it */
-.pf-panel { --pb: #ffffff; --pi: var(--e-carton); display: grid; grid-template-rows: 40% 1fr; aspect-ratio: 78 / 120; margin-inline: auto; width: min(100%, 480px); font-family: 'Archivo', system-ui, sans-serif; }
-.pf-band { position: relative; overflow: hidden; }
-.pf-band img { position: absolute; inset: 0; width: 100%; height: auto; }
-.pf-copy { display: grid; align-content: center; justify-items: center; gap: clamp(8px, 1.1vw, 14px); padding: clamp(18px, 2.6vw, 32px) clamp(18px, 3vw, 40px) clamp(16px, 2vw, 24px); text-align: center; }
-.pf-mark { width: clamp(30px, 3.4vw, 42px); aspect-ratio: 136 / 144; background: currentColor; -webkit-mask: url('../Assets/case-studies/evelyn-dew/mark.svg') center / contain no-repeat; mask: url('../Assets/case-studies/evelyn-dew/mark.svg') center / contain no-repeat; }
-.pf-brand { font-size: clamp(9px, .8vw, 11px); letter-spacing: .42em; text-transform: uppercase; margin-top: -4px; }
-.pf-line { position: relative; display: grid; justify-items: center; }
-.pf-line > span { grid-area: 1 / 1; transition: opacity .45s var(--ease), transform .6s var(--ease); }
-.pf-line .pf-new { opacity: 0; transform: translateY(8px); }
-.pf-panel[data-state="new"] .pf-old { opacity: 0; transform: translateY(-8px); }
-.pf-panel[data-state="new"] .pf-new { opacity: 1; transform: none; }
-.pf-line > i {
-  position: absolute; top: 50%; right: calc(100% + 10px); translate: 0 -50%;
-  width: 20px; height: 20px; display: grid; place-items: center; font: 600 11px/1 var(--f-mono); font-style: normal;
-  color: var(--e-carton); box-shadow: inset 0 0 0 1px var(--e-carton);
-}
-.pf-actives { font-size: clamp(11px, 1vw, 13px); font-weight: 450; }
-.pf-name { font-size: clamp(30px, 3.6vw, 46px); line-height: 1; font-weight: 800; font-stretch: 112%; text-transform: uppercase; letter-spacing: -.01em; }
-.pf-name em { display: block; margin-top: 6px; font-size: .34em; font-style: italic; font-weight: 300; text-transform: none; letter-spacing: 0; }
-.pf-spec { font-size: clamp(10px, .9vw, 12px); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.pf-small { font-size: clamp(10px, .9vw, 12px); }
-.pf-foot { width: 100%; margin-top: clamp(8px, 2vw, 24px); padding-top: 12px; border-top: 1px solid rgb(13 12 20 / .18); display: flex; justify-content: space-between; align-items: end; gap: 16px; }
-.pf-foot .pf-line { justify-items: start; text-align: left; }
-.pf-foot .pf-qty { justify-items: end; text-align: right; text-transform: none; letter-spacing: .04em; }
-.pf-foot .pf-qty > i { right: auto; left: calc(100% + 10px); }
-.pf-tiny { font-size: clamp(8.5px, .75vw, 10px); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; line-height: 1.5; }
-
-.pf-notes { display: grid; counter-reset: none; }
-.pf-notes li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 16px; padding-block: 18px; border-top: var(--hair); }
-.pf-notes li:last-child { border-bottom: var(--hair); }
-.pf-notes b { width: 28px; height: 28px; display: grid; place-items: center; font: 500 12px/1 var(--f-mono); color: var(--neon); box-shadow: inset 0 0 0 1px var(--g700); }
-.pf-notes strong { color: var(--white); font-weight: 600; }
 
 /* ---------- The name in the mark ---------- */
 .nm { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 112px); align-items: center; }
@@ -93,11 +45,16 @@
 .nm-plate[data-on="e"] [data-ring="e"], .nm-plate[data-on="d"] [data-ring="d"] { opacity: 1; transform: none; }
 .nm-plate figcaption { justify-self: stretch; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; opacity: .62; }
 
+/* ---------- Screenshots ----------
+   Every screen is a whole section of the build, shown at its own aspect ratio: no mat, no crop, no cover fit.
+   A hairline and a small radius hold the edge on both themes. */
+.ed-frame { position: relative; overflow: hidden; border-radius: clamp(6px, .8vw, 12px); background: var(--e-paper); box-shadow: 0 30px 60px -40px rgb(0 0 0 / .7); }
+.ed-frame::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .08); pointer-events: none; }
+.ed-frame img { display: block; width: 100%; height: auto; }
+
 /* ---------- Decisions ---------- */
-.ed-shotplate { padding: clamp(14px, 2.4vw, 36px); }
-.ed-trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.4vw, 20px); }
+.ed-trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 24px); }
 .ed-trio figure { margin: 0; }
-.ed-trio .plate { padding: clamp(8px, 1vw, 14px); }
 .ed-trio figcaption { margin-top: 12px; font-size: 14px; color: var(--g400); }
 
 /* ---------- Logos ---------- */
@@ -109,7 +66,7 @@
 /* ---------- Product colours ---------- */
 .ed-products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 16px; margin-top: 28px; }
 .ed-products img { width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; }
-.ed-faces { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ed-faces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ed-faces .gd-face { min-height: clamp(280px, 26vw, 360px); }
 .ed-faces .gd-aa { font-size: clamp(4.4rem, 7vw, 7rem); }
 .ed-pinfo { padding-top: 14px; display: grid; gap: 2px; justify-items: start; }
@@ -158,41 +115,37 @@
 .fg-facts div { display: grid; grid-template-columns: 3.2ch minmax(0, 1fr); gap: 16px; align-items: baseline; padding-block: 14px; border-top: var(--hair); }
 .fg-facts dt { font-family: var(--f-display); font-weight: 600; font-size: clamp(1.6rem, 2.4vw, 2.2rem); line-height: 1; letter-spacing: -.03em; color: var(--neon); font-variant-numeric: tabular-nums; }
 .fg-board { margin: 0; }
-.fg-board .plate { padding: clamp(10px, 1.4vw, 18px); }
 .fg-board figcaption { margin-top: 14px; font-size: 14px; color: var(--g400); }
 
 /* ---------- Screens ---------- */
-.els { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 20px); }
+.els { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(40px, 4.4vw, 64px) clamp(16px, 2vw, 28px); align-items: start; }
 .el { margin: 0; }
 .el--wide { grid-column: 1 / -1; }
-.el .plate { padding: clamp(14px, 2.4vw, 36px); }
-.el figcaption { margin-top: 14px; display: flex; gap: 12px; font-size: 15px; }
+.el figcaption { margin-top: 16px; display: flex; gap: 10px; font-size: 15px; line-height: 1.5; max-width: 72ch; }
 .el figcaption b { color: var(--white); font-weight: 600; flex: none; }
-.el figcaption .mono { margin-left: auto; color: var(--g500); flex: none; font-family: var(--f-mono); font-size: 13px; }
 
 /* ---------- Light theme: plates keep their colours, page chrome follows the portfolio ---------- */
-:root[data-theme="light"] .pf-tabs button[aria-selected="true"], :root[data-theme="light"] .nm-pick button[aria-pressed="true"] { color: #fff; }
+:root[data-theme="light"] .nm-pick button[aria-pressed="true"] { color: #fff; }
+:root[data-theme="light"] .ed-frame { box-shadow: 0 24px 50px -36px rgb(23 23 26 / .4); }
+:root[data-theme="light"] .ed-frame::after { box-shadow: inset 0 0 0 1px rgb(23 23 26 / .1); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
-  .pf, .nm, .fg { grid-template-columns: 1fr; }
+  .nm, .fg { grid-template-columns: 1fr; }
   .nm-plate { max-width: 560px; }
-  .ed-faces { grid-template-columns: 1fr; }
 }
 @media (max-width: 767px) {
-  .pf-panel { aspect-ratio: auto; grid-template-rows: 150px auto; }
-  .pf-line > i { right: auto; left: -4px; top: -6px; translate: -100% 0; width: 18px; height: 18px; font-size: 10px; }
-  .pf-copy { padding-inline: 32px; }
-  .pf-foot .pf-qty > i { left: auto; right: -4px; translate: 100% 0; }
+  /* the phone cover is its own 4:3 lineup, so the frame follows it instead of the template's 4:5 */
+  .study--evelyn .st-cover-frame { aspect-ratio: 4 / 3; }
+  .ed-faces { grid-template-columns: 1fr; }
   .ed-trio { grid-template-columns: 1fr; }
   .ed-products { grid-template-columns: 1fr; }
   .ed-index a { grid-template-columns: 44px minmax(0, 1fr) 18px; gap: 14px; }
   .ed-index-art { width: 44px; height: 44px; }
   .ed-index-meta { display: none; }
   .els { grid-template-columns: 1fr; }
-  .el figcaption { flex-wrap: wrap; }
-  .el figcaption .mono { display: none; }
+  .el figcaption { flex-wrap: wrap; gap: 4px 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pf-line > span, .nm-def, .nm-ring, .ed-btn, .ed-btn::before, .ed-link::after, .ed-index * { transition: none; }
+  .nm-def, .nm-ring, .ed-btn, .ed-btn::before, .ed-link::after, .ed-index * { transition: none; }
 }

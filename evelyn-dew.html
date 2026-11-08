@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evelyn Dew case study - Hardik Ojha</title>
-<meta name="description" content="Cartons, a five-page shop and a Figma design system for Evelyn Dew, a skin and hair care brand made in India. Black and white everywhere, so each product's gradient is the only colour.">
+<meta name="description" content="UI, UX and the website for Evelyn Dew, a skin and hair care brand made in India: a five-page shop in black and white, where each product's gradient is the only colour, and a Figma design system rebuilt from the site's own stylesheet.">
 <meta name="theme-color" content="#0a0a0b">
 <meta property="og:title" content="Evelyn Dew, a case study by Hardik Ojha">
-<meta property="og:description" content="Three cartons, a monochrome shop and a Figma file rebuilt from the site's own stylesheet.">
+<meta property="og:description" content="A monochrome shop for three products, and a Figma file rebuilt from the site's own stylesheet.">
 <meta property="og:image" content="Assets/case-studies/evelyn-dew/card.jpg">
 <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230a0a0b%27/%3E%3Crect x=%277%27 y=%2711%27 width=%2718%27 height=%2710%27 rx=%272%27 fill=%27%232a2a2f%27/%3E%3Crect x=%2715%27 y=%275%27 width=%272.5%27 height=%2722%27 fill=%27%23b4ff39%27/%3E%3C/svg%3E">
@@ -50,7 +50,7 @@
     <h1 class="st-title" data-split>Evelyn Dew</h1>
     <div class="st-hero-foot">
       <div data-intro>
-        <p class="st-sum">Skin and hair care made in India: three cartons and a five-page shop where the only colour is the product&rsquo;s own.</p>
+        <p class="st-sum">Skin and hair care made in India: a five-page shop in black and white, where the only colour is the product&rsquo;s own.</p>
         <div class="st-hero-cta">
           <a class="btn btn--neon" href="https://evelyndew.com/" target="_blank" rel="noopener noreferrer">Visit evelyndew.com <span class="ic" data-icon="arrow-up-right"></span></a>
           <a class="link-arrow" href="#screens">See the screens <span class="ic" data-icon="arrow-down"></span></a>
@@ -58,8 +58,7 @@
       </div>
       <dl class="st-meta" data-intro style="--d:.5s">
         <div><dt>Client</dt><dd>Evelyn Dew, a sunscreen, a scalp serum and a hair oil</dd></div>
-        <div><dt>Role</dt><dd>Carton copy and packaging, UI and UX, front end, Figma design system</dd></div>
-        <div><dt>Timeline</dt><dd>26 October to 6 November 2026, now live</dd></div>
+        <div><dt>Role</dt><dd>UI and UX, front end, Figma design system</dd></div>
         <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, GSAP, Lenis, the Figma plugin API</dd></div>
       </dl>
     </div>
@@ -68,67 +67,25 @@
   <figure class="st-cover">
     <div class="st-cover-frame">
       <picture>
-        <source media="(max-width: 767px)" srcset="Assets/case-studies/evelyn-dew/cover-tall.jpg" width="1200" height="1500">
-        <img src="Assets/case-studies/evelyn-dew/cover.jpg" alt="The three Evelyn Dew products in a row on black: a sunscreen carton and tube, a hair serum carton and dropper bottle, and a hair oil carton and bottle, each topped with its own gradient" width="1920" height="1080" fetchpriority="high">
+        <source media="(max-width: 767px)" srcset="Assets/case-studies/evelyn-dew/cover-tall.jpg" width="1200" height="900">
+        <img src="Assets/case-studies/evelyn-dew/cover.jpg" alt="The three product pages on a phone, side by side on black: the sunscreen on a silver gradient, the hair serum on violet and the hair oil on amber" width="1920" height="1080" fetchpriority="high">
       </picture>
     </div>
-    <figcaption class="wrap st-label">The cartons and packs, rendered from the packaging studio on 27 October</figcaption>
+    <figcaption class="wrap st-label">The three product pages at 390 px, each in its own colour</figcaption>
   </figure>
 
   <!-- Intro -->
   <section class="st-sec wrap" aria-labelledby="intro-h">
     <h2 class="st-label" id="intro-h">Overview</h2>
-    <p class="st-statement" data-words style="margin-top:20px">Evelyn Dew arrived with three formulas and one front panel for a sunscreen. It left with three full cartons, a shop in black and white, and a Figma file rebuilt from the site&rsquo;s own stylesheet.</p>
+    <p class="st-statement" data-words style="margin-top:20px">A new brand with three products and no reviews yet needed a shop that feels trustworthy from the first screen. It got five pages in black and white, where each product&rsquo;s own colour does the selling, and a Figma file rebuilt from the site&rsquo;s own stylesheet.</p>
     <div class="st-intro-grid">
-      <div data-reveal><span class="st-label">The brief</span><p>Turn a sunscreen front panel into packaging for the whole range, then a website that sells three products without shouting.</p></div>
+      <div data-reveal><span class="st-label">The brief</span><p>A website that sells three products without shouting, and tells you plainly what is in each one.</p></div>
       <div data-reveal style="--d:.08s"><span class="st-label">The client</span><p>A new care brand from India with a sunscreen, an anti-dandruff scalp serum and a hair growth oil, made by a contract manufacturer in Ghaziabad.</p></div>
-      <div data-reveal style="--d:.16s"><span class="st-label">My part</span><p>The carton copy and every panel, a packaging studio that renders them, the five pages of the site, and a plugin that rebuilds the site in Figma.</p></div>
+      <div data-reveal style="--d:.16s"><span class="st-label">My part</span><p>The UI and UX of all five pages, the front end, and a plugin that rebuilds the site in Figma.</p></div>
     </div>
   </section>
 
-  <!-- Signature 1: the label proof -->
-  <section class="st-sec wrap" aria-labelledby="proof-h">
-    <div class="st-head">
-      <h2 class="st-h2" id="proof-h" data-split>The label came first.</h2>
-      <p class="st-lede" data-reveal>Before any screen, I read 19 cartons already on the shelf, then checked every line of the prototype against the formula the team sent. Their data held 33 problems across the three products, 14 of them on the sunscreen. Switch between the two panels to see what changed and why.</p>
-    </div>
-
-    <div class="pf">
-      <div class="pf-stage" data-reveal>
-        <div class="pf-tabs" role="tablist" aria-label="Sunscreen front panel">
-          <button type="button" role="tab" id="pfTabOld" aria-selected="true" aria-controls="pfPanel" data-pf="old">The prototype</button>
-          <button type="button" role="tab" id="pfTabNew" aria-selected="false" aria-controls="pfPanel" data-pf="new">On the carton</button>
-        </div>
-        <div class="pf-panel plate" id="pfPanel" role="tabpanel" aria-labelledby="pfTabOld" data-state="old">
-          <div class="pf-band" aria-hidden="true"><img src="Assets/case-studies/evelyn-dew/carton-front.jpg" alt="" width="640" height="985"></div>
-          <div class="pf-copy">
-            <span class="pf-mark" aria-hidden="true"></span>
-            <p class="pf-brand">Evelyn Dew</p>
-            <p class="pf-line pf-actives" data-n="1"><span class="pf-old">Niacinamide + Ceramide + Vitamin E</span><span class="pf-new">Zinc Oxide + Alpha Arbutin + Hyaluronic Acid</span><i>1</i></p>
-            <p class="pf-line pf-name" data-n="2"><span class="pf-old">Sunscreen</span><span class="pf-new">Sunscreen <em>Cream</em></span><i>2</i></p>
-            <p class="pf-line pf-spec" data-n="3"><span class="pf-old">Broad spectrum &nbsp;|&nbsp; SPF 50+ &nbsp;|&nbsp; PA++++</span><span class="pf-new">Broad spectrum &nbsp;|&nbsp; SPF 50 &nbsp;|&nbsp; PA+++</span><i>3</i></p>
-            <p class="pf-line pf-small" data-n="4"><span class="pf-old">No White Cast &middot; Lightweight &middot; Non-Greasy</span><span class="pf-new">Brightening &middot; Hydrating &middot; Non-Greasy</span><i>4</i></p>
-            <p class="pf-small">UVA + UVB Protection</p>
-            <div class="pf-foot">
-              <p class="pf-line pf-tiny" data-n="5"><span class="pf-old">For all skin types<br>Dermatologically tested</span><span class="pf-new">For all skin types</span><i>5</i></p>
-              <p class="pf-line pf-tiny pf-qty" data-n="6"><span class="pf-old">50 ml</span><span class="pf-new">Net Wt.: 100 g</span><i>6</i></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <ol class="pf-notes" aria-label="What changed and why">
-        <li data-reveal><b>1</b><p><strong>Hero ingredients from the real formula.</strong> The line names the mineral filter, the brightener and the humectant the team&rsquo;s formula is built on.</p></li>
-        <li data-reveal style="--d:.04s"><b>2</b><p><strong>A format word.</strong> Every reference carton says what it is: gel, spray, cream. &ldquo;Cream&rdquo; sits under the name, set lighter.</p></li>
-        <li data-reveal style="--d:.08s"><b>3</b><p><strong>Only the numbers the data supports.</strong> The two prototype panels disagreed on PA+++ and PA++++, and the data read &ldquo;SPF 50 +++&rdquo;. The carton says SPF 50 PA+++ until the lab report confirms more.</p></li>
-        <li data-reveal style="--d:.12s"><b>4</b><p><strong>No claim the formula can break.</strong> Zinc oxide and titanium dioxide can leave a white cast, so &ldquo;No White Cast&rdquo; came off.</p></li>
-        <li data-reveal style="--d:.16s"><b>5</b><p><strong>Tests before badges.</strong> &ldquo;Dermatologically tested&rdquo; needs a patch test report. It stays off until there is one.</p></li>
-        <li data-reveal style="--d:.2s"><b>6</b><p><strong>The legal quantity.</strong> The tube holds 100 g, not 50 ml. The data said &ldquo;100gm&rdquo;, and &ldquo;gm&rdquo; is not a legal unit.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Signature 2: the name in the mark -->
+  <!-- Signature: the name in the mark -->
   <section class="st-sec wrap nm" aria-labelledby="nm-h">
     <div class="nm-copy">
       <h2 class="st-h2" id="nm-h" data-split>Two words, one drop.</h2>
@@ -160,7 +117,7 @@
     </div>
     <div class="st-chs">
       <article class="st-ch">
-        <div class="st-ch-media" data-reveal><div class="plate ed-shotplate" style="--pb:#ecebe7"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-ritual.jpg" alt="Home page ritual cards: a black and white portrait beside the word Protect on the sunscreen's silver gradient, with the next card showing the serum's violet" width="1440" height="900" loading="lazy"></div></div>
+        <div class="st-ch-media" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-ritual.jpg" alt="A home page ritual card: a black and white portrait beside the word Soothe on the hair serum's violet gradient" width="1326" height="733" loading="lazy"></div></div>
         <div class="st-ch-copy">
           <h3 class="st-h3" data-reveal>Black and white, so the product is the colour.</h3>
           <div class="st-body" data-reveal style="--d:.06s">
@@ -172,26 +129,26 @@
 
       <article class="st-ch">
         <div class="st-ch-media ed-trio" data-reveal>
-          <figure><div class="plate" style="--pb:#0c0c0b"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-sunscreen.jpg" alt="Sunscreen Cream SPF 50 product page header on a silver satin gradient" width="1440" height="900" loading="lazy"></div><figcaption>Sunscreen</figcaption></figure>
-          <figure><div class="plate" style="--pb:#0c0c0b"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-serum.jpg" alt="Anti Dandruff Hair Serum product page header on a violet gradient" width="1440" height="900" loading="lazy"></div><figcaption>Hair serum</figcaption></figure>
-          <figure><div class="plate" style="--pb:#0c0c0b"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-oil.jpg" alt="Hair Growth Massage Oil product page header on an amber and ember gradient" width="1440" height="900" loading="lazy"></div><figcaption>Hair oil</figcaption></figure>
+          <figure><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-sunscreen.jpg" alt="Sunscreen Cream SPF 50 product page header on a silver satin gradient" width="1440" height="828" loading="lazy"></div><figcaption>Sunscreen</figcaption></figure>
+          <figure><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-serum.jpg" alt="Anti Dandruff Hair Serum product page header on a violet gradient" width="1440" height="828" loading="lazy"></div><figcaption>Hair serum</figcaption></figure>
+          <figure><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-oil.jpg" alt="Hair Growth Massage Oil product page header on an amber and ember gradient" width="1440" height="828" loading="lazy"></div><figcaption>Hair oil</figcaption></figure>
         </div>
         <div class="st-ch-copy">
-          <h3 class="st-h3" data-reveal>One file for the carton and the page.</h3>
+          <h3 class="st-h3" data-reveal>One product file, nine places on the site.</h3>
           <div class="st-body" data-reveal style="--d:.06s">
-            <p>All three products live in one data file: name, actives, claims, quantity, carton size, gradient and accent. The packaging studio draws every panel and dieline from it, and the website builds its shop, product pages and ingredient guide from the same file.</p>
-            <p>So a claim corrected once is corrected on the carton, the product page and the science page together.</p>
+            <p>All three products live in one data file: name, actives, claims, size, gradient and accent. The home page index and ritual cards, the shop grid and its slider, each product page and the two products suggested under it, and the science page&rsquo;s actives, ingredient guide and free-from list are all built from it.</p>
+            <p>So adding a product, or correcting a claim, is one edit instead of nine.</p>
           </div>
         </div>
       </article>
 
       <article class="st-ch">
-        <div class="st-ch-media" data-reveal><div class="plate ed-shotplate" style="--pb:#dfded9"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-spotlight.jpg" alt="Science page: The ingredients that do the work, with Zinc Oxide and Titanium Dioxide in focus, what it is and what it does on either side of a round portrait" width="1440" height="900" loading="lazy"></div></div>
+        <div class="st-ch-media" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-label.jpg" alt="Science page band: Care begins with the label, beside the sunscreen's full ingredient list set as a printed label" width="1440" height="793" loading="lazy"></div></div>
         <div class="st-ch-copy">
           <h3 class="st-h3" data-reveal>The label is the content.</h3>
           <div class="st-body" data-reveal style="--d:.06s">
-            <p>A new brand has no reviews yet, so the site leans on what is printed. The science page walks through each hero ingredient, what it is, what it does and which product it is in, and every product page carries the full ingredient list as it appears on the carton.</p>
-            <p>The copy only repeats what the cartons claim. Nothing new is promised online.</p>
+            <p>A new brand has no reviews yet, so the site leans on what is on the pack. The science page walks through each hero ingredient, what it is, what it does and which product it is in, and every product page carries the full ingredient list.</p>
+            <p>The copy only repeats what the product label claims. Nothing new is promised online.</p>
           </div>
         </div>
       </article>
@@ -209,7 +166,7 @@
       <div><dt>Ground</dt><dd><i class="gd-dot" style="--c:#f6f6f3"></i>Paper #F6F6F3</dd></div>
       <div><dt>Ink</dt><dd><i class="gd-dot" style="--c:#121211"></i>Ink #121211</dd></div>
       <div><dt>Display</dt><dd>Cormorant 300 and italic</dd></div>
-      <div><dt>Text</dt><dd>Montserrat, Archivo on cartons</dd></div>
+      <div><dt>Text</dt><dd>Montserrat 400 and 500</dd></div>
     </dl>
 
     <div class="gd-block">
@@ -221,13 +178,13 @@
       <div class="gd-main gd-logos">
         <figure class="gd-logo gd-logo--wide plate" style="--pb:#f6f6f3;--pi:#121211" data-reveal><span class="ed-logo ed-logo--combo" role="img" aria-label="Evelyn Dew combination logo, the mark above the wordmark, in ink on paper"></span><figcaption>Combination, ink on paper</figcaption></figure>
         <figure class="gd-logo plate" style="--pb:#0c0c0b;--pi:#f4f4f0" data-reveal><span class="ed-logo ed-logo--word" role="img" aria-label="Evelyn Dew wordmark in off-white on night"></span><figcaption>Wordmark on night</figcaption></figure>
-        <figure class="gd-logo plate" style="--pb:#ffffff;--pi:#0d0c14;--d:.06s" data-reveal>
+        <figure class="gd-logo plate" style="--pb:#ffffff;--pi:#121211;--d:.06s" data-reveal>
           <span class="gd-sizes" aria-label="The mark at 96, 48 and 24 pixels" role="img">
             <span><span class="ed-logo ed-logo--mark" style="width:96px"></span>96</span>
             <span><span class="ed-logo ed-logo--mark" style="width:48px"></span>48</span>
             <span><span class="ed-logo ed-logo--mark" style="width:24px"></span>24</span>
           </span>
-          <figcaption>The mark alone, as on every carton</figcaption>
+          <figcaption>The mark alone, down to favicon size</figcaption>
         </figure>
       </div>
     </div>
@@ -288,7 +245,7 @@
       <div class="gd-side">
         <span class="st-label">Type</span>
         <h3 class="st-h3">A light serif, a plain sans.</h3>
-        <p>Cormorant at 300 for headings, with one word in italic where the line turns. Montserrat for text and the small spaced labels. The cartons use Archivo, heavy and slightly wide, so the product name reads from a shelf.</p>
+        <p>Cormorant at 300 for headings, with one word in italic where the line turns. Montserrat for text and the small spaced labels.</p>
       </div>
       <div class="gd-main">
         <div class="gd-faces ed-faces">
@@ -308,14 +265,6 @@
               <p class="gd-glyphs e-sans" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
             </div>
           </div>
-          <div class="gd-face plate" style="--pb:#ffffff;--pi:#0d0c14;--d:.12s" data-reveal>
-            <p class="gd-face-top"><span>Cartons</span><span>300 to 800</span></p>
-            <p class="gd-aa e-carton" style="font-weight:800" aria-hidden="true">Aa</p>
-            <div>
-              <p class="gd-face-name e-carton" style="font-weight:700">Archivo</p>
-              <p class="gd-glyphs e-carton" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p>
-            </div>
-          </div>
         </div>
         <div class="gd-scale plate" style="--pb:#f6f6f3;--pi:#121211;--pl:#dfded9" data-reveal>
           <div class="gd-row"><span class="gd-role">Hero</span><span class="gd-sample e-serif" style="font-size:clamp(52px,8.6vw,148px);line-height:.92;letter-spacing:-.025em">Start <em>fresh</em></span><span class="gd-spec">Cormorant 300<br>60 to 148 px, line 0.92, &minus;0.025 em</span></div>
@@ -324,7 +273,6 @@
           <div class="gd-row"><span class="gd-role">Display 3</span><span class="gd-sample e-serif" style="font-size:clamp(27px,2.7vw,42px);line-height:1.12;letter-spacing:-.005em">Care begins with <em>the label.</em></span><span class="gd-spec">Cormorant 300<br>27 to 42 px, line 1.12, &minus;0.005 em</span></div>
           <div class="gd-row"><span class="gd-role">Body</span><span class="gd-sample e-sans" style="font-size:15px;line-height:1.7;color:#4e4e4a">Three formulas, one for each moment of your routine. Every ingredient is on the label.</span><span class="gd-spec">Montserrat 400<br>15 px, line 1.7</span></div>
           <div class="gd-row"><span class="gd-role">Label</span><span class="gd-sample e-sans" style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase">Every morning &nbsp; Every night &nbsp; Twice a week</span><span class="gd-spec">Montserrat 500, capitals<br>11 px, +0.16 em</span></div>
-          <div class="gd-row"><span class="gd-role">Carton name</span><span class="gd-sample e-carton" style="font-size:clamp(30px,4vw,56px);line-height:1;font-weight:800;font-stretch:112%;color:#0d0c14">SUNSCREEN</span><span class="gd-spec">Archivo 800, 112% wide<br>the largest line on the front panel</span></div>
         </div>
       </div>
     </div>
@@ -339,7 +287,7 @@
         <div class="plate plate--pad gd-parts" style="--pb:#f6f6f3;--pi:#121211" data-reveal>
           <a class="ed-btn" href="#screens">Shop the collection <span class="ic" data-icon="arrow-right"></span></a>
           <a class="ed-link" href="#guide-h">View the shop</a>
-          <span class="ed-chips" aria-label="Free-from claims printed on the sunscreen carton"><span class="ed-chip">Paraben free</span><span class="ed-chip">Mineral oil free</span><span class="ed-chip">Cruelty free</span></span>
+          <span class="ed-chips" aria-label="Free-from claims for the sunscreen"><span class="ed-chip">Paraben free</span><span class="ed-chip">Mineral oil free</span><span class="ed-chip">Cruelty free</span></span>
         </div>
         <div class="plate plate--pad gd-parts" style="--pb:#0c0c0b;--pi:#f4f4f0;--d:.06s" data-reveal>
           <a class="ed-btn ed-btn--light" href="#screens">Details and ingredients <span class="ic" data-icon="arrow-right"></span></a>
@@ -368,7 +316,7 @@
       </dl>
     </div>
     <figure class="fg-board" data-reveal style="--d:.1s">
-      <div class="plate" style="--pb:#0c0c0b"><img class="shot" src="Assets/case-studies/evelyn-dew/figma-cover.jpg" alt="The cover board of the Figma file: the Evelyn Dew wordmark, the title Website design system, a contents line of seven pages and the mark in dark grey" width="1600" height="900" loading="lazy"></div>
+      <div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/figma-cover.jpg" alt="The cover board of the Figma file: the Evelyn Dew wordmark, the title Website design system, a contents line of seven pages and the mark in dark grey" width="1600" height="900" loading="lazy"></div>
       <figcaption>The file&rsquo;s cover board, exported from Figma</figcaption>
     </figure>
   </section>
@@ -377,48 +325,25 @@
   <section class="st-sec wrap" id="screens" aria-labelledby="el-h">
     <div class="st-head">
       <h2 class="st-h2" id="el-h" data-split>Five pages, in black and white.</h2>
-      <p class="st-lede" data-reveal>Screens at 1440 px and 390. The photographs are stock stand-ins, graded the way the real shoot will be.</p>
+      <p class="st-lede" data-reveal>Each screen is one whole section of the live build at 1440 px, then four views at 390. The photographs are stock stand-ins, graded the way the real shoot will be.</p>
     </div>
     <div class="els">
-      <figure class="el el--wide" data-reveal><div class="plate" style="--pb:#ecebe7"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-hero.jpg" alt="Home page: a black and white film of a woman applying cream, the headline Start fresh in a light serif, and a Shop the collection button" width="1440" height="900" loading="lazy"></div><figcaption><b>Home.</b><span>A short film of skin, hair and a drop of water behind two words. It has a pause button, and starts paused when your device asks for less motion or less data.</span><span class="mono">1440 &times; 900</span></figcaption></figure>
-      <figure class="el" data-reveal><div class="plate" style="--pb:#ecebe7"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-collection.jpg" alt="The collection: three products as rows with a small image, the name in serif, the category and size, and an arrow" width="1440" height="900" loading="lazy"></div><figcaption><b>Collection.</b><span>Three products read as an index, not a grid of cards.</span></figcaption></figure>
-      <figure class="el" data-reveal style="--d:.06s"><div class="plate" style="--pb:#ecebe7"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-shop.jpg" alt="Shop page header: a portrait beside the sunscreen's feature panel with tabs for the three products" width="1440" height="900" loading="lazy"></div><figcaption><b>Shop.</b><span>A feature panel that steps through the range, then the grid.</span></figcaption></figure>
-      <figure class="el" data-reveal><div class="plate" style="--pb:#ecebe7"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-science.jpg" alt="Science page header: The science of starting fresh, beside a photograph of a dropper bottle" width="1440" height="900" loading="lazy"></div><figcaption><b>Science.</b><span>Every ingredient on the label, and the reason it is there.</span></figcaption></figure>
-      <figure class="el" data-reveal style="--d:.06s"><div class="plate" style="--pb:#ecebe7"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-about.jpg" alt="About page header: a portrait in a doorway beside the title About us" width="1440" height="900" loading="lazy"></div><figcaption><b>About.</b><span>The name, where it is made and who makes it.</span></figcaption></figure>
-      <figure class="el el--wide" data-reveal><div class="plate" style="--pb:#0c0c0b"><img class="shot" src="Assets/case-studies/evelyn-dew/screen-footer.jpg" alt="Footer on black: a newsletter field, links, the manufacturer's address, and the wordmark across the full width" width="1440" height="900" loading="lazy"></div><figcaption><b>Footer.</b><span>The wordmark at full width, with the maker&rsquo;s address and licence number as the carton prints them.</span><span class="mono">1440 &times; 900</span></figcaption></figure>
+      <figure class="el el--wide" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-hero.jpg" alt="Home page: a black and white film of a woman applying cream, the headline Start fresh in a light serif, and a Shop the collection button" width="1440" height="900" loading="lazy"></div><figcaption><b>Home.</b><span>A short film of skin, hair and a drop of water behind two words. It has a pause button, and starts paused when your device asks for less motion or less data.</span></figcaption></figure>
+      <figure class="el" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-collection.jpg" alt="The collection: three products as rows with a small image, the name in serif, the category, size and price, and an arrow" width="1440" height="900" loading="lazy"></div><figcaption><b>Collection.</b><span>Three products read as an index, not a grid of cards.</span></figcaption></figure>
+      <figure class="el" data-reveal style="--d:.06s"><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-story.jpg" alt="Two words, one drop: the mark drawn large with the e and the d circled, Evelyn and Dew defined on either side" width="1440" height="900" loading="lazy"></div><figcaption><b>The name.</b><span>The mark draws itself and circles each letter as you scroll.</span></figcaption></figure>
+      <figure class="el el--wide" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-shop.jpg" alt="Shop page: a portrait beside the sunscreen's feature panel on a silver gradient, with tabs for the three products" width="1440" height="900" loading="lazy"></div><figcaption><b>Shop.</b><span>A feature panel steps through the range, one product and one gradient at a time, then the grid.</span></figcaption></figure>
+      <figure class="el el--wide" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-product.jpg" alt="Sunscreen product details: a gallery with four thumbnails, the price, size, quantity and an Add to bag button in graphite, free-from tags, and tabs for how to use, ingredients and caution" width="1440" height="1080" loading="lazy"></div><figcaption><b>Product.</b><span>Everything to decide in one column: size, quantity, the bag, then how to use it, the full ingredients and the cautions. The button takes the product&rsquo;s own accent.</span></figcaption></figure>
+      <figure class="el" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-science.jpg" alt="Science page header: The science of starting fresh, beside a photograph of a dropper bottle" width="1440" height="900" loading="lazy"></div><figcaption><b>Science.</b><span>Every ingredient on the label, and the reason it is there.</span></figcaption></figure>
+      <figure class="el" data-reveal style="--d:.06s"><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-spotlight.jpg" alt="The ingredient guide: Zinc Oxide and Titanium Dioxide in focus, what it is and what it does on either side of a round portrait, with arrows and dots to step through" width="1440" height="900" loading="lazy"></div><figcaption><b>Ingredient guide.</b><span>One hero ingredient at a time, and the product it is in.</span></figcaption></figure>
+      <figure class="el" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-about.jpg" alt="About page header: a portrait in a doorway beside the title About us" width="1440" height="893" loading="lazy"></div><figcaption><b>About.</b><span>The name, where it is made and who makes it.</span></figcaption></figure>
+      <figure class="el" data-reveal style="--d:.06s"><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-about-2.jpg" alt="Care made to be understood: a short paragraph and a link to the ingredients beside two women at a mirror" width="1440" height="893" loading="lazy"></div><figcaption><b>About, further down.</b><span>Short blocks that point back to the ingredients.</span></figcaption></figure>
+      <figure class="el el--wide" data-reveal><div class="ed-frame"><img src="Assets/case-studies/evelyn-dew/screen-footer.jpg" alt="Footer on black: a newsletter field, links, the manufacturer's address, and the wordmark across the full width" width="1440" height="742" loading="lazy"></div><figcaption><b>Footer.</b><span>The wordmark at full width, with the maker&rsquo;s address and licence number as the label prints them.</span></figcaption></figure>
     </div>
     <div class="st-phones st-sec" style="padding-top:clamp(56px,7vw,96px)">
       <figure class="st-phone" data-speed="0.4"><div class="st-phone-frame"><img src="Assets/case-studies/evelyn-dew/phone-hero.jpg" alt="Home page on a phone: the film, Start fresh, and the shop button" width="780" height="1688" loading="lazy"></div><figcaption>Home</figcaption></figure>
-      <figure class="st-phone" data-speed="-0.5"><div class="st-phone-frame"><img src="Assets/case-studies/evelyn-dew/phone-serum.jpg" alt="The serum's product page on a phone, on its violet gradient" width="780" height="1688" loading="lazy"></div><figcaption>Hair serum</figcaption></figure>
+      <figure class="st-phone" data-speed="-0.5"><div class="st-phone-frame"><img src="Assets/case-studies/evelyn-dew/phone-shop.jpg" alt="The shop on a phone: a portrait above the sunscreen's feature panel" width="780" height="1688" loading="lazy"></div><figcaption>Shop</figcaption></figure>
       <figure class="st-phone" data-speed="0.6"><div class="st-phone-frame"><img src="Assets/case-studies/evelyn-dew/phone-science.jpg" alt="The ingredient guide on a phone: Zinc Oxide and Titanium Dioxide above a round portrait" width="780" height="1688" loading="lazy"></div><figcaption>Ingredients</figcaption></figure>
       <figure class="st-phone" data-speed="-0.3"><div class="st-phone-frame"><img src="Assets/case-studies/evelyn-dew/phone-menu.jpg" alt="The phone menu on black: Home, Science, About us and Shop in large serif" width="780" height="1688" loading="lazy"></div><figcaption>Menu</figcaption></figure>
-    </div>
-  </section>
-
-  <!-- Revisions -->
-  <section class="st-sec wrap" aria-labelledby="rev-h">
-    <div class="st-head">
-      <h2 class="st-h2" id="rev-h" data-split>How it came together.</h2>
-      <p class="st-lede" data-reveal>From the project files, in order. Packaging first, then the site, then the system.</p>
-    </div>
-    <div class="st-log">
-      <div class="st-log-group">
-        <h3>Packaging<small>26 and 27 October</small></h3>
-        <ol>
-          <li><time datetime="2026-10-26">26 Oct</time><p>Nineteen reference cartons and the prototype panel read and written up: what every front and back panel carries, in what order, and what the law asks for.</p></li>
-          <li style="--d:.06s"><time datetime="2026-10-26">26 Oct</time><p>Carton copy written for all three products from the team&rsquo;s data, with a list of the problems found in it and the questions only the manufacturer can answer.</p></li>
-          <li style="--d:.12s"><time datetime="2026-10-27">27 Oct</time><p>A packaging studio that draws every panel, dieline, pack and the lineup from one product file, and renders them to images.</p></li>
-        </ol>
-      </div>
-      <div class="st-log-group">
-        <h3>Website and system<small>4 to 6 November</small></h3>
-        <ol>
-          <li><time datetime="2026-11-04">4 Nov</time><p>The brand&rsquo;s final logo files and gradient artwork arrived. The site uses them; the carton renders from 27 October still carry the first gradients.</p></li>
-          <li style="--d:.06s"><time datetime="2026-11-04">4 Nov</time><p>Five pages built: home, shop, product, science and about, with a bag drawer, a newsletter form and the black and white film.</p></li>
-          <li style="--d:.12s"><time datetime="2026-11-05">5 Nov</time><p>The Figma plugin written: tokens to variables, 23 component sets, every page at desktop and phone size, the prototype wired.</p></li>
-          <li style="--d:.18s"><time datetime="2026-11-06">6 Nov</time><p>The website committed to its own repository, then published at evelyndew.com.</p></li>
-        </ol>
-      </div>
     </div>
   </section>
 
@@ -428,15 +353,14 @@
       <h2 class="st-h3" id="close-h">Where it stands</h2>
       <div class="st-body">
         <p>The site is live at <a class="ed-inline" href="https://evelyndew.com/" target="_blank" rel="noopener noreferrer">evelyndew.com</a>. The photographs on it are licensed stock in black and white, and the people in them have nothing to do with the brand.</p>
-        <p>The cartons are written and drawn, and wait on the manufacturer: the marketer&rsquo;s address, the lab reports and the printer&rsquo;s dieline.</p>
+        <p>The Figma file is rebuilt from the same stylesheet, so a designer can pick it up without the two drifting apart.</p>
       </div>
     </div>
     <div data-reveal style="--d:.08s">
       <h2 class="st-h3">What comes next</h2>
       <dl class="st-next-list">
         <div><dt>An Evelyn Dew shoot</dt><dd>Real products on real skin, graded black and white like the stand-ins, so the page layouts do not change.</dd></div>
-        <div><dt>One set of gradients</dt><dd>Re-render the cartons with the final artwork so the shelf and the screen match.</dd></div>
-        <div><dt>Claims from the lab reports</dt><dd>Add what the SPF and patch test reports allow, on the carton and the site together, from the one product file.</dd></div>
+        <div><dt>Claims from the lab reports</dt><dd>Add what the SPF and patch test reports allow to the product and science pages together, from the one product file.</dd></div>
       </dl>
     </div>
   </section>
@@ -444,7 +368,7 @@
   <!-- Contact -->
   <section class="st-contact wrap" aria-labelledby="end-h">
     <h2 class="contact-title" id="end-h" data-split>Launching a product range?</h2>
-    <p class="lede" data-reveal>I design the carton and the site together, so they say the same thing.</p>
+    <p class="lede" data-reveal>I design the shop and the system behind it, so the two never drift apart.</p>
     <div class="contact-mail" data-reveal><a class="mail-link" href="mailto:ojhah10@gmail.com">ojhah10@gmail.com</a></div>
   </section>
 
