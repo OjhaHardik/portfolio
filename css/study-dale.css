@@ -1,5 +1,5 @@
 /* The Dale study: the comparison switch, the photographs, the pinned pan of screens and the site's own parts.
-   Brand plates use the site's tokens (css/site.css in The Dale) and stay the same in both themes. */
+   Brand plates use The Dale's colours and stay the same in both themes. */
 @font-face { font-family: 'Cormorant Garamond'; src: url('../fonts/cormorant-garamond-var.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Cormorant Garamond'; src: url('../fonts/cormorant-garamond-italic-var.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Hanken Grotesk'; src: url('../fonts/hanken-grotesk-var.woff2') format('woff2'); font-weight: 400 600; font-display: swap; }

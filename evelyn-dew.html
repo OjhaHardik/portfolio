@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evelyn Dew case study - Hardik Ojha</title>
-<meta name="description" content="UI, UX and the website for Evelyn Dew, a skin and hair care brand made in India: a five-page shop in black and white, where each product's gradient is the only colour, and a Figma design system rebuilt from the site's own stylesheet.">
+<meta name="description" content="UI, UX and the website for Evelyn Dew, a skin and hair care brand made in India: a five-page shop in black and white, where each product's gradient is the only colour, and the design system behind it in Figma.">
 <meta name="theme-color" content="#0a0a0b">
 <meta property="og:title" content="Evelyn Dew, a case study by Hardik Ojha">
-<meta property="og:description" content="A monochrome shop for three products, and a Figma file rebuilt from the site's own stylesheet.">
+<meta property="og:description" content="A monochrome shop for three products, and the design system behind it.">
 <meta property="og:image" content="Assets/case-studies/evelyn-dew/card.jpg">
 <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230a0a0b%27/%3E%3Crect x=%277%27 y=%2711%27 width=%2718%27 height=%2710%27 rx=%272%27 fill=%27%232a2a2f%27/%3E%3Crect x=%2715%27 y=%275%27 width=%272.5%27 height=%2722%27 fill=%27%23b4ff39%27/%3E%3C/svg%3E">
@@ -59,7 +59,7 @@
       <dl class="st-meta" data-intro style="--d:.5s">
         <div><dt>Client</dt><dd>Evelyn Dew, a sunscreen, a scalp serum and a hair oil</dd></div>
         <div><dt>Role</dt><dd>UI and UX, front end, Figma design system</dd></div>
-        <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, GSAP, Lenis, the Figma plugin API</dd></div>
+        <div><dt>Built with</dt><dd>Figma, HTML, CSS, JavaScript, GSAP, Lenis</dd></div>
       </dl>
     </div>
   </header>
@@ -77,11 +77,11 @@
   <!-- Intro -->
   <section class="st-sec wrap" aria-labelledby="intro-h">
     <h2 class="st-label" id="intro-h">Overview</h2>
-    <p class="st-statement" data-words style="margin-top:20px">A new brand with three products and no reviews yet needed a shop that feels trustworthy from the first screen. It got five pages in black and white, where each product&rsquo;s own colour does the selling, and a Figma file rebuilt from the site&rsquo;s own stylesheet.</p>
+    <p class="st-statement" data-words style="margin-top:20px">A new brand with three products and no reviews yet needed a shop that feels trustworthy from the first screen. It got five pages in black and white, where each product&rsquo;s own colour does the selling, and a complete design system in Figma.</p>
     <div class="st-intro-grid">
       <div data-reveal><span class="st-label">The brief</span><p>A website that sells three products without shouting, and tells you plainly what is in each one.</p></div>
       <div data-reveal style="--d:.08s"><span class="st-label">The client</span><p>A new care brand from India with a sunscreen, an anti-dandruff scalp serum and a hair growth oil, made by a contract manufacturer in Ghaziabad.</p></div>
-      <div data-reveal style="--d:.16s"><span class="st-label">My part</span><p>The UI and UX of all five pages, the front end, and a plugin that rebuilds the site in Figma.</p></div>
+      <div data-reveal style="--d:.16s"><span class="st-label">My part</span><p>The UI and UX of all five pages, the design system in Figma, and the front end.</p></div>
     </div>
   </section>
 
@@ -106,7 +106,7 @@
         <circle class="nm-ring" data-ring="e" cx="151" cy="66" r="25"/>
         <ellipse class="nm-ring" data-ring="d" cx="214" cy="96" rx="31" ry="35"/>
       </svg>
-      <figcaption>From the brand&rsquo;s logo file, as the site draws it</figcaption>
+      <figcaption>The mark, as the site draws it</figcaption>
     </figure>
   </section>
 
@@ -159,7 +159,7 @@
   <section class="st-sec wrap" aria-labelledby="guide-h">
     <div class="st-head">
       <h2 class="st-h2" id="guide-h" data-split>Brand guidelines.</h2>
-      <p class="st-lede" data-reveal>Paper, ink and three gradients. The logo and gradient artwork are the brand&rsquo;s own files, and every value below is read from the site&rsquo;s stylesheet.</p>
+      <p class="st-lede" data-reveal>Paper, ink and three gradients. Every value below is the one the live site uses.</p>
     </div>
 
     <dl class="gd-quick" data-reveal>
@@ -281,7 +281,7 @@
       <div class="gd-side">
         <span class="st-label">Components</span>
         <h3 class="st-h3">Square corners, a fill that rises.</h3>
-        <p>Every corner is square; only icon buttons are round. Buttons fill from the bottom when you point at them and links lose their underline. Try them: these are rebuilt from the site&rsquo;s own CSS.</p>
+        <p>Every corner is square; only icon buttons are round. Buttons fill from the bottom when you point at them and links lose their underline. Try them: they behave exactly as they do on the site.</p>
       </div>
       <div class="gd-main ed-parts">
         <div class="plate plate--pad gd-parts" style="--pb:#f6f6f3;--pi:#121211" data-reveal>
@@ -307,8 +307,8 @@
   <!-- Figma system -->
   <section class="st-sec wrap fg" aria-labelledby="fg-h">
     <div class="fg-copy">
-      <h2 class="st-h2" id="fg-h" data-split>The site, rebuilt in Figma from its own CSS.</h2>
-      <p class="st-lede" data-reveal>Instead of drawing the design system by hand, I wrote a Figma plugin that reads the stylesheet, the images and the product file and builds the whole file in about a minute. When the site changes, the file is rebuilt, so the two never drift apart.</p>
+      <h2 class="st-h2" id="fg-h" data-split>One design system, in Figma.</h2>
+      <p class="st-lede" data-reveal>Every colour, type style, component and screen of the shop lives in one Figma file, with variables for each product, so the design and the live site match screen for screen.</p>
       <dl class="fg-facts" data-reveal style="--d:.06s">
         <div><dt>7</dt><dd>pages, from foundations and components to every screen at 1440 and 390</dd></div>
         <div><dt>23</dt><dd>component sets with 153 variants, hover and press states wired for the prototype</dd></div>
@@ -353,7 +353,7 @@
       <h2 class="st-h3" id="close-h">Where it stands</h2>
       <div class="st-body">
         <p>The site is live at <a class="ed-inline" href="https://evelyndew.com/" target="_blank" rel="noopener noreferrer">evelyndew.com</a>. The photographs on it are licensed stock in black and white, and the people in them have nothing to do with the brand.</p>
-        <p>The Figma file is rebuilt from the same stylesheet, so a designer can pick it up without the two drifting apart.</p>
+        <p>The Figma file matches the live site screen for screen, so the next change can start in design.</p>
       </div>
     </div>
     <div data-reveal style="--d:.08s">

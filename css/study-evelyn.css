@@ -1,5 +1,5 @@
 /* Evelyn Dew study: the name hidden in the mark, the product colours, the Figma system,
-   the shop's own parts rebuilt from website/css/style.css, and whole-section screenshots in plain frames.
+   the shop's buttons, links and index, and whole-section screenshots in plain frames.
    Brand fonts and colours appear only on plates; the page keeps the portfolio's ground, type and neon. */
 @font-face { font-family: 'Cormorant'; src: url('../fonts/cormorant-latin-wght-normal.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Cormorant'; src: url('../fonts/cormorant-latin-wght-italic.woff2') format('woff2'); font-weight: 300 700; font-style: italic; font-display: swap; }
@@ -73,7 +73,7 @@
 .ed-pinfo .gd-hex { gap: 10px; }
 .ed-pinfo .gd-dot { width: 12px; height: 12px; }
 
-/* ---------- Components, rebuilt from the shop's CSS ---------- */
+/* ---------- Components: the shop's buttons, links and index ---------- */
 .ed-parts { gap: 16px; }
 .ed-parts .gd-parts { gap: 24px 32px; }
 .ed-btn {

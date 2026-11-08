@@ -1,5 +1,5 @@
 /* Bakhoor Al Barkaah study: occasion rail, the shop's components at their real sizes, the logo film.
-   Brand plates use the shop's own tokens (css/style.css in the shop) and stay the same in both themes. */
+   Brand plates use Bakhoor's colours and stay the same in both themes. */
 @font-face { font-family: 'Cormorant Infant'; src: url('../fonts/cormorant-infant-var.woff2') format('woff2'); font-weight: 300 700; font-display: swap; }
 
 .study--bakhoor { --b-forest: #0e2b03; --b-gold: #b78a4a; --b-gold-2: #dbb05f; --b-charcoal: #333333; --b-ink: #1e1e1e; }

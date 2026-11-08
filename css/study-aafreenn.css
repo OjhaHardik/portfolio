@@ -1,5 +1,5 @@
 /* Aafreenn study: the four questions, the sticky walkthrough, the fit demo and the brand's components.
-   Brand plates use the store's own tokens and stay the same in both themes. */
+   Brand plates use Aafreenn's colours and stay the same in both themes. */
 .study--aafreenn {
   --a-cream: #fff7ef; --a-sand: #e5ded7; --a-stone: #6b6560; --a-maroon: #4c1205; --a-maroon-2: #350c03; --a-wine: #3b060a; --a-ink: #231f20;
 }
